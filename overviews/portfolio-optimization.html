@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Optimization Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f4f4f4; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+
+<h2>Overview</h2>
+<p>This project conducts a comprehensive analysis of a portfolio consisting of Apple Inc. (AAPL) and Walmart Inc. (WMT) stocks over a 10-year period. It utilizes portfolio optimization techniques to balance risk and return. By analyzing historical performance and applying methods such as mean-variance optimization and Markowitz efficient frontier analysis, it provides insights into how different asset allocations can impact overall portfolio performance and risk.</p>
+
+<p><strong><a href="full project/portfolio-optimization.md" target="_blank">View the full project on Github</a>.</strong></p>
+
+<h2>Approach and Methodology</h2>
+<ol>
+    <li><strong>Data Collection:</strong> Historical daily adjusted closing price data for AAPL and WMT from Yahoo Finance.</li>
+    <li><strong>Data Analysis:</strong>
+        <ul>
+            <li>Calculation of annualized returns and volatility for each asset.</li>
+            <li>Construction of a correlation matrix to assess the relationships between the assets.</li>
+        </ul>
+    </li>
+    <li><strong>Optimization Techniques:</strong>
+        <ul>
+            <li><strong>Mean-Variance Optimization:</strong> Using cvxpy to minimize portfolio volatility while achieving a target return.</li>
+            <li><strong>Markowitz Efficient Frontier Analysis:</strong> Identification of portfolios that offer the minimum volatility, maximum return, and maximum Sharpe ratio.</li>
+        </ul>
+    </li>
+    <li><strong>Visualization:</strong> Plotting the efficient frontier and optimized portfolio allocations.</li>
+</ol>
+
+<h2>Visuals</h2>
+<h3>Mean-Variance Optimization Results</h3>
+<img src="images/output_10_2.png" alt="Optimized">
+
+<h3>Markowitz Efficient Frontier Analysis</h3>
+<p>Interactive Efficient Frontier with plotly:</p>
+<img src="images/output_10_5.png" alt="Interactive Eff Frontier">
+<p>Minimum Volatility Portfolio:</p>
+<img src="images/output_10_7.png" alt="Min Volatility">
+<p>Maximum Return Portfolio:</p>
+<img src="images/output_10_9.png" alt="Max Return">
+<p>Maximum Sharpe Ratio Portfolio:</p>
+<img src="images/output_10_11.png" alt="Max Sharpe">
+
+</body>
+</html>

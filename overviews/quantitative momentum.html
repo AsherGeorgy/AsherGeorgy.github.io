@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&P 500 Momentum Strategy</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+
+<h2>Overview</h2>
+<p>This project implements a momentum-based investment strategy for selecting stocks from the S&P 500 index. It identifies top-performing stocks based on historical returns over multiple time frames and calculates the optimal number of shares to buy for a specified portfolio size. Investing in "momentum stocks"—those with strong recent performance—is a popular strategy among traders and investors. This project addresses the challenge of identifying these top momentum stocks and determining the appropriate share quantities to maximize potential returns by capturing ongoing upward trends.</p>
+
+<p><strong><a href="full project/quantitative momentum.md" target="_blank">View the full project on Github</a>.</strong></p>
+
+<h2>Approach and Methodology</h2>
+<ol>
+    <li><strong>Data Collection:</strong> 
+        <ul>
+            <li>Fetch the list of S&P 500 companies from Wikipedia.</li>
+            <li>Download one year of daily adjusted closing price data for each S&P 500 stock using the Yahoo Finance API.</li>
+        </ul>
+    </li>
+    <li><strong>Data Analysis:</strong>
+        <ul>
+            <li>Calculate the one-year return for each stock.</li>
+            <li>Identify the top 50 stocks based on their one-year return.</li>
+        </ul>
+    </li>
+    <li><strong>Momentum Strategy Implementation:</strong>
+        <ul>
+            <li>Calculate returns over different time frames (one month, three months, six months, and one year).</li>
+            <li>Rank stocks based on these returns and compute percentiles to score momentum.</li>
+            <li>Calculate the <strong>HQM (High-Quality Momentum) Score</strong> for each stock, which is the average of these percentiles.</li>
+        </ul>
+    </li>
+    <li><strong>Portfolio Construction:</strong>
+        <ul>
+            <li>Prompt the user for the portfolio size.</li>
+            <li>Calculate the position size for each stock based on equal-weighted investment and the stock's current price.</li>
+            <li>Determine the optimal number of shares to buy for each stock.</li>
+        </ul>
+    </li>
+    <li><strong>Export Results:</strong>
+        <ul>
+            <li>Output the final list of stocks, their calculated metrics, and the number of shares to buy to an Excel file using <code>xlsxwriter</code>.</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>Visuals</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Ticker</th>
+            <th>Stock Price</th>
+            <th>HQM Score</th>
+            <th>No of shares to buy</th>
+            <th>One Year Price Return</th>
+            <th>One Year Return Percentile</th>
+            <th>Six Month Price Return</th>
+            <th>Six Month Return Percentile</th>
+            <th>Three Month Price Return</th>
+            <th>Three Month Return Percentile</th>
+            <th>One Month Price Return</th>
+            <th>One Month Return Percentile</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>VST</td>
+            <td>85.77</td>
+            <td>78.0</td>
+            <td>2331</td>
+            <td>190.96%</td>
+            <td>100.0</td>
+            <td>77.48%</td>
+            <td>100.0</td>
+            <td>-10.55%</td>
+            <td>14.0</td>
+            <td>21.87%</td>
+            <td>98.0</td>
+        </tr>
+        <tr>
+            <td>NVDA</td>
+            <td>129.37</td>
+            <td>89.0</td>
+            <td>1545</td>
+            <td>174.39%</td>
+            <td>98.0</td>
+            <td>64.16%</td>
+            <td>96.0</td>
+            <td>24.65%</td>
+            <td>82.0</td>
+            <td>15.22%</td>
+            <td>80.0</td>
+        </tr>
+        <tr>
+            <td>SMCI</td>
+            <td>613.24</td>
+            <td>25.5</td>
+            <td>326</td>
+            <td>133.62%</td>
+            <td>96.0</td>
+            <td>-28.69%</td>
+            <td>2.0</td>
+            <td>-27.63%</td>
+            <td>2.0</td>
+            <td>-11.84%</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <td>NRG</td>
+            <td>83.50</td>
+            <td>70.5</td>
+            <td>2395</td>
+            <td>131.98%</td>
+            <td>94.0</td>
+            <td>63.77%</td>
+            <td>94.0</td>
+            <td>3.53%</td>
+            <td>16.0</td>
+            <td>14.87%</td>
+            <td>78.0</td>
+        </tr>
+        <tr>
+            <td>GDDY</td>
+            <td>162.45</td>
+            <td>75.0</td>
+            <td>1231</td>
+            <td>131.51%</td>
+            <td>92.0</td>
+            <td>41.37%</td>
+            <td>80.0</td>
+            <td>17.24%</td>
+            <td>58.0</td>
+            <td>13.37%</td>
+            <td>70.0</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
