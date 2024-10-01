@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Monthly Cash Flow Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3, h4 { color: #333; }
+        img { max-width: 100%; height: auto; }
+        code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+        hr { border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+<h2>Overview</h2>
+<p>This Excel-based system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month.</p> 
+
+<p><strong><a href="full project/Automated Cash Register.md" target="_blank">View the full project on Github</a>.</strong></p>
+
+<h2>How It Works</h2>
+<ul>
+    <li>Users enter the date, type, particulars, and amount in the 'Register' sheet.</li>
+    <li>The 'Summary' sheet automatically updates with categorized transactions for each month.</li>
+</ul>
+
+<h2>Formulas Used</h2>
+<h4>Populate the transaction type and particulars:</h4>
+<pre><code>= SORT(UNIQUE(FILTER('Register'!$D:$E, ('Register'!$D:$D<>""  ) + ('Register'!$E:$E<>""))))</code></pre>
+
+<h4>Obtain corresponding summary:</h4>
+<pre><code>= SUMIFS('Register'!$F:$F,'Register'!$D:$D,Summary!$B5,'Register'!$E:$E,Summary!$C5,'Register'!$G:$G,Summary!D$2)</code></pre>
+<hr>
+
+<h2>Screenshots:</h2>
+<h3>Register Sheet:</h3>
+<img src="images/Register Sheet.png" alt="Register Sheet">
+
+<hr>
+
+<h3>Summary Sheet:</h3>
+<img src="images/Summary Sheet.png" alt="Summary Sheet">
+
+</body>
+</html>

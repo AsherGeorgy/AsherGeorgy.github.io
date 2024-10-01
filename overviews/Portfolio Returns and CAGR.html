@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock and Portfolio Performance Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        img { max-width: 100%; height: auto; }
+        code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+<h2>Overview</h2>
+<p>This project provides a comprehensive analysis of individual stock performance and portfolio returns using Python. The analysis includes calculating key metrics such as <strong>simple and log returns</strong>, <strong>cumulative returns</strong>, and <strong>Compound Annual Growth Rate (CAGR)</strong>, while also comparing the performance of multiple stocks in a portfolio over a specified period.</p>
+
+<p>Investors need to evaluate both individual stock performance and the overall performance of their investment portfolios to make informed decisions. This project addresses this need by offering a framework to calculate essential metrics for both individual stocks and portfolios.</p>
+
+<p>These metrics help investors understand the risk and return profiles of their investments, enabling them to make better strategic choices.</p>
+
+<p><strong><a href="full project/Portfolio Returns and CAGR.md" target="_blank">View the full project on Github</a>.</strong></p>
+
+<h2>Approach and Methodology</h2>
+<ol>
+    <li><strong>Data Retrieval</strong>: 
+        <p>Used Yahoo Finance API to fetch historical daily adjusted closing prices for stocks. Conducted analysis over specified periods to calculate returns and growth rates.</p>
+    </li>
+    <li><strong>Individual Stock Analysis</strong>:
+        <ul>
+            <li><strong>Simple Returns</strong>: Calculated daily and annualized simple returns using percentage change in closing prices.</li>
+            <li><strong>Log Returns</strong>: Computed daily and annualized log returns for more accurate risk assessment.</li>
+            <li><strong>Cumulative Return and CAGR</strong>: Measured overall return and growth rate of stocks over multiple years.</li>
+        </ul>
+    </li>
+    <li><strong>Portfolio Analysis</strong>:
+        <ul>
+            <li><strong>Relative Price Movement</strong>: Compared relative performance of multiple stocks in a portfolio using normalized price charts.</li>
+            <li><strong>Weighted Average Return</strong>: Calculated portfolio return based on asset allocation weights.</li>
+            <li><strong>Cumulative Return and CAGR</strong>: Assessed overall portfolio growth and performance over the analysis period.</li>
+        </ul>
+    </li>
+    <li><strong>Visualization</strong>: 
+        <p>Plotted return distributions and price movements to visually compare stock and portfolio performance.</p>
+    </li>
+</ol>
+
+<h2>Visuals</h2>
+<h3>Annualized Simple Returns:</h3>
+<img src="images/Annualized Simple Returns.png" alt="Annualized Simple Returns">
+<h3>Annualized Log Returns:</h3>
+<img src="images/Annualized Log Returns.png" alt="Annualized Log Returns">
+<h3>Cumulative Return and CAGR Calculation:</h3>
+<img src="images/Cumulative Return and CAGR Calculation.png" alt="Cumulative Return and CAGR Calculation">
+<h3>Relative Stock Price Movement:</h3>
+<img src="images/Relative Stock Price Movement.png" alt="Relative Stock Price Movement">
+
+
+
+</body>
+</html>

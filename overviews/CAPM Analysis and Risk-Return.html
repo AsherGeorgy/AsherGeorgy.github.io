@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Asset Pricing Model (CAPM)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Overview</h2>
+<p>
+    This project provides a brief overview of the <strong>Capital Asset Pricing Model (CAPM)</strong> and its practical applications in financial analysis. It explores the implementation of CAPM using <u>Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc</u> stocks as examples, demonstrating how to calculate <strong>beta values</strong> and <strong>expected returns</strong>, as well as assess <strong>risk-adjusted returns</strong> using the <strong>Sharpe Ratio</strong> with Python.
+</p>
+<p>
+	Investors require a systematic approach to evaluate the expected returns of securities based on their risk. The CAPM serves as a foundational model in finance for understanding the relationship between risk and return, while the Sharpe Ratio helps investors assess the risk-adjusted performance of their investments. Together, these tools enable more informed investment decisions.
+</p>
+
+<p><strong><a href="full project/CAPM Analysis and Risk-Return.md" target="_blank">View the full project on Github</a>.</strong></p>
+
+<h2>Approach</h2>
+<ol>
+    <li>
+        <strong>Data Retrieval:</strong> Historical stock prices are fetched using the Yahoo Finance API. 
+        Monthly log returns are calculated to understand stock performance over time.
+    </li>
+    <li>
+        <strong>Beta Calculation:</strong> The beta values for selected stocks are computed in relation to a market index, 
+        indicating the sensitivity of the stock to market movements.
+    </li>
+    <li>
+        <strong>Expected Returns Estimation:</strong> Expected returns for each stock are calculated using the CAPM formula, 
+        incorporating the risk-free rate and equity risk premium.
+    </li>
+    <li>
+        <strong>Sharpe Ratio Calculation:</strong> The Sharpe Ratio is computed to evaluate the risk-adjusted return 
+        for the selected stocks, providing insights into their performance relative to the risk taken.
+    </li>
+</ol>
+
+<h2>Visuals</h2>
+
+<p><em>Beta Values</em></p><img src="images/Beta Values.png" alt="Beta Values" style="width:50%; height=auto;">
+<p><em>Expected Returns as per CAPM</em></p><img src="images/Expected Return.png" alt="Expected Return" style="width:50%; height:auto;">
+<p><em>Sharpe Ratios</em></p>
+<img src="images/Sharpe Ratio.png" alt="Sharpe Ratio" style="width:50%; height:auto;">
+
+
+</body>
+</html>

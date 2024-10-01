@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock and Portfolio Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        img { max-width: 100%; height: auto; }
+        code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+
+<h2>Overview</h2>
+<p>This project provides a comprehensive analysis of individual stocks and their performance within a portfolio context, calculating key metrics such as <strong>risk and return, variance, covariance, correlation</strong>, and <strong>portfolio risk decomposition</strong> using historical data fetched from Yahoo Finance. Investors need to understand the risk and return profiles of individual stocks and how they behave together in a portfolio.<br><br> By delivering insights into stock performance metrics and portfolio risk through various quantitative methods, the project evaluates the expected return and risk associated with investing in different stocks and highlights how diversification impacts overall portfolio risk.</p>
+
+<p><strong><a href="full project/stock and portfolio.md" target="_blank">View the full project on Github</a>.</strong></p>
+
+<h2>Approach and Methodology</h2>
+<ol>
+    <li><strong>Data Collection</strong>: Fetching historical adjusted close prices for selected stocks from Yahoo Finance using the <code>yfinance</code> library.</li>
+    <li><strong>Individual Stock Analysis</strong>:
+        <ul>
+            <li><strong>Risk and Return</strong>: Calculating annualized average returns and volatility for each stock.</li>
+            <li><strong>Covariance and Correlation</strong>: Computing variance, covariance, and correlation matrices to assess the relationship between stocks.</li>
+        </ul>
+    </li>
+    <li><strong>Portfolio Analysis</strong>:
+        <ul>
+            <li><strong>Portfolio Variance</strong>: Calculating the total variance of a portfolio based on the covariance matrix of the selected stocks.</li>
+            <li><strong>Risk Decomposition</strong>: Breaking down portfolio risk into diversifiable and non-diversifiable components using the variance-covariance approach.</li>
+        </ul>
+    </li>
+    <li><strong>Visualization</strong>: Plotting stock price movements and risk metrics for better understanding and interpretation.</li>
+</ol>
+
+<h2>Visuals</h2>
+<h3>Risk and Return Calculation:</h3>
+<img src="images/Risk and Return Calculation.png" alt="Risk and Return Calculation">
+<h3>Covariance and Correlation Analysis:</h3>
+<img src="images/Covariance and Correlation Analysis.png" alt="Covariance and Correlation Analysis">
+<h3>Portfolio Risk Decomposition:</h3>
+<img src="images/Portfolio Risk Decomposition.png" alt="Portfolio Risk Decomposition">
+
+
