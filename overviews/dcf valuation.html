@@ -10,6 +10,28 @@
         img { max-width: 100%; height: auto; }
         a { color: #007BFF; text-decoration: none; }
         a:hover { text-decoration: underline; }
+		
+		/* Base font size for portrait mode */
+		body {
+			font-size: 16px; /* Default font size */
+		}
+
+		/* Adjust font size for landscape orientation */
+		@media screen and (orientation: landscape) {
+			body {
+				font-size: 14px; /* Smaller font size for landscape */
+			}
+		}
+
+		th {
+			background-color: #f4f4f4;
+		}
+
+		@media (max-width: 600px) {
+			th, td {
+				font-size: 14px; /* Adjust font size for smaller screens */
+			}
+		}
     </style>
 </head>
 <body>
@@ -27,7 +49,7 @@
         <li><strong>Dynamic Dashboard</strong>: Visualizing key findings and enabling scenario analysis.</li>
     </ul>
 
-<p><strong><a href="full project/dcf valuation.md" target="_blank">View the full project on Github</a>.</strong></p>
+<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Microsoft%20Excel/Financial%20Modeling%20and%20Valuation%20Analysis.md" target="_blank">View the full project on Github</a>.</strong></p>
 
 <h2>Approach and Methodology</h2>
 <ol>
