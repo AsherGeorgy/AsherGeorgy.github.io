@@ -11,6 +11,28 @@
         th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
         th { background-color: #f4f4f4; }
         img { max-width: 100%; height: auto; }
+		
+		/* Base font size for portrait mode */
+		body {
+			font-size: 16px; /* Default font size */
+		}
+
+		/* Adjust font size for landscape orientation */
+		@media screen and (orientation: landscape) {
+			body {
+				font-size: 14px; /* Smaller font size for landscape */
+			}
+		}
+
+		th {
+			background-color: #f4f4f4;
+		}
+
+		@media (max-width: 600px) {
+			th, td {
+				font-size: 14px; /* Adjust font size for smaller screens */
+			}
+		}
     </style>
 </head>
 <body>
@@ -18,7 +40,7 @@
 <h2>Overview</h2>
 <p>This project conducts a comprehensive analysis of a portfolio consisting of Apple Inc. (AAPL) and Walmart Inc. (WMT) stocks over a 10-year period. It utilizes portfolio optimization techniques to balance risk and return. By analyzing historical performance and applying methods such as mean-variance optimization and Markowitz efficient frontier analysis, it provides insights into how different asset allocations can impact overall portfolio performance and risk.</p>
 
-<p><strong><a href="full project/portfolio-optimization.md" target="_blank">View the full project on Github</a>.</strong></p>
+<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Portfolio%20Optimization%20with%20Python.md" target="_blank">View the full project on Github</a>.</strong></p>
 
 <h2>Approach and Methodology</h2>
 <ol>
