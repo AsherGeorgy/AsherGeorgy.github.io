@@ -20,6 +20,28 @@
         .visual {
             margin: 20px 0;
         }
+		
+		/* Base font size for portrait mode */
+		body {
+			font-size: 16px; /* Default font size */
+		}
+
+		/* Adjust font size for landscape orientation */
+		@media screen and (orientation: landscape) {
+			body {
+				font-size: 14px; /* Smaller font size for landscape */
+			}
+		}
+
+		th {
+			background-color: #f4f4f4;
+		}
+
+		@media (max-width: 600px) {
+			th, td {
+				font-size: 14px; /* Adjust font size for smaller screens */
+			}
+		}
     </style>
 </head>
 <body>
@@ -31,7 +53,7 @@
 <p>
 	The tool is a <strong>Google Sheets-based calculator</strong> that uses formulas and lookup tables to dynamically update based on user input, providing clear visualization of the required resources and time needed for upgrades. The challenge of Clash of Clans is to efficiently plan upgrades due to the complexity of resource management and varying upgrade costs. Balancing resource collection, time, and strategic gameplay decisions is key to quick progress. This project addresses this challenge by offering a structured, user-friendly tool for visualizing and planning upgrades more effectively.
 <p>
-    <p><strong><a href="full project/Clash of Clans.md" target="_blank">View the full project on Github</a>.</strong></p>
+    <p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Fun%20projects/Clash%20of%20Clans%20Upgrade%20Planner.md" target="_blank">View the full project on Github</a>.</strong></p>
 </p>
 
 <h2>Approach and Methodology</h2>
