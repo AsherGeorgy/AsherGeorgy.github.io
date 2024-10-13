@@ -10,6 +10,28 @@
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
         th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
         th { background-color: #f4f4f4; }
+
+		/* Base font size for portrait mode */
+		body {
+			font-size: 16px; /* Default font size */
+		}
+
+		/* Adjust font size for landscape orientation */
+		@media screen and (orientation: landscape) {
+			body {
+				font-size: 14px; /* Smaller font size for landscape */
+			}
+		}
+
+		th {
+			background-color: #f4f4f4;
+		}
+
+		@media (max-width: 600px) {
+			th, td {
+				font-size: 14px; /* Adjust font size for smaller screens */
+			}
+		}
     </style>
 </head>
 <body>
@@ -17,7 +39,7 @@
 <h2>Overview</h2>
 <p>This project implements a momentum-based investment strategy for selecting stocks from the S&P 500 index. It identifies top-performing stocks based on historical returns over multiple time frames and calculates the optimal number of shares to buy for a specified portfolio size. Investing in "momentum stocks"—those with strong recent performance—is a popular strategy among traders and investors. This project addresses the challenge of identifying these top momentum stocks and determining the appropriate share quantities to maximize potential returns by capturing ongoing upward trends.</p>
 
-<p><strong><a href="full project/quantitative momentum.md" target="_blank">View the full project on Github</a>.</strong></p>
+<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/quantitative%20momentum.md" target="_blank">View the full project on Github</a>.</strong></p>
 
 <h2>Approach and Methodology</h2>
 <ol>
@@ -75,76 +97,77 @@
     <tbody>
         <tr>
             <td>VST</td>
-            <td>85.77</td>
-            <td>78.0</td>
-            <td>2331</td>
-            <td>190.96%</td>
-            <td>100.0</td>
-            <td>77.48%</td>
-            <td>100.0</td>
-            <td>-10.55%</td>
-            <td>14.0</td>
-            <td>21.87%</td>
-            <td>98.0</td>
+            <td>124.18</td>
+            <td>98</td>
+            <td>1610</td>
+            <td>292.34</td>
+            <td>100</td>
+            <td>76.369412</td>
+            <td>98</td>
+            <td>35.875208</td>
+            <td>94</td>
+            <td>63.611046</td>
+            <td>100</td>
         </tr>
         <tr>
-            <td>NVDA</td>
-            <td>129.37</td>
-            <td>89.0</td>
-            <td>1545</td>
-            <td>174.39%</td>
-            <td>98.0</td>
-            <td>64.16%</td>
-            <td>96.0</td>
-            <td>24.65%</td>
-            <td>82.0</td>
-            <td>15.22%</td>
-            <td>80.0</td>
+            <td>PLTR</td>
+            <td>43.13</td>
+            <td>97</td>
+            <td>4637</td>
+            <td>142.3</td>
+            <td>96</td>
+            <td>92.372885</td>
+            <td>100</td>
+            <td>56.041975</td>
+            <td>100</td>
+            <td>24.079411</td>
+            <td>92</td>
         </tr>
         <tr>
-            <td>SMCI</td>
-            <td>613.24</td>
-            <td>25.5</td>
-            <td>326</td>
-            <td>133.62%</td>
-            <td>96.0</td>
-            <td>-28.69%</td>
-            <td>2.0</td>
-            <td>-27.63%</td>
-            <td>2.0</td>
-            <td>-11.84%</td>
-            <td>2.0</td>
+            <td>CEG</td>
+            <td>262.28</td>
+            <td>83</td>
+            <td>762</td>
+            <td>133.89</td>
+            <td>94</td>
+            <td>37.727767</td>
+            <td>76</td>
+            <td>21.180846</td>
+            <td>64</td>
+            <td>45.509015</td>
+            <td>98</td>
         </tr>
         <tr>
-            <td>NRG</td>
-            <td>83.50</td>
-            <td>70.5</td>
-            <td>2395</td>
-            <td>131.98%</td>
-            <td>94.0</td>
-            <td>63.77%</td>
-            <td>94.0</td>
-            <td>3.53%</td>
-            <td>16.0</td>
-            <td>14.87%</td>
-            <td>78.0</td>
+            <td>FICO</td>
+            <td>2024.99</td>
+            <td>82</td>
+            <td>98</td>
+            <td>127.74</td>
+            <td>90</td>
+            <td>71.430629</td>
+            <td>96</td>
+            <td>29.184314</td>
+            <td>84</td>
+            <td>12.669699</td>
+            <td>58</td>
         </tr>
         <tr>
-            <td>GDDY</td>
-            <td>162.45</td>
-            <td>75.0</td>
-            <td>1231</td>
-            <td>131.51%</td>
-            <td>92.0</td>
-            <td>41.37%</td>
-            <td>80.0</td>
-            <td>17.24%</td>
-            <td>58.0</td>
-            <td>13.37%</td>
-            <td>70.0</td>
+            <td>AXON</td>
+            <td>432.14</td>
+            <td>80.5</td>
+            <td>462</td>
+            <td>100.72</td>
+            <td>70</td>
+            <td>35.782065</td>
+            <td>70</td>
+            <td>48.420116</td>
+            <td>98</td>
+            <td>20.25602</td>
+            <td>84</td>
         </tr>
     </tbody>
 </table>
+
 
 </body>
 </html>
