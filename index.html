@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Metadata -->
-	<title>Asher Georgy - Finance Professional & Aspiring Data Scientist</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Asher Georgy's resume as a Finance Professional and aspiring data scientist, showcasing expertise in Python, web development, and financial modeling.">
-	<meta name="keywords" content="Asher Georgy, finance, data science, Python, web development, financial modeling, resume">
-	<meta name="author" content="Asher Georgy">
+    <!-- Metadata --> 
+    <title>Asher Georgy - Finance Professional & Aspiring Data Scientist</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Asher Georgy is a Finance Professional and aspiring data scientist skilled in Python, web development, and financial modeling. Explore his portfolio and resume.">
+    <meta name="keywords" content="Asher Georgy, finance, data science, web development, Python, portfolio, resume">
+    <meta name="author" content="Asher Georgy">
 
-	<!-- Open Graph Metadata for Social Sharing -->
-	<meta property="og:title" content="Asher Georgy - Finance Professional & Aspiring Data Scientist">
-	<meta property="og:description" content="Explore Asher Georgy's resume, highlighting his skills in finance, Python, web development, and financial modeling.">
-	<meta property="og:url" content="https://ashergeorgy.github.io/resume">
-	<meta name="twitter:card" content="summary_large_image">
+    <!-- Open Graph Metadata for Social Sharing -->
+    <meta property="og:title" content="Asher Georgy - Finance Professional & Aspiring Data Scientist">
+    <meta property="og:description" content="Explore Asher Georgy's portfolio, showcasing his skills in finance, Python, web development, and financial modeling.">
+    <meta property="og:image" content="assets/banner-bg.jpg">
+    <meta property="og:url" content="https://ashergeorgy.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<!-- Favicon Links -->
-	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-      <style>
-         :root {
-			--bg-color: #f5f5f5;
-			--navbar-bg: #333;
-			--text-white: rgba(255, 255, 255, 0.9);
-			--text-teal: #4CAF50;
-			--skill-bg: #ffffff;
-			--shadow: rgba(0, 0, 0, 0.1);
-		}
-
-		body {
-			font-family: "Roboto", sans-serif;
-			background-color: var(--bg-color);
-			font-size: 16px; /* Ensure a base size for readability */
-		}
-
-		/* Navbar */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest" type="application/manifest+json">
+    <style>
+        body, html {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+			padding-top: 16px;
         }
+
+        /* Navbar */
+        .navbar {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 999;
+			background-color: #333;
+			transition: top 0.3s ease;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		}
 
         .navbar a {
             float: left;
@@ -67,16 +66,15 @@
             color: white; 
         }
 
-		.text-white {
-			color: var(--text-white);
-		}
-
-		/* Footer */
+        /* Footer */
         footer {
             background-color: #333;
             color: #f2f2f2;
             padding: 30px 20px;
             text-align: center;
+			display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         footer a {
@@ -87,200 +85,357 @@
         }
 
         footer a:hover {
-            color: #009688;
+            color: #009688; 
         }
 
-		.contact-link {
-			text-decoration: none;
+        /* Header Section */
+        .header {
+            background: linear-gradient(rgba(0, 121, 107, 0.7), rgba(0, 121, 107, 0.7)), url('assets/banner-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .header h1 { 
+            font-size: 50px; 
+            margin: 0; 
+        }
+
+        .header p { 
+            font-size: 22px; 
+            margin: 10px 0 30px; 
+        }
+
+        .header .cta-button {
+            background-color: #00796B;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .header .cta-button:hover { 
+            text-decoration: underline; 
+			background-color: #4CAF50;
+        }
+		
+		/* Link Styles */
+		a {
 			color: #009688; 
-			transition: color 0.3s ease;
+			text-decoration: none; 
+			transition: color 0.3s ease; 
 		}
 
-		.contact-link:hover {
-			color: #00796b; 
-			text-decoration: underline;  
+		a:hover {
+			text-decoration: underline; 
+			color: #4CAF50;
 		}
 
-		h2 {
-			color: var(--text-teal);
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .about-section h2 { 
+            text-align: center; 
+            color: #009688; 
+            font-size: 36px; 
+            margin-bottom: 30px; 
+        }
+
+        .about-section p {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        /* Qualities Section */
+        .qualities-section {
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .qualities-section h2 {
+            color: #009688;
+            font-size: 28px;
+            text-align: center; 
+        }
+        .qualities-list {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+        .qualities-list p {
+            margin: 15px 0; 
+        }
+        
+        /* Skills Section */
+        .skills-section {
+            padding: 60px 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .skills-section h2 { 
+            font-size: 36px; 
+            margin-bottom: 40px; 
+			color: #009688;
+        }
+
+        .skill-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .skill-icons img {
+            width: 60px;
+			height: auto;
+            max-height: 60px;
+            transition: transform 0.2s ease;
+        }
+
+        .skill-icons img:hover { 
+            transform: scale(1.2); 
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+			text-align: center;
+            gap: 20px;
+        }
+
+        .projects-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            width: 100%;
+			color: #009688;
+        }
+
+        .project-card {
+            max-width: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+		
+		.project-card:hover {
+			transform: translateY(-10px); 
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 		}
 
-		.skills-container {
-			margin: 20px 0;
-			padding: 15px;
-			background-color: var(--skill-bg);
-			border-radius: 8px;
-			box-shadow: 0 2px 4px var(--shadow);
-		}
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
 
-		/* Accessibility - minimum font sizes */
-		body, .navbar a, footer {
-			font-size: 1rem; /* At least 16px font size for readability */
-		}
+        .project-card h3 { 
+            font-size: 24px; 
+            margin: 20px 0 10px; 
+        }
 
-		@media only screen and (max-width: 600px) {
-			.w3-third, .w3-twothird {
-				width: 100%;
-			}
+        .project-card p { 
+            font-size: 16px; 
+            color: #666; 
+            margin-bottom: 15px;
+			justify-content: center;
+        }
 
-			body {
-				font-size: 0.9rem; /* Scale down the font slightly on small screens */
-			}
-		}
+        .project-card a {
+            color: #009688;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
 
-		/* New media query for tablets */
-		@media only screen and (min-width: 600px) and (max-width: 900px) {
-			.w3-third, .w3-twothird {
-				width: 48%; /* Adjustment for tablet-sized screens */
-			}
+        .project-card a:hover { 
+            text-decoration: underline; 
+			color: #4CAF50
+        }
 
-			.skills-container {
-				padding: 20px; /* More padding on larger screens for aesthetics */
-			}
-		}
+        .arrow-button {
+            background-color: #00796B;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.1s ease;
+        }
 
-		/* Accessibility Improvements */
-		.w3-container [aria-label] {
-			font-size: 0.9em;
-			color: var(--text-teal);
-		}
+        .arrow-button:hover { 
+            background-color: #4CAF50; 
+			color: white;
+        }
+
+        /* Accessibility: Focus Styles */
+        .navbar a:focus, 
+        .header .cta-button:focus, 
+        footer a:focus {
+            outline: 2px solid #009688;
+            outline-offset: 2px;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header h1 { 
+                font-size: 36px; 
+            }
+            
+            .header p { 
+                font-size: 18px; 
+            }
+            
+            .about-section h2, 
+            .skills-section h2, 
+            .projects-section h2 {
+                font-size: 28px; 
+            }
+            
+            .skill-icons img { 
+                width: 60px; 
+                height: 60px;
+				object-fit: contain;
+				transition: transform 0.2s ease;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a class="active" href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- Header Section -->
+<header class="header">
+    <h1>Asher Georgy</h1>
+    <p>Data Analysis | Financial Modeling | Web Development</p>
+    <a href="#about" class="cta-button">Learn More About Me</a>
+</header>
+
+<!-- Main Content -->
+<main>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>
+            I am a <strong>self-taught</strong> data analyst and developer with a strong foundation in accounting and business, holding <strong><u>ACCA affiliate</u></strong> status and a B.Com degree.<br><br>
+            Through hands-on projects, experimentation with generative AI, and continuous learning on platforms like <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> and <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>, I developed varied levels of proficiency in Python, Microsoft Excel, SQL, and some web development tools.<br><br>
+            My passion for solving both complex and everyday problems through technology drives me to create efficient solutions. I am committed to expanding my expertise in data-driven decision-making and quantitative analysis.<br><br>
+			I’m proficient in English and Malayalam. Currently, I'm learning intermediate Spanish and Hindi on <a href="https://www.duolingo.com/profile/Ash_Geo" target="_blank" rel="noopener noreferrer">Duolingo</a>.
+        </p>
+    </section>
+
+    <!-- Qualities Section -->
+    <section class="qualities-section">
+        <h2>Qualities</h2>
+        <div class="qualities-list">
+            <p><strong>Self-Motivated:</strong> Took the initiative to achieve educational and personal development goals independently through self-learning.</p>
+            <p><strong>Continuous Learner:</strong> Pursued ongoing education to acquire new skills and stay updated in the fields of finance and technology.</p>
+            <p><strong>Resourceful:</strong> Leveraged diverse online platforms and communities to access essential information and tools for my projects, maximizing available resources.</p>
+            <p><strong>Detail-Oriented:</strong> Maintained a strong focus on detail in all projects, ensuring high-quality results and accuracy in my work.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <h2>Experienced with:</h2>
+        <div class="skill-icons">
+            <img src="assets/excel-logo-only.png" alt="Excel Logo" title="Excel" >
+			<img src="assets/python-logo-only.png" alt="Python Logo" title="Python">
+            <img src="assets/git-logo-only.png" alt="Git Logo" title="Git">
+            <img src="assets/sql-logo-only.png" alt="SQL Logo" title="SQL" >
+            <img src="assets/html-logo-only.png" alt="HTML Logo" title="HTML">
+            <img src="assets/css-logo-only.png" alt="CSS Logo" title="CSS" >
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <h2>Featured Projects</h2>
+        <article class="project-card">
+            <img src="assets/python-logo-only.png" alt="Python Logo" style="width:40px; height:40px">
+            <h3><a href="portfolio.html#Project1">Optimization with Python</a></h3>
+            <p>Developed a Python model for optimizing investment portfolios, utilizing historical market data to assess asset performance relative to a benchmark index.</p>
+        </article>
+
+        <article class="project-card">
+            <img src="assets/python-logo-only.png" alt="Python Logo" style="width:40px; height:40px">
+            <h3><a href="portfolio.html#Project2">S&P 500 Momentum Strategy</a></h3>
+            <p>Developed a momentum investment strategy to analyze and select top-performing S&P 500 stocks.</p>
+        </article>
+        
+        <article class="project-card">
+            <img src="assets/excel-logo-only.png" alt="Excel Logo" style="width:40px; height:40px">
+            <h3><a href="portfolio.html#Project3">Dynamic DCF Valuation Model</a></h3>
+            <p>Developed a financial model for dynamic three-statement modeling, scenario analysis, and discounted cash flow (DCF) valuation.</p>
+        </article>
+        
+        <article class="project-card">
+            <img src="assets/html-logo-only.png" alt="HTML Logo" style="width:40px; height:40px"><img src="assets/css-logo-only.png" alt="CSS Logo" style="width:40px; height:40px">
+            <h3><a href="portfolio.html#Project4">Professional Website/Portfolio</a></h3>
+            <p>Discover how this website came to be, detailing the journey, development process, technologies used, and future improvement plans.</p>
+        </article>
+
+        <!-- Button to Portfolio -->
+        <div style="width: 100%; text-align: center;">
+            <a href="portfolio.html" class="arrow-button">View All Projects &rarr;</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <a class="footer-link" href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">GitHub</a> |
+    <a class="footer-link" href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+    <a class="footer-link" href="mailto:asher.georgy@outlook.com" >Email</a>
+</footer>
+
+<script>
+	let prevScrollPos = window.pageYOffset;
+	const navbar = document.querySelector('.navbar');
+
+	window.onscroll = function() {
+	  let currentScrollPos = window.pageYOffset;
+	  
+	  // Show navbar when scrolling up, hide when scrolling down
+	  if (prevScrollPos > currentScrollPos) {
+		navbar.style.top = "0"; // Navbar visible
+	  } else {
+		navbar.style.top = "-60px"; // Navbar hidden
+	  }
+	  prevScrollPos = currentScrollPos;
+	};
+</script>
 
 
-      </style>
-   </head>
-   <body>
-      <!-- Navigation Bar -->
-      <div class="navbar">
-         <a href="home.html">Home</a>
-		 <a class="active" href="index.html">Resume</a>
-         <a href="portfolio.html">Portfolio</a>
-         <a href="contact.html">Contact</a>
-      </div>
-      <!-- Page Container -->
-      <div class="w3-content w3-margin-top" style="max-width:1400px;">
-         <!-- The Grid -->
-         <div class="w3-row-padding">
-            <!-- Left Column -->
-            <div class="w3-third">
-               <div class="w3-white w3-text-grey w3-card-4">
-                  <div class="w3-display-container">
-                     <img src="images/Asher_photo.jpg" style="width:100%" alt="Asher V Georgy portrait" loading="lazy">
-                     <div class="w3-display-bottomleft w3-container text-white">
-                        <h1></h1>
-                     </div>
-                  </div>
-                  <div class="w3-container">
-                     <h1>Asher Georgy</h1>
-                     <p>
-                        <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
-                        <a class="contact-link" href="mailto:georgy.asher@gmail.com">georgy.asher@gmail.com</a>
-                     </p>
-                     <p>
-                        <i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-teal"></i>
-                        <a class="contact-link" href="https://www.linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                     </p>
-                     <hr>
-                  </div>
-               </div>
-               <!-- Technical Skills Container -->
-               <div class="skills-container">
-                  <p style="text-align: left;">
-                     <strong>Microsoft Excel</strong>
-                     <img src="images/excel-logo-only.png" alt="Excel Logo" style="height: 1.5em; float: right; margin-left: 5px;">
-                  </p>
-                  <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%" aria-label="85 percent proficiency in Microsoft Excel">85%</div>
-                  </div>
-                  <p style="text-align: left;">
-                     <strong>Python</strong>
-                     <img src="images/python-logo-only.png" alt="Python Logo" style="height: 1.5em; float: right; margin-left: 5px;">
-                  </p>
-                  <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%" aria-label="70 percent proficiency in Python">70%</div>
-                  </div>
-                  <p style="text-align: left;">
-                     <strong>SQL</strong>
-                     <img src="images/sql-logo-only.png" alt="SQL Logo" style="height: 1.5em; float: right; margin-left: 5px;">
-                  </p>
-                  <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%" aria-label="40 percent proficiency in SQL">40%</div>
-                  </div>
-                  <p style="text-align: left;">
-                     <strong>HTML</strong>
-                     <img src="images/html-logo-only.png" alt="HTML Logo" style="height: 1.5em; float: right; margin-left: 5px;">
-                  </p>
-                  <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:30%" aria-label="30 percent proficiency in HTML">30%</div>
-                  </div>
-               </div>
-               <!-- End Technical Skills Container -->
-               <br>
-            </div>
-            <!-- Right Column -->
-            <div class="w3-twothird">
-               <div class="w3-container w3-card w3-white w3-margin-bottom w3-round-xlarge">
-                  <h2 class="w3-text-grey w3-padding-16">
-                     <img src="images/work_experience_icon.png" alt="Work Experience Icon" style="height: 1.5em; display: inline-block; margin-right: 10px;">
-                     Work Experience
-                  </h2>
-                  <div class="w3-container">
-                     <h5 class="w3-opacity"><b>Financial Reporting Analyst / Diwali Investments LLC</b></h5>
-                     <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2021 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-                     <ul>
-                        <li>Collaborated with a US firm to create income expense summaries in Excel.</li>
-                        <li>Developed user-friendly dashboards for quick access to monthly financial insights.</li>
-                        <li>Communicated effectively with the team to deliver timely, accurate reports.</li>
-                     </ul>
-                     <hr>
-                  </div>
-                  <div class="w3-container">
-                     <h5 class="w3-opacity"><b>English Language Trainer / IILT</b></h5>
-                     <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sept 2019 – Mar 2020</h6>
-                     <ul>
-                        <li>Led training sessions for students in India and abroad focusing on English proficiency.</li>
-                        <li>Collaborated with trainers to develop effective teaching methodologies.</li>
-                     </ul>
-                     <hr>
-                  </div>
-               </div>
-               <div class="w3-container w3-card w3-white w3-round-xlarge">
-				   <h2 class="w3-text-grey w3-padding-16">
-					  <img src="images/education_icon.png" alt="Education Icon" style="height: 2em; display: inline-block; margin-right: 10px;">
-					  Education
-				   </h2>
-				   <div class="w3-container">
-					  <h5 class="w3-opacity"><b>Affiliate / Association of Chartered Certified Accountants 
-						 <img src="images/ACCA_logo.png" alt="ACCA Logo" style="height: 1.5em; display: inline-block; margin-left: 5px;"></b>
-					  </h5>
-					  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2023</h6>
-					  <ul>
-						 <li>Globally recognized qualification in accounting, finance, and business management.</li>
-						 <li>Enhanced analytical and strategic decision-making skills.</li>
-					  </ul>
-					  <hr>
-				   </div>
-				   <div class="w3-container">
-					  <h5 class="w3-opacity"><b>Bachelor of Commerce (B.Com) / University of Kerala  
-						 <img src="images/Kerala_University_Emblem.png" alt="University of Kerala Logo" style="height: 1.5em; vertical-align: top;"> </b>
-					  </h5>
-					  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017 - 2020</h6>
-					  <ul>
-						 <li>Comprehensive education in business, economics, and finance.</li>
-					  </ul>
-					  <hr>
-				   </div>
-				</div>
-
-            </div>
-            <!-- End Right Column -->
-         </div>
-         <!-- End Grid -->
-      </div>
-      <!-- Footer -->
-      <footer class="w3-container w3-center w3-margin-top" style="padding: 20px 0;">
-         <a class="footer-link" href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">GitHub</a> |
-         <a class="footer-link" href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-         <a class="footer-link" href="mailto:asher.georgy@outlook.com">Email</a>
-      </footer>
-   </body>
+</body>
 </html>
