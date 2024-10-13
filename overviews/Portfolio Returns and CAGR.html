@@ -9,6 +9,28 @@
         h1, h2, h3 { color: #333; }
         img { max-width: 100%; height: auto; }
         code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+		
+		/* Base font size for portrait mode */
+		body {
+			font-size: 16px; /* Default font size */
+		}
+
+		/* Adjust font size for landscape orientation */
+		@media screen and (orientation: landscape) {
+			body {
+				font-size: 14px; /* Smaller font size for landscape */
+			}
+		}
+
+		th {
+			background-color: #f4f4f4;
+		}
+
+		@media (max-width: 600px) {
+			th, td {
+				font-size: 14px; /* Adjust font size for smaller screens */
+			}
+		}
     </style>
 </head>
 <body>
@@ -20,7 +42,7 @@
 
 <p>These metrics help investors understand the risk and return profiles of their investments, enabling them to make better strategic choices.</p>
 
-<p><strong><a href="full project/Portfolio Returns and CAGR.md" target="_blank">View the full project on Github</a>.</strong></p>
+<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Portfolio%20returns%20and%20CAGR.md" target="_blank">View the full project on Github</a>.</strong></p>
 
 <h2>Approach and Methodology</h2>
 <ol>
