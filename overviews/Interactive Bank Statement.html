@@ -20,6 +20,28 @@
         .visual {
             margin: 20px 0;
         }
+		
+		/* Base font size for portrait mode */
+		body {
+			font-size: 16px; /* Default font size */
+		}
+
+		/* Adjust font size for landscape orientation */
+		@media screen and (orientation: landscape) {
+			body {
+				font-size: 14px; /* Smaller font size for landscape */
+			}
+		}
+
+		th {
+			background-color: #f4f4f4;
+		}
+
+		@media (max-width: 600px) {
+			th, td {
+				font-size: 14px; /* Adjust font size for smaller screens */
+			}
+		}
     </style>
 </head>
 <body>
@@ -32,7 +54,7 @@
 <p>
 	Firms often need to analyze their financial transactions to manage cash flow, monitor expenses, and prepare for audits. This project aims to transform raw bank statements into an organized Excel workbook, enhancing readability and enabling interactive exploration of data. This approach allows for quick insights into financial health and supports more efficient decision-making processes.
 </p>
-<p><strong><a href="full project/Interactive Bank Statement.md" target="_blank">View the full project on Github</a>.</strong></p>
+<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Microsoft%20Excel/Interactive%20Bank%20Statement.md" target="_blank">View the full project on Github</a>.</strong></p>
 
 <h2>Approach and Methodology</h2>
 <ol>
