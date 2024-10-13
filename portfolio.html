@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata -->
-	<title>Asher Georgy - Finance Professional & Aspiring Data Scientist</title>
+    <title>Asher Georgy - Finance Professional & Aspiring Data Scientist</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Asher Georgy's resume as a Finance Professional and aspiring data scientist, showcasing various projects in Python, web development, and data science. Explore detailed overviews and insights.">
     <meta name="keywords" content="Asher V Georgy, portfolio, projects, Python, web development, data science">
     <meta name="author" content="Asher V Georgy">
-	
+
     <!-- Open Graph Metadata for Social Sharing -->
     <meta property="og:title" content="Asher Georgy - Finance Professional & Aspiring Data Scientist">
     <meta property="og:description" content="Explore Asher Georgy's portfolio, showcasing his skills in finance, Python, web development, and financial modeling.">
@@ -18,29 +17,58 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <!-- Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest" type="application/manifest+json">
+
     <style>
-        html, body, h1, h2, h3, h4, h5, h6 {
-			font-family: "Roboto", sans-serif;
+		
+		body, html {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+			padding-top: 16px;
+        }
+
+		/* Navbar */
+        nav {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 999;
+			background-color: #333;
+			transition: top 0.3s ease;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		}
 
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ddd; 
+            color: black; 
+        }
+
+        nav a.active { 
+            background-color: #4CAF50; 
+            color: white; 
+        }
+		
 		.w3-container {
 			max-width: 1200px;
 			margin: auto;
-		}
-
-		.w3-bar {
-			background-color: #00796b;
-		}
-
-		.w3-bar-item {
-			color: white;
 		}
 
 		.project-card {
@@ -50,7 +78,7 @@
 			border: 1px solid #e0e0e0;
 			border-radius: 5px;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-			transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+			transition: box-shadow 0.3s ease, transform 0.3s ease; 
 		}
 
 		.project-card:hover {
@@ -68,12 +96,8 @@
 			cursor: pointer;
 		}
 
-		.project-title .fa {
-			margin-left: 10px;
-		}
-
 		.project-description {
-			display: none; /* Initially hide descriptions */
+			display: none; 
 			color: #333;
 			background-color: #f9f9f9;
 			padding: 15px;
@@ -82,9 +106,10 @@
 		}
 
 		iframe {
-			width: 100%;
-			height: 600px;
-			border: none;
+			width: 100%; /* Full width */
+			height: 100vh; /* Full height of the viewport */
+			overflow-y: auto; /* Enable vertical scrolling */
+			overflow-x: hidden; /* Prevent horizontal scrolling */
 		}
 
 		img {
@@ -97,60 +122,46 @@
 			position: fixed;
 			bottom: 30px;
 			right: 30px;
-			z-index: 99;
-			background-color: #00796b;
+			z-index: 1000;
+			background: rgba(0, 121, 107, 0.8); 
 			color: white;
-			padding: 15px;
-			border-radius: 5px;
+			padding: 8px 12px;
+			border-radius: 25px; 
 			cursor: pointer;
-			transition: opacity 0.3s;
-			opacity: 0.8;
-			border: black;
+			transition: background 0.3s, transform 0.2s;
 			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+			font-size: 14px; 
+			border: none; 
 		}
 
 		#myBtn:hover {
-			opacity: 1;
-			background-color: white;
-			color: #00796b;
+			background: rgba(0, 121, 107, 1); 
+			transform: scale(1.05); 
 		}
 
 		#myBtn:focus {
-			outline: 2px dashed #00796b; 
+			outline: none;
+			box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.5); 
 		}
 
-		/* Navbar */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
+		#myBtn:active {
+			background: rgba(0, 121, 107, 0.9); 
+		}
 
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+		#myBtn:visited {
+			background-color: teal;
+			color: white;
+		}
 
-        .navbar a:hover {
-            background-color: #ddd; 
-            color: black; 
-        }
-
-        .navbar a.active { 
-            background-color: #4CAF50; 
-            color: white; 
-        }
-
-		/* Footer */
+        /* Footer */
         footer {
             background-color: #333;
             color: #f2f2f2;
             padding: 30px 20px;
             text-align: center;
+			display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         footer a {
@@ -230,169 +241,178 @@
 <body class="w3-light-grey">
 
 <!-- Navigation Bar -->
-<div class="navbar">
-    <a href="home.html">Home</a>
-    <a href="index.html">Resume</a>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
     <a class="active" href="portfolio.html">Portfolio</a>
     <a href="contact.html">Contact</a>
-</div>
+</nav>
 
 <!-- Portfolio Section -->
-<div id="portfolio" class="w3-container w3-padding-32 w3-white w3-margin-top">
-    <h1 class="w3-center">Project Portfolio</h1>
-    <h5 class="w3-center">A list of some of the projects I have worked on with links to detailed overviews.</h5>
+<main id="portfolio" class="w3-container w3-padding-32 w3-white w3-margin-top">
+    <h1 class="w3-center">Project Portfolio<i class="fa-solid fa-laptop-file" style="margin-left:10px;"></i></h1>
+    <h5 class="w3-center">A list of some of the projects I have worked on, along with their GitHub links.</h5>
     <hr>
 
-	<!-- Project List -->
-	<div id="projects">
+    <!-- Project List -->
+    <section id="projects">
 		<!-- Portfolio Optimization Project -->
-		<div id="Project1" class="project-card">
-			<div  class="project-title" onclick="toggleDescription(this)">
+		<article id="Project1" class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>Portfolio Optimization Model with Python</span>
 				<div class="project-icons">
-					<img src="images/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/portfolio-optimization.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- S&P 500 Momentum Project -->
-		<div id="Project2" class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
+		<article id="Project2" class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>S&P 500 Momentum Investment Strategy</span>
 				<div class="project-icons">
-					<img src="images/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/quantitative momentum.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- DCF Valuation Project -->
-		<div id="Project3" class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
+		<article id="Project3" class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>Dynamic DCF Valuation and Financial Modeling</span>
 				<div class="project-icons">
-					<img src="images/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/dcf valuation.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- Stock and Portfolio Project -->
-		<div class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
-				<span>Stock and Portfolio Analysis</span>
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Portfolio Risk Analysis</span>
 				<div class="project-icons">
-					<img src="images/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/stock and portfolio.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- Interactive Bank Statement Project -->
-		<div class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>Interactive Bank Statement Analysis Tool</span>
 				<div class="project-icons">
-					<img src="images/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/Interactive Bank Statement.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- Portfolio Returns and CAGR Project -->
-		<div class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>Portfolio Returns and CAGR Analysis</span>
 				<div class="project-icons">
-					<img src="images/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/Portfolio Returns and CAGR.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- Three-Statement Project -->
-		<div class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>Three-Statement Financial Model</span>
 				<div class="project-icons">
-					<img src="images/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/Three-Statement Financial Model.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- CAPM Analysis and Risk-Return Project -->
-		<div class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>CAPM Analysis and Risk-Return Evaluation</span>
 				<div class="project-icons">
-					<img src="images/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/CAPM Analysis and Risk-Return.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- Automated Cash Register Project -->
-		<div class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>Automated Cash Register System</span>
 				<div class="project-icons">
-					<img src="images/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/Automated Cash Register.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- Clash of Clans Project -->
-		<div class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>Clash of Clans Hero Upgrade Planner</span>
 				<div class="project-icons">
-					<img src="images/google-sheets-logo-only.png" alt="Google Sheets Logo" class="project-icon" style="width: 25px; height: auto; margin-left: 10px;">
+					<img src="assets/google-sheets-logo-only.png" alt="Google Sheets Logo" class="project-icon" style="width: 25px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/Clash of Clans.html"></iframe>
 			</div>
-		</div>
+		</article>
+
 		<!-- Personal Website -->
-		<div id="Project4" class="project-card">
-			<div class="project-title" onclick="toggleDescription(this)">
+		<article id="Project4" class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
 				<span>Personal Website</span>
 				<div class="project-icons">
-					<img src="images/html-logo-only.png" alt="HTML Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-					<img src="images/css-logo-only.png" alt="CSS Logo" class="project-icon" style="width: 22px; height: 30px; margin-left: 10px;">
+					<img src="assets/html-logo-only.png" alt="HTML Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/css-logo-only.png" alt="CSS Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
 					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
 				</div>
-			</div>
+			</header>
 			<div class="project-description">
 				<iframe src="overviews/personal website.html"></iframe>
 			</div>
-		</div>
-	</div>
+		</article>
 
-    
-</div>
+    </section>
+</main>
 
 <!-- Footer -->
 <footer class="w3-container w3-center w3-margin-top" style="padding: 20px 0;">
@@ -402,55 +422,68 @@
 </footer>
 
 <!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="myBtn" title="Scroll to top">Scroll to Top</button>
+<button onclick="scrollToTop()" id="myBtn" title="Scroll to top">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i> Top
+</button>
+
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="myBtn" title="Scroll to top"><i class="fa fa-chevron-up" aria-hidden="true"></i> Top</button>
 
 <script>
-// Scroll to top script
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
-function scrollToTop() {
-	window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+	// Function to toggle the visibility of project descriptions
+	function toggleDescription(element) {
+		const description = element.nextElementSibling; // Get the next sibling element (description)
+		const isExpanded = element.getAttribute('aria-expanded') === 'true'; // Check if it's currently expanded
 
-// Toggle project description visibility
-function toggleDescription(element) {
-    const description = element.nextElementSibling;
-    const isExpanded = element.getAttribute('aria-expanded') === 'true';
+		// Close all other open descriptions
+		document.querySelectorAll('.project-description').forEach((desc) => {
+			desc.style.display = 'none'; // Hide all descriptions
+			desc.previousElementSibling.setAttribute('aria-expanded', 'false'); // Update aria-expanded attribute
+		});
 
-    // Close all other open descriptions
-    document.querySelectorAll('.project-description').forEach((desc) => {
-        desc.style.display = 'none';
-    });
+		// Toggle the visibility of the selected description
+		description.style.display = isExpanded ? 'none' : 'block'; // Show/hide the description
+		element.setAttribute('aria-expanded', !isExpanded); // Update aria-expanded attribute for the clicked element
+	}
 
-    // Toggle the selected description
-    description.style.display = isExpanded ? 'none' : 'block';
-    element.setAttribute('aria-expanded', !isExpanded);
-}
+	// Function to highlight the project based on the URL hash
+	function highlightProject() {
+		const hash = window.location.hash; // Get the hash from the URL
+		const projectDiv = document.querySelector(hash); // Select the project div using the hash
 
+		if (projectDiv) {
+			projectDiv.classList.add('highlight'); // Add highlight class to the project
 
-// Function to highlight project based on URL hash
-    function highlightProject() {
-        const hash = window.location.hash; // Get the hash from the URL
-        const projectDiv = document.querySelector(hash); // Select the project div using the hash
+			// Remove highlight after 2 seconds
+			setTimeout(() => {
+				projectDiv.classList.remove('highlight'); // Remove highlight class
+			}, 2000);
+		}
+	}
 
-        if (projectDiv) {
-            projectDiv.classList.add('highlight'); // Add highlight class
-            
-            // Remove highlight after 5 seconds
-            setTimeout(() => {
-                projectDiv.classList.remove('highlight');
-            }, 2000);
-        }
-    }
+	// Call the highlightProject function when the page loads
+	window.onload = highlightProject;
 
-    // Call the function on page load
-    window.onload = highlightProject;
+	let prevScrollPos = window.pageYOffset; // Store the previous scroll position
+	const navbar = document.querySelector('nav'); // Select the navbar element
+
+	// Combined scroll function for navbar and scroll button
+	window.onscroll = function() {
+		let currentScrollPos = window.pageYOffset; // Get the current scroll position
+
+		// Show the navbar when scrolling up, hide it when scrolling down
+		navbar.style.top = prevScrollPos > currentScrollPos ? "0" : "-60px"; // Adjust navbar visibility
+		prevScrollPos = currentScrollPos; // Update previous scroll position
+
+		// Show/hide scroll-to-top button based on scroll position
+		const scrollButton = document.getElementById("myBtn"); // Get the scroll button
+		scrollButton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+	};
+
+	// Function to scroll to the top of the page smoothly
+	function scrollToTop() {
+		window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top with smooth behavior
+	}
 </script>
 
 </body>
