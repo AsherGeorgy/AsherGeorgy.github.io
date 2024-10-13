@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact - Asher V Georgy</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Contact Asher V Georgy for inquiries regarding projects, collaborations, and more.">
     <meta name="keywords" content="Asher V Georgy, contact, email, phone, Twitter, Reddit, GitHub, LinkedIn">
     <meta name="author" content="Asher V Georgy">
+    <title>Contact - Asher V Georgy</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest" type="application/manifest+json">
     <style>
-        html, body, h1, h2, h3 {
+        body, html {
             font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            padding-top: 16px;
         }
-        .w3-container { max-width: 1200px; margin: auto; }
+
         /* Navbar */
         .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 999;
+			background-color: #333;
+			transition: top 0.3s ease;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		}
 
         .navbar a {
             float: left;
@@ -45,22 +54,32 @@
             background-color: #4CAF50; 
             color: white; 
         }
-		/* Link Styles */
-		a {
-			color: #009688; 
-			text-decoration: none; 
-			transition: color 0.3s ease; 
-		}
 
-		a:hover {
-			text-decoration: underline; 
-		}
+        .w3-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Link Styles */
+        a {
+            color: #009688;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         /* Footer */
         footer {
             background-color: #333;
             color: #f2f2f2;
             padding: 30px 20px;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         footer a {
@@ -73,38 +92,47 @@
         footer a:hover {
             color: #009688;
         }
-        .contact-item {
-			margin: 10px 0;
-			padding: 19px;
-			background-color: white;
-			border-radius: 5px;
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-			display: flex;
-			align-items: center;
-		}
 
-		.contact-item i {
-			margin-right: 10px;
-			color: #00796b;
-			font-size: 20px;
-		}
-		.w3-row {
-			margin-bottom: 20px;
-		}
+        .contact-item {
+            margin: 10px 0;
+            padding: 19px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item i {
+            margin-right: 10px;
+            color: #00796b;
+            font-size: 20px;
+        }
+
+        .w3-row {
+            margin-bottom: 20px;
+        }
+
         .sidebar {
             float: right;
             width: 30%;
             padding: 10px;
+            display: inline-block;
+            vertical-align: top;
         }
+
         .main-content {
             float: left;
             width: 65%;
+            display: inline-block;
+            vertical-align: top;
         }
 
         @media (max-width: 768px) {
             .sidebar, .main-content {
                 float: none;
                 width: 100%;
+                display: block;
             }
         }
     </style>
@@ -112,68 +140,79 @@
 <body class="w3-light-grey">
 
 <!-- Navigation Bar -->
-<div class="navbar">
+<nav class="navbar">
     <a href="index.html">Home</a>
     <a href="resume.html">Resume</a>
     <a href="portfolio.html">Portfolio</a>
     <a class="active" href="contact.html">Contact</a>
-</div>
+</nav>
 
 <!-- Contact Section -->
-<div class="w3-container w3-padding-32 w3-white w3-margin-top">
-    <h1 class="w3-center">Contact Me</h1>
+<main class="w3-container w3-padding-32 w3-white w3-margin-top">
+    <h1 class="w3-center">Contact Me <i class="fa-regular fa-address-card" style="margin-left:10px;"></i></h1>
     <h5 class="w3-center">Feel free to connect with me through any of the following methods:</h5>
     <hr>
 
-    <div class="main-content">
-        <div class="contact-item">
+    <section class="main-content">
+        <article class="contact-item">
             <i class="fa fa-envelope"></i>
             <span>Email: <a href="mailto:asher.georgy@outlook.com">asher.georgy@outlook.com</a></span>
-        </div>
-        <div class="contact-item">
-            <i class="fa fa-twitter"></i>
-            <span>x.com <a href="https://x.com/AsherTweetsHere" target="_blank" rel="noopener noreferrer">@AsherTweetsHere</a></span>
-        </div>
-        <div class="contact-item">
-            <i class="fa fa-reddit-alien"></i>
-            <span>Reddit: <a href="https://www.reddit.com/user/stormcloak573/" target="_blank" rel="noopener noreferrer">u/stormcloak573</a></span>
-        </div>
-        <div class="contact-item">
-            <i class="fa fa-github"></i>
+        </article>
+        <article class="contact-item">
+            <i class="fa-brands fa-github"></i>
             <span>GitHub: <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">github.com/AsherGeorgy</a></span>
-        </div>
-        <div class="contact-item">
-            <i class="fa fa-linkedin"></i>
+        </article>
+        <article class="contact-item">
+            <i class="fa-brands fa-linkedin"></i>
             <span>LinkedIn: <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">linkedin.com/in/ashergeorgy</a></span>
-        </div>
+        </article>
         <br>
-        <h5>Find me here elsewhere:</h5>
-        <div class="contact-item">
-            <i class="fa fa-twitter"></i>
+        <h5>Find me elsewhere:</h5>
+        <article class="contact-item">
+            <i class="fa-brands fa-x-twitter"></i>
             <span>x.com <a href="https://x.com/AsherTweetsHere" target="_blank" rel="noopener noreferrer">@AsherTweetsHere</a></span>
-        </div>
-        <div class="contact-item">
-            <i class="fa fa-reddit-alien"></i>
+        </article>
+        <article class="contact-item">
+            <i class="fa-brands fa-reddit-alien"></i>
             <span>Reddit: <a href="https://www.reddit.com/user/stormcloak573/" target="_blank" rel="noopener noreferrer">u/stormcloak573</a></span>
-        </div>
-        <div class="contact-item">
-            <span>Duolingo.com: <a href="https://www.duolingo.com/profile/Ash_Geo" target="_blank" rel="noopener noreferrer">Ash_Geo</a></span>
-        </div>
-    </div>
+        </article>
+        <article class="contact-item">
+            <i class="fa-solid fa-d"></i>
+            <span>Duolingo: <a href="https://www.duolingo.com/profile/Ash_Geo" target="_blank" rel="noopener noreferrer">Ash_Geo</a></span>
+        </article>
+    </section>
 
-    <div class="sidebar">
-		<!-- Twitter Embed -->
-		<a class="twitter-timeline" data-theme="light" href="https://twitter.com/AsherTweetsHere?ref_src=twsrc%5Etfw">Tweets by AsherTweetsHere</a>
-		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		<em><strong>Note:</strong> X posts may not be displayed due to an update made by X.com. Click on the above button and log into your X account to view posts.</em>
-    </div>
-</div>
+    <aside class="sidebar">
+        <!-- Twitter Embed -->
+        <a class="twitter-timeline" data-theme="light" href="https://twitter.com/AsherTweetsHere?ref_src=twsrc%5Etfw">Tweets by AsherTweetsHere</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <p><em><strong>Note:</strong> X posts may not be displayed due to a recent update made by X.com. Click on the above button and log into your X account to view posts.</em></p>
+    </aside>
+</main>
 
+<!-- Footer -->
 <footer class="w3-container w3-center w3-margin-top" style="padding: 30px 0;">
     <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">GitHub</a> |
     <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
     <a href="mailto:asher.georgy@outlook.com">Email</a>
 </footer>
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector('.navbar');
+
+    window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+
+        // Show navbar when scrolling up, hide when scrolling down
+        if (prevScrollPos > currentScrollPos) {
+            navbar.style.top = "0"; // Navbar visible
+        } else {
+            navbar.style.top = "-60px"; // Navbar hidden
+        }
+        prevScrollPos = currentScrollPos;
+    };
+</script>
 
 </body>
 </html>
