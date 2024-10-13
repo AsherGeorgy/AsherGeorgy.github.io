@@ -18,12 +18,12 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 	<!-- Favicon Links -->
-	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<style>
 		:root {
@@ -35,60 +35,70 @@
 			--shadow: rgba(0, 0, 0, 0.1);
 		}
 
-		body {
-			font-family: "Roboto", sans-serif;
-			background-color: var(--bg-color);
-			font-size: 16px; /* Ensure a base size for readability */
-		}
+		body, html {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+			padding-top: 16px;
+        }
 
 		/* Navbar */
-		.navbar {
+        .navbar {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 999;
 			background-color: #333;
-			overflow: hidden;
+			transition: top 0.3s ease;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		}
 
-		.navbar a {
-			float: left;
-			display: block;
-			color: #f2f2f2;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			transition: background-color 0.3s ease, color 0.3s ease;
-		}
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-		.navbar a:hover {
-			background-color: #ddd; 
-			color: black; 
-		}
+        .navbar a:hover {
+            background-color: #ddd; 
+            color: black; 
+        }
 
-		.navbar a.active { 
-			background-color: #4CAF50; 
-			color: white; 
-		}
+        .navbar a.active { 
+            background-color: #4CAF50; 
+            color: white; 
+        }
 
 		.text-white {
 			color: var(--text-white);
 		}
 
 		/* Footer */
-		footer {
-			background-color: #333;
-			color: #f2f2f2;
-			padding: 30px 20px;
-			text-align: center;
-		}
+        footer {
+            background-color: #333;
+            color: #f2f2f2;
+            padding: 30px 20px;
+            text-align: center;
+			display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-		footer a {
-			color: #f2f2f2;
-			text-decoration: none;
-			margin: 0 10px;
-			transition: color 0.3s ease;
-		}
+        footer a {
+            color: #f2f2f2;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
 
-		footer a:hover {
-			color: #009688;
-		}
+        footer a:hover {
+            color: #009688; 
+        }
 
 		.contact-link {
 			text-decoration: none;
@@ -103,39 +113,46 @@
 
 		h2 {
 			color: var(--text-teal);
+			margin-bottom: 10px;
 		}
 
 		.skills-container {
-			margin: 20px 0;
+			margin: 15px 0;
 			padding: 15px;
 			background-color: var(--skill-bg);
 			border-radius: 8px;
 			box-shadow: 0 2px 4px var(--shadow);
 		}
+		
+		.skills-container h2 {
+			margin: 0; 
+			margin-bottom: 10px;
+			color: #808080;
+		}
 
 		/* Accessibility - minimum font sizes */
 		body, .navbar a, footer {
-			font-size: 1rem; /* At least 16px font size for readability */
-		}
-
+			font-size: 1rem; 
+		
+		/* Media Queries */
 		@media only screen and (max-width: 600px) {
 			.w3-third, .w3-twothird {
 				width: 100%;
 			}
 
 			body {
-				font-size: 0.9rem; /* Scale down the font slightly on small screens */
+				font-size: 0.9rem; 
 			}
 		}
 
-		/* New media query for tablets */
+		/* Media query for tablets */
 		@media only screen and (min-width: 600px) and (max-width: 900px) {
 			.w3-third, .w3-twothird {
-				width: 48%; /* Adjustment for tablet-sized screens */
+				width: 48%; 
 			}
 
 			.skills-container {
-				padding: 20px; /* More padding on larger screens for aesthetics */
+				padding: 20px; 
 			}
 		}
 
@@ -153,7 +170,7 @@
 		}
 
 		.image-background {
-			background-image: url('images/Asher_photo.jpg');
+			background-image: url('assets/Asher_photo.jpg');
 			background-size: cover;
 			background-position: center;
 			width: 100%;
@@ -169,6 +186,90 @@
 			background: rgba(255, 255, 255, 0); 
 			pointer-events: none; 
 		}
+		/* Modal and Icon Styles */
+		.info-icon {
+			color: #808080;
+			transition: color 0.3s ease, transform 0.3s ease;
+			cursor: pointer;
+			margin-left: 5px;
+			font-size: 0.5em; 
+		}
+
+		.info-icon:hover {
+			color: #36a9e1;
+			transform: scale(1.2);
+		}
+
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+
+		.modal-content {
+			background-color: #fefefe;
+			margin: 10% auto;
+			padding: 20px;
+			border-radius: 8px;
+			width: 80%;
+			max-width: 400px;
+			animation: popIn 0.4s ease-out;
+			transform-origin: center;
+		}
+
+		.close {
+			color: #aaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.close:hover {
+			color: black;
+		}
+
+		@keyframes popIn {
+			0% {
+				transform: scale(0.8);
+				opacity: 0;
+			}
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+		.tab {
+			display: flex;
+			border-bottom: 2px solid #ddd; /* Add a bottom border */
+			justify-content: space-around;
+		}
+
+		.tab button {
+			background-color: transparent; /* Make background transparent */
+			border: none; /* Remove border */
+			padding: 10px 15px; /* Add padding */
+			cursor: pointer; /* Change cursor to pointer */
+			transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+			outline: none; /* Remove outline */
+		}
+
+		.tab button:hover {
+			background-color: #D3D3D3; /* Background color on hover */
+			color: white; /* Change text color on hover */
+		}
+
+		.tab button.active {
+			background-color: #D3D3D3; /* Active tab background */
+			color: white; /* Active tab text color */
+			border-radius: 5px 5px 0 0; /* Rounded corners on active tab */
+		}
+
 
 	</style>
 </head>
@@ -187,6 +288,7 @@
 			<!-- Left Column -->
 			<div class="w3-third">
 				<div class="w3-white w3-text-grey w3-card-4">
+					<!-- Profile Image -->
 					<div class="w3-display-container image-container">
 						<div class="image-background"></div>
 						<div class="image-overlay"></div>
@@ -194,50 +296,142 @@
 							<h1></h1>
 						</div>
 					</div>
+					
+					<!-- Contact Info -->
 					<div class="w3-container">
 						<h1>Asher Georgy</h1>
 						<p>
 							<i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
-							<a class="contact-link" href="mailto:georgy.asher@gmail.com">georgy.asher@gmail.com</a>
+							<a class="contact-link" href="mailto:asher.georgy@outlook.com">asher.georgy@outlook.com</a>
 						</p>
 						<p>
-							<i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-teal"></i>
+							<i class='fa-brands fa-linkedin' style="color:#009688; margin-right:20px; margin-left:2px; font-size:20px"></i>
 							<a class="contact-link" href="https://www.linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+						</p>
+						<p>
+							<i class="fa-regular fa-file-pdf" style="color:red; margin-right:18px; margin-left:2px; font-size:18px"></i>
+							<a class="contact-link" href="assets/Asher_Georgy_Resume.pdf" style="color:red;">Download PDF</a>
 						</p>
 						<hr>
 					</div>
+
 				</div>
+				
 				<!-- Technical Skills Container -->
                <div class="skills-container">
-                  <p style="text-align: left;">
+    <h2 style="display: flex; align-items: center; margin-bottom: 12px;"><i class='fas fa-laptop-code' style= "color:#009688; margin-right:10px; font-size:30px"></i>
+    Technical Skills
+    <span class="info-icon" title="Click to view details." onclick="openModal('skillsModal')">
+        <i class="fas fa-info-circle"></i>
+    </span>
+</h2>
+    
+    <!-- Skills Progress Bars -->
+				  <p style="text-align: left; position: relative;">
                      <strong>Microsoft Excel</strong>
-                     <img src="images/excel-logo-only.png" alt="Excel Logo" style="height: 1.5em; float: right; margin-left: 5px;">
+                     <img src="assets/excel-logo-only.png" alt="Excel Logo" style="height: 1.6em; float: right; margin-left: 5px;">
                   </p>
                   <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%" aria-label="85 percent proficiency in Microsoft Excel">85%</div>
+                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%" aria-label="Microsoft Excel proficiency of 85 percent">85%</div>
                   </div>
-                  <p style="text-align: left;">
+                  <p style="text-align: left; position: relative;">
                      <strong>Python</strong>
-                     <img src="images/python-logo-only.png" alt="Python Logo" style="height: 1.5em; float: right; margin-left: 5px;">
+                     <img src="assets/python-logo-only.png" alt="Python Logo" style="height: 1.6em; float: right; margin-left: 5px;">
                   </p>
                   <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%" aria-label="70 percent proficiency in Python">70%</div>
+                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%" aria-label="Python proficiency of 70 percent">70%</div>
                   </div>
-                  <p style="text-align: left;">
+				  <p style="text-align: left; position: relative;">
+                     <strong>Git</strong>
+                     <img src="assets/git-logo-only.png" alt="Git Logo" style="height: 1.6em; float: right; margin-left: 5px;">
+                  </p>
+                  <div class="w3-light-grey w3-round-xlarge w3-small">
+                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%" aria-label="Git proficiency of 50 percent">50%</div>
+                  </div>
+                  <p style="text-align: left; position: relative;">
                      <strong>SQL</strong>
-                     <img src="images/sql-logo-only.png" alt="SQL Logo" style="height: 1.5em; float: right; margin-left: 5px;">
+                     <img src="assets/sql-logo-only.png" alt="SQL Logo" style="height: 1.6em; float: right; margin-left: 5px;">
                   </p>
                   <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%" aria-label="40 percent proficiency in SQL">40%</div>
+                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%" aria-label="SQL proficiency of 40 percent">40%</div>
                   </div>
-                  <p style="text-align: left;">
+                  <p style="text-align: left; position: relative;">
                      <strong>HTML, CSS</strong>
-                     <img src="images/html-logo-only.png" alt="HTML Logo" style="height: 1.5em; float: right; margin-left: 5px;"><img src="images/css-logo-only.png" alt="CSS Logo" style="height: 1.5em; float: right; margin-left: 5px;">
+                     <img src="assets/html-logo-only.png" alt="HTML Logo" style="height: 1.6em; float: right; margin-left: 5px;"><img src="assets/css-logo-only.png" alt="CSS Logo" style="height: 1.6em; float: right; margin-left: 5px;">
                   </p>
                   <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:30%" aria-label="30 percent proficiency in HTML">30%</div>
+                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:30%" aria-label="HTML,CSS proficiency of 30 percent">30%</div>
                   </div>
-               </div>
+</div>			   
+			   <!-- Modal -->
+<div id="skillsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('skillsModal')">&times;</span>
+        <div class="tab">
+            <button class="tablinks" data-skill="Excel" onclick="openTab(event, 'Excel')">
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="Python" onclick="openTab(event, 'Python')">
+                <img src="assets/python-logo-only.png" alt="Python Logo" style="height: 30px;">
+            </button>
+            <button class="tablinks" data-skill="Git" onclick="openTab(event, 'Git')">
+				<img src="assets/git-logo-only.png" alt="Git Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="SQL" onclick="openTab(event, 'SQL')">
+				<img src="assets/sql-logo-only.png" alt="SQL Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="HTMLCSS" onclick="openTab(event, 'HTMLCSS')">
+				<img src="assets/html-logo-only.png" alt="HTML Logo" style="height: 30px;">
+				<img src="assets/css-logo-only.png" alt="CSS Logo" style="height: 30px;">
+			</button>
+        </div>
+
+        <div id="Excel" class="tabcontent" style="display:block;">
+            <h3>Microsoft Excel</h3>
+            <ul>
+                <li>Proficient in creating and managing complex spreadsheets for data manipulation and analysis.</li>
+                <li>Can utilize advanced functions and formulas, generate pivot tables for data analysis, and automate repetitive tasks with macros.</li>
+                <li>Comfortable with data visualization techniques such as charts and conditional formatting.</li>
+            </ul>
+        </div>
+
+        <div id="Python" class="tabcontent">
+            <h3>Python</h3>
+            <ul>
+                <li>Able to work with popular data manipulation and visualization libraries, such as Pandas, NumPy, and Matplotlib.</li>
+                <li>Experienced in handling time-series data, performing statistical analysis, and creating interactive plots.</li>
+                <li>Can perform web scraping, manage financial datasets and automate data-related tasks.</li>
+            </ul>
+        </div>
+
+        <div id="Git" class="tabcontent">
+            <h3>Git</h3>
+            <ul>
+                <li>Familiar with essential Git commands and workflows for version control, including creating and switching branches, committing changes, and merging branches.</li>
+                <li>Can manage repositories on platforms like GitHub, collaborate with team members, and perform code reviews.</li>
+				<li>Comfortable resolving basic merge conflicts and understanding the importance of commit messages and history tracking.</li>
+            </ul>
+        </div>
+
+        <div id="SQL" class="tabcontent">
+            <h3>SQL</h3>
+            <ul>
+                <li>Capable of writing basic SQL queries to retrieve and manipulate data from relational databases.</li>
+                <li>Proficient in using SELECT statements with filtering options, employing WHERE clauses for conditions, and performing simple JOIN operations to combine data from multiple tables.</li>
+				<li>Familiar with basic aggregate functions (e.g., COUNT, SUM, AVG) for summarizing data.</li>
+            </ul>
+        </div>
+
+        <div id="HTMLCSS" class="tabcontent">
+            <h3>HTML, CSS</h3>
+            <ul>
+                <li>Able to create simple web pages using HTML and CSS.</li>
+                <li>Understands fundamental HTML tags for structuring content and basic CSS rules for styling.</li>
+                <li>Familiar with responsive design principles and layout techniques.</li>
+            </ul>
+        </div>
+    </div>
+</div>
 				<!-- End Technical Skills Container -->
 				<br>
 			</div>
@@ -245,16 +439,16 @@
 			<div class="w3-twothird">
 				<div class="w3-container w3-card w3-white w3-margin-bottom w3-round-xlarge">
 					<h2 class="w3-text-grey w3-padding-16">
-						<img src="images/work_experience_icon.png" alt="Work Experience Icon" style="height: 1.5em; display: inline-block; margin-right: 10px;">
+						<i class="fa fa-briefcase" style= "color:#009688; margin-right:10px; font-size:30px"></i>
 						Work Experience
 					</h2>
 					<div class="w3-container">
 						<h5 class="w3-opacity"><b>Financial Reporting Analyst / Diwali Investments LLC</b></h5>
 						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2021 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
 						<ul>
-							<li>Collaborated with a US firm to create income expense summaries in Excel.</li>
+							<li>Collaborated with a US firm to create cash flow summaries in Excel.</li>
 							<li>Developed user-friendly dashboards for quick access to monthly financial insights.</li>
-							<li>Communicated effectively with the team to deliver timely, accurate reports.</li>
+							<li>Communicated effectively to deliver timely, accurate reports.</li>
 						</ul>
 						<hr>
 					</div>
@@ -270,12 +464,12 @@
 				</div>
 				<div class="w3-container w3-card w3-white w3-round-xlarge">
 					<h2 class="w3-text-grey w3-padding-16">
-						<img src="images/education_icon.png" alt="Education Icon" style="height: 2em; display: inline-block; margin-right: 10px;">
+						<i class='fa-solid fa-graduation-cap' style= "color:#009688; margin-right:10px; font-size:30px"></i>
 						Education
 					</h2>
 					<div class="w3-container">
 						<h5 class="w3-opacity"><b>Affiliate / Association of Chartered Certified Accountants 
-						 <img src="images/ACCA_logo.png" alt="ACCA Logo" style="height: 1.5em; display: inline-block; margin-left: 5px;"></b>
+						 <img src="assets/ACCA_logo.png" alt="ACCA Logo" style="height: 1.5em; display: inline-block; margin-left: 5px;"></b>
 						</h5>
 						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2023</h6>
 						<ul>
@@ -286,7 +480,7 @@
 					</div>
 					<div class="w3-container">
 						<h5 class="w3-opacity"><b>Bachelor of Commerce (B.Com) / University of Kerala  
-						 <img src="images/Kerala_University_Emblem.png" alt="University of Kerala Logo" style="height: 1.5em; vertical-align: top;"> </b>
+						 <img src="assets/Kerala_University_Emblem.png" alt="University of Kerala Logo" style="height: 1.5em; vertical-align: top;"> </b>
 						</h5>
 						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017 - 2020</h6>
 						<ul>
@@ -309,9 +503,75 @@
 	</footer>
 
 	<script>
-		document.addEventListener('contextmenu', function(e) {
-			e.preventDefault();
-		});
-	</script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+	// Open modal function
+	function openModal(id) {
+		document.getElementById(id).style.display = 'block';
+
+		// Create a synthetic event for the Excel tab
+		const excelTab = document.querySelector(".tablinks[data-skill='Excel']");
+		if (excelTab) {
+			excelTab.classList.add("active"); // Set Excel tab as active
+		}
+
+		// Show the Excel content by default
+		openTab({ currentTarget: excelTab }, 'Excel'); // Pass the synthetic event
+	}
+
+
+	// Close modal function
+	function closeModal(id) {
+		document.getElementById(id).style.display = 'none';
+	}
+	
+	// Close with esc key
+	document.addEventListener('keydown', function(event) {
+		if (event.key === 'Escape') {
+			closeModal('skillsModal');
+		}
+	});
+
+    // Close modal when clicking outside
+	window.onclick = function(event) {
+    const modal = document.getElementById('skillsModal');
+    if (event.target === modal) {
+        closeModal('skillsModal');
+    }
+	};
+	
+    function openTab(evt, skillName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";  
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active"); // Remove active class from all tabs
+    }
+    document.getElementById(skillName).style.display = "block";  
+    evt.currentTarget.classList.add("active"); // Add active class to the clicked tab
+	}
+	
+	let prevScrollPos = window.pageYOffset;
+	const navbar = document.querySelector('.navbar');
+
+	window.onscroll = function() {
+	  let currentScrollPos = window.pageYOffset;
+	  
+	  // Show navbar when scrolling up, hide when scrolling down
+	  if (prevScrollPos > currentScrollPos) {
+		navbar.style.top = "0"; // Navbar visible
+	  } else {
+		navbar.style.top = "-60px"; // Navbar hidden
+	  }
+	  prevScrollPos = currentScrollPos;
+	};
+
+</script>
+
 </body>
 </html>
