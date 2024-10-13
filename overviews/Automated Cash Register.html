@@ -10,6 +10,28 @@
         img { max-width: 100%; height: auto; }
         code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
         hr { border: 1px solid #ccc; }
+		
+		/* Base font size for portrait mode */
+		body {
+			font-size: 16px; /* Default font size */
+		}
+
+		/* Adjust font size for landscape orientation */
+		@media screen and (orientation: landscape) {
+			body {
+				font-size: 14px; /* Smaller font size for landscape */
+			}
+		}
+
+		th {
+			background-color: #f4f4f4;
+		}
+
+		@media (max-width: 600px) {
+			th, td {
+				font-size: 14px; /* Adjust font size for smaller screens */
+			}
+		}
     </style>
 </head>
 <body>
@@ -17,7 +39,7 @@
 <h2>Overview</h2>
 <p>This Excel-based system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month.</p> 
 
-<p><strong><a href="full project/Automated Cash Register.md" target="_blank">View the full project on Github</a>.</strong></p>
+<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Microsoft%20Excel/Automated%20Monthly%20Cash%20Flow%20Manager.md" target="_blank">View the full project on Github</a>.</strong></p>
 
 <h2>How It Works</h2>
 <ul>
@@ -35,7 +57,7 @@
 
 <h2>Screenshots:</h2>
 <h3>Register Sheet:</h3>
-<img src="images/Register Sheet.png" alt="Register Sheet">
+<img src="images/Register Sheet.png" alt="Register Sheet" style="width:75%; height:auto;">
 
 <hr>
 
