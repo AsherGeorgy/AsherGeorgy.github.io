@@ -17,6 +17,28 @@
             max-width: 100%;
             height: auto;
         }
+		
+		/* Base font size for portrait mode */
+		body {
+			font-size: 16px; /* Default font size */
+		}
+
+		/* Adjust font size for landscape orientation */
+		@media screen and (orientation: landscape) {
+			body {
+				font-size: 14px; /* Smaller font size for landscape */
+			}
+		}
+
+		th {
+			background-color: #f4f4f4;
+		}
+
+		@media (max-width: 600px) {
+			th, td {
+				font-size: 14px; /* Adjust font size for smaller screens */
+			}
+		}
     </style>
 </head>
 <body>
@@ -29,7 +51,7 @@
 	Investors require a systematic approach to evaluate the expected returns of securities based on their risk. The CAPM serves as a foundational model in finance for understanding the relationship between risk and return, while the Sharpe Ratio helps investors assess the risk-adjusted performance of their investments. Together, these tools enable more informed investment decisions.
 </p>
 
-<p><strong><a href="full project/CAPM Analysis and Risk-Return.md" target="_blank">View the full project on Github</a>.</strong></p>
+<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Capital%20Asset%20Pricing%20Model.md" target="_blank">View the full project on Github</a>.</strong></p>
 
 <h2>Approach</h2>
 <ol>
