@@ -471,8 +471,12 @@
 	window.onscroll = function() {
 		let currentScrollPos = window.pageYOffset; // Get the current scroll position
 
-		// Show the navbar when scrolling up, hide it when scrolling down
-		navbar.style.top = prevScrollPos > currentScrollPos ? "0" : "-60px"; // Adjust navbar visibility
+		// Show the navbar when at the top or scrolling up, hide it when scrolling down
+		if (currentScrollPos === 0 || prevScrollPos > currentScrollPos) {
+			navbar.style.top = "0"; // Show navbar
+		} else {
+			navbar.style.top = "-60px"; // Hide navbar
+		}
 		prevScrollPos = currentScrollPos; // Update previous scroll position
 
 		// Show/hide scroll-to-top button based on scroll position
