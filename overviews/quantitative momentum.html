@@ -11,27 +11,30 @@
         th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
         th { background-color: #f4f4f4; }
 
-		/* Base font size for portrait mode */
-		body {
-			font-size: 16px; /* Default font size */
-		}
+        /* Prevent horizontal scroll */
+        .table-container {
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+        }
 
-		/* Adjust font size for landscape orientation */
-		@media screen and (orientation: landscape) {
-			body {
-				font-size: 14px; /* Smaller font size for landscape */
-			}
-		}
+        /* Base font size for portrait mode */
+        body {
+            font-size: 16px; /* Default font size */
+        }
 
-		th {
-			background-color: #f4f4f4;
-		}
+        /* Adjust font size for landscape orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 14px; /* Smaller font size for landscape */
+            }
+        }
 
-		@media (max-width: 600px) {
-			th, td {
-				font-size: 14px; /* Adjust font size for smaller screens */
-			}
-		}
+        /* Adjust font size for smaller screens */
+        @media (max-width: 600px) {
+            th, td {
+                font-size: 14px; /* Smaller font size */
+                padding: 8px; /* Adjust padding */
+            }
+        }
     </style>
 </head>
 <body>
@@ -77,97 +80,98 @@
 </ol>
 
 <h2>Visuals</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Ticker</th>
-            <th>Stock Price</th>
-            <th>HQM Score</th>
-            <th>No of shares to buy</th>
-            <th>One Year Price Return</th>
-            <th>One Year Return Percentile</th>
-            <th>Six Month Price Return</th>
-            <th>Six Month Return Percentile</th>
-            <th>Three Month Price Return</th>
-            <th>Three Month Return Percentile</th>
-            <th>One Month Price Return</th>
-            <th>One Month Return Percentile</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>VST</td>
-            <td>124.18</td>
-            <td>98</td>
-            <td>1610</td>
-            <td>292.34</td>
-            <td>100</td>
-            <td>76.369412</td>
-            <td>98</td>
-            <td>35.875208</td>
-            <td>94</td>
-            <td>63.611046</td>
-            <td>100</td>
-        </tr>
-        <tr>
-            <td>PLTR</td>
-            <td>43.13</td>
-            <td>97</td>
-            <td>4637</td>
-            <td>142.3</td>
-            <td>96</td>
-            <td>92.372885</td>
-            <td>100</td>
-            <td>56.041975</td>
-            <td>100</td>
-            <td>24.079411</td>
-            <td>92</td>
-        </tr>
-        <tr>
-            <td>CEG</td>
-            <td>262.28</td>
-            <td>83</td>
-            <td>762</td>
-            <td>133.89</td>
-            <td>94</td>
-            <td>37.727767</td>
-            <td>76</td>
-            <td>21.180846</td>
-            <td>64</td>
-            <td>45.509015</td>
-            <td>98</td>
-        </tr>
-        <tr>
-            <td>FICO</td>
-            <td>2024.99</td>
-            <td>82</td>
-            <td>98</td>
-            <td>127.74</td>
-            <td>90</td>
-            <td>71.430629</td>
-            <td>96</td>
-            <td>29.184314</td>
-            <td>84</td>
-            <td>12.669699</td>
-            <td>58</td>
-        </tr>
-        <tr>
-            <td>AXON</td>
-            <td>432.14</td>
-            <td>80.5</td>
-            <td>462</td>
-            <td>100.72</td>
-            <td>70</td>
-            <td>35.782065</td>
-            <td>70</td>
-            <td>48.420116</td>
-            <td>98</td>
-            <td>20.25602</td>
-            <td>84</td>
-        </tr>
-    </tbody>
-</table>
-
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Ticker</th>
+                <th>Stock Price</th>
+                <th>HQM Score</th>
+                <th>No of shares to buy</th>
+                <th>One Year Price Return</th>
+                <th>One Year Return Percentile</th>
+                <th>Six Month Price Return</th>
+                <th>Six Month Return Percentile</th>
+                <th>Three Month Price Return</th>
+                <th>Three Month Return Percentile</th>
+                <th>One Month Price Return</th>
+                <th>One Month Return Percentile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>VST</td>
+                <td>124.18</td>
+                <td>98</td>
+                <td>1610</td>
+                <td>292.34</td>
+                <td>100</td>
+                <td>76.37</td>
+                <td>98</td>
+                <td>35.88</td>
+                <td>94</td>
+                <td>63.61</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>PLTR</td>
+                <td>43.13</td>
+                <td>97</td>
+                <td>4637</td>
+                <td>142.3</td>
+                <td>96</td>
+                <td>92.37</td>
+                <td>100</td>
+                <td>56.04</td>
+                <td>100</td>
+                <td>24.08</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>CEG</td>
+                <td>262.28</td>
+                <td>83</td>
+                <td>762</td>
+                <td>133.89</td>
+                <td>94</td>
+                <td>37.73</td>
+                <td>76</td>
+                <td>21.18</td>
+                <td>64</td>
+                <td>45.51</td>
+                <td>98</td>
+            </tr>
+            <tr>
+                <td>FICO</td>
+                <td>2024.99</td>
+                <td>82</td>
+                <td>98</td>
+                <td>127.74</td>
+                <td>90</td>
+                <td>71.43</td>
+                <td>96</td>
+                <td>29.18</td>
+                <td>84</td>
+                <td>12.67</td>
+                <td>58</td>
+            </tr>
+            <tr>
+                <td>AXON</td>
+                <td>432.14</td>
+                <td>80.5</td>
+                <td>462</td>
+                <td>100.72</td>
+                <td>70</td>
+                <td>35.78</td>
+                <td>70</td>
+                <td>48.42</td>
+                <td>98</td>
+                <td>20.26</td>
+                <td>84</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>
