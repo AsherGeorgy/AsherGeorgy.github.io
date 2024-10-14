@@ -221,6 +221,17 @@
 			animation: popIn 0.4s ease-out;
 			transform-origin: center;
 		}
+		
+		.modal-content a {
+			color: #00796B;
+			text-align: center;
+			text-decoration: underline;
+			transition: color 0.3s ease;
+		}
+		
+		.modal-content a:hover {
+			color: #0000ff 
+		}
 
 		.close {
 			color: #aaa;
@@ -332,7 +343,7 @@
                      <img src="assets/excel-logo-only.png" alt="Excel Logo" style="height: 1.6em; float: right; margin-left: 5px;">
                   </p>
                   <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%" aria-label="Microsoft Excel proficiency of 85 percent">85%</div>
+                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%" aria-label="Microsoft Excel proficiency of 90 percent">90%</div>
                   </div>
                   <p style="text-align: left; position: relative;">
                      <strong>Python</strong>
@@ -346,7 +357,7 @@
                      <img src="assets/git-logo-only.png" alt="Git Logo" style="height: 1.6em; float: right; margin-left: 5px;">
                   </p>
                   <div class="w3-light-grey w3-round-xlarge w3-small">
-                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%" aria-label="Git proficiency of 50 percent">50%</div>
+                     <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%" aria-label="Git proficiency of 60 percent">60%</div>
                   </div>
                   <p style="text-align: left; position: relative;">
                      <strong>SQL</strong>
@@ -389,47 +400,55 @@
         <div id="Excel" class="tabcontent" style="display:block;">
             <h3>Microsoft Excel</h3>
             <ul>
-                <li>Proficient in creating and managing complex spreadsheets for data manipulation and analysis.</li>
-                <li>Can utilize advanced functions and formulas, generate pivot tables for data analysis, and automate repetitive tasks with macros.</li>
-                <li>Comfortable with data visualization techniques such as charts and conditional formatting.</li>
-            </ul>
+				<li><strong>Advanced Financial Modeling:</strong> Expertise in building integrated financial models with dynamic forecasting and DCF analysis.</li>
+				<li><strong>Data Processing:</strong> Proficient in data cleaning using functions like TRIM and SUBSTITUTE, along with Power Query for efficient transformation.</li>
+				<li><strong>Formulas and What-If Analysis:</strong> Skilled in advanced Excel functions (e.g., nested IFs, INDEX/MATCH) and performing What-If analysis using Scenario Manager and Goal Seek.</li>
+				<li><strong>Interactive Dashboards and Automation:</strong> Capable of creating sophisticated dashboards with charts and slicers, and familiar with automating tasks through Macros and basic VBA scripting.</li>
+			</ul>
         </div>
 
         <div id="Python" class="tabcontent">
             <h3>Python</h3>
             <ul>
-                <li>Able to work with popular data manipulation and visualization libraries, such as Pandas, NumPy, and Matplotlib.</li>
-                <li>Experienced in handling time-series data, performing statistical analysis, and creating interactive plots.</li>
-                <li>Can perform web scraping, manage financial datasets and automate data-related tasks.</li>
+                <li><strong>Data Analysis and Manipulation:</strong> Proficient in using Pandas for data analysis, including data retrieval, cleaning, and manipulation of financial datasets.</li>
+				<li><strong>Financial Modeling:</strong> Understanding of portfolio optimization and risk assessment techniques, with the ability to apply fundamental financial models.</li>
+				<li><strong>Statistical Analysis:</strong> Knowledge of calculating key financial metrics, such as returns, volatility, and risk-adjusted performance measures.</li>
+				<li><strong>Data Visualization:</strong> Able to create informative visualizations using Matplotlib to effectively communicate data insights.</li>
             </ul>
         </div>
 
         <div id="Git" class="tabcontent">
             <h3>Git</h3>
             <ul>
-                <li>Familiar with essential Git commands and workflows for version control, including creating and switching branches, committing changes, and merging branches.</li>
-                <li>Can manage repositories on platforms like GitHub, collaborate with team members, and perform code reviews.</li>
-				<li>Comfortable resolving basic merge conflicts and understanding the importance of commit messages and history tracking.</li>
+                <li><strong>Version Control:</strong> Solid understanding of Git fundamentals, including repositories, commits, branches, and merges, with practical experience using them in projects.</li>
+                <li><strong>Repository Management:</strong> Capable of creating, cloning, and managing both local and remote repositories, including setting up and maintaining connections to remote repositories.</li>
+				<li><strong>Common Git Commands:</strong> Familiar with essential Git commands, including git init, git add, git commit, git push, git pull, git status, and git diff, with the ability to track and review changes effectively.</li>
+				<li><strong>Branching and Merging:</strong> Proficient in creating branches for feature development and merging changes back to the main branch, with a basic understanding of conflict resolution and the ability to handle simple merge conflicts.</li>
             </ul>
         </div>
 
         <div id="SQL" class="tabcontent">
             <h3>SQL</h3>
             <ul>
-                <li>Capable of writing basic SQL queries to retrieve and manipulate data from relational databases.</li>
-                <li>Proficient in using SELECT statements with filtering options, employing WHERE clauses for conditions, and performing simple JOIN operations to combine data from multiple tables.</li>
-				<li>Familiar with basic aggregate functions (e.g., COUNT, SUM, AVG) for summarizing data.</li>
+                <li><strong>Basic Querying and Data Manipulation:</strong> Familiar with writing basic SQL queries to select, filter, and sort data using SELECT, WHERE, and ORDER BY, as well as performing INSERT, UPDATE, and DELETE operations.</li>
+                <li><strong>Joins and Relationships:</strong> Understanding of different types of joins (INNER, LEFT, RIGHT) to combine data from multiple tables effectively.</li>
+				<li><strong>Aggregate Functions:</strong> Proficient in using aggregate functions like COUNT, SUM, and AVG with GROUP BY to summarize and calculate data.</li>
+				<li><strong>Basic Subqueries:</strong> Experience with writing subqueries to retrieve data based on results from other queries.</li>
             </ul>
         </div>
 
         <div id="HTMLCSS" class="tabcontent">
             <h3>HTML, CSS</h3>
             <ul>
-                <li>Able to create simple web pages using HTML and CSS.</li>
-                <li>Understands fundamental HTML tags for structuring content and basic CSS rules for styling.</li>
-                <li>Familiar with responsive design principles and layout techniques.</li>
+                <li><strong>Basic HTML Structure:</strong> Familiar with creating simple HTML documents, including the use of common elements like headings, paragraphs, links, and images.</li>
+                <li><strong>CSS Styling:</strong> Understanding of basic CSS concepts, including selectors, properties, and values, to apply simple styles to HTML elements.</li>
+				<li><strong>Layout Techniques:</strong> Some experience with basic layout techniques using CSS, such as margins, padding, and simple positioning.</li>
+				<li><strong>Responsive Design Awareness:</strong> Awareness of the importance of responsive design and media queries, though limited practical experience.</li>
             </ul>
         </div>
+		<p style="text-align:center;">
+			<a href="portfolio.html">View Portfolio</a>
+		</p>
     </div>
 </div>
 				<!-- End Technical Skills Container -->
@@ -446,7 +465,7 @@
 						<h5 class="w3-opacity"><b>Financial Reporting Analyst / Diwali Investments LLC</b></h5>
 						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2021 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
 						<ul>
-							<li>Collaborated with a US firm to create cash flow summaries in Excel.</li>
+							<li>Collaborated remotely with a US-based firm (part-time) to create cash flow summaries in Excel.</li>
 							<li>Developed user-friendly dashboards for quick access to monthly financial insights.</li>
 							<li>Communicated effectively to deliver timely, accurate reports.</li>
 						</ul>
@@ -456,7 +475,7 @@
 						<h5 class="w3-opacity"><b>English Language Trainer / IILT</b></h5>
 						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sept 2019 – Mar 2020</h6>
 						<ul>
-							<li>Led training sessions for students in India and abroad focusing on English proficiency.</li>
+							<li>Led training sessions for students in India and abroad focusing on English language proficiency.</li>
 							<li>Collaborated with trainers to develop effective teaching methodologies.</li>
 						</ul>
 						<hr>
@@ -468,13 +487,13 @@
 						Education
 					</h2>
 					<div class="w3-container">
-						<h5 class="w3-opacity"><b>Affiliate / Association of Chartered Certified Accountants 
-						 <img src="assets/ACCA_logo.png" alt="ACCA Logo" style="height: 1.5em; display: inline-block; margin-left: 5px;"></b>
+						<h5 class="w3-opacity"><b>ACCA / Association of Chartered Certified Accountants (Affiliate)
+						<img src="assets/ACCA_logo.png" alt="ACCA Logo" style="height: 1.5em; display: inline-block; margin-left: 5px;"></b>
 						</h5>
 						<h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2023</h6>
 						<ul>
 							<li>Globally recognized qualification in accounting, finance, and business management.</li>
-							<li>Enhanced analytical and strategic decision-making skills.</li>
+							<li>Affiliate status.</li>
 						</ul>
 						<hr>
 					</div>
