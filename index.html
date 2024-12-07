@@ -375,30 +375,33 @@
 			}
 		}
 		.tab {
-			display: flex;
-			border-bottom: 2px solid #ddd; /* Add a bottom border */
-			justify-content: space-around;
-		}
+            display: flex;
+            flex-wrap: wrap; /* Allow tabs to wrap if they don't fit */
+            justify-content: space-around;
+            width: 100%; /* Ensure tab container fills the modal */
+        }
 
-		.tab button {
-			background-color: transparent; /* Make background transparent */
-			border: none; /* Remove border */
-			padding: 10px 15px; /* Add padding */
-			cursor: pointer; /* Change cursor to pointer */
-			transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
-			outline: none; /* Remove outline */
-		}
+        .tab button {
+            background-color: transparent;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            outline: none;
+            flex: 1; /* Allow buttons to grow equally */
+            min-width: 100px; /* Prevent the buttons from becoming too small */
+        }
 
-		.tab button:hover {
-			background-color: #D3D3D3; /* Background color on hover */
-			color: white; /* Change text color on hover */
-		}
+        .tab button:hover {
+            background-color: #D3D3D3;
+            color: white;
+        }
 
-		.tab button.active {
-			background-color: #D3D3D3; /* Active tab background */
-			color: white; /* Active tab text color */
-			border-radius: 5px 5px 0 0; /* Rounded corners on active tab */
-		}
+        .tab button.active {
+            background-color: #D3D3D3;
+            color: white;
+            border-radius: 5px 5px 0 0;
+        }
 
         /* Accessibility: Focus Styles */
         .navbar a:focus, 
