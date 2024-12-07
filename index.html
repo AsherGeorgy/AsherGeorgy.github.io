@@ -317,7 +317,7 @@
 			padding: 20px;
 			border-radius: 8px;
 			width: 80%;
-			max-width: 400px;
+			max-width: 750px;
 			animation: popIn 0.4s ease-out;
 			transform-origin: center;
 		}
@@ -497,15 +497,15 @@
             </span>
         </h2>
         <div class="skill-icons">
-            <img src="assets/excel-logo-only.png" alt="Excel Logo" title="Excel" >
-			<img src="assets/python-logo-only.png" alt="Python Logo" title="Python">
-            <img src="assets/tableau-logo-only.png" alt="Tableau Logo" title="Tableau">
-            <img src="assets/powerbi-logo-only.png" alt="PowerBi Logo" title="PowerBi">
-            <img src="assets/powerpoint-logo-only.png" alt="Powerpoint Logo" title="Powerpoint" >
-            <img src="assets/sql-logo-only.png" alt="SQL Logo" title="SQL" >
+            <img src="assets/excel-logo-only.png" alt="Excel Logo" title="Excel">
+            <img src="assets/powerpoint-logo-only.png" alt="PowerPoint Logo" title="PowerPoint">
+            <img src="assets/sql-logo-only.png" alt="SQL Logo" title="SQL">
+            <img src="assets/python-logo-only.png" alt="Python Logo" title="Python">
             <img src="assets/html-logo-only.png" alt="HTML Logo" title="HTML">
-            <img src="assets/css-logo-only.png" alt="CSS Logo" title="CSS" >
+            <img src="assets/css-logo-only.png" alt="CSS Logo" title="CSS">
             <img src="assets/git-logo-only.png" alt="Git Logo" title="Git">
+            <img src="assets/tableau-logo-only.png" alt="Tableau Logo" title="Tableau">
+            <img src="assets/powerbi-logo-only.png" alt="PowerBI Logo" title="PowerBI">
         </div>
     </section>
 
@@ -517,70 +517,103 @@
             <button class="tablinks" data-skill="Excel" onclick="openTab(event, 'Excel')">
 				<img src="assets/excel-logo-only.png" alt="Excel Logo" style="height: 30px;">
 			</button>
-            <button class="tablinks" data-skill="Python" onclick="openTab(event, 'Python')">
-                <img src="assets/python-logo-only.png" alt="Python Logo" style="height: 30px;">
-            </button>
-            <button class="tablinks" data-skill="Git" onclick="openTab(event, 'Git')">
-				<img src="assets/git-logo-only.png" alt="Git Logo" style="height: 30px;">
+            <button class="tablinks" data-skill="PowerPoint" onclick="openTab(event, 'PowerPoint')">
+				<img src="assets/powerpoint-logo-only.png" alt="PowerPoint Logo" style="height: 30px;">
 			</button>
             <button class="tablinks" data-skill="SQL" onclick="openTab(event, 'SQL')">
 				<img src="assets/sql-logo-only.png" alt="SQL Logo" style="height: 30px;">
 			</button>
-            <button class="tablinks" data-skill="HTMLCSS" onclick="openTab(event, 'HTMLCSS')">
+            <button class="tablinks" data-skill="Python" onclick="openTab(event, 'Python')">
+                <img src="assets/python-logo-only.png" alt="Python Logo" style="height: 30px;">
+            </button>
+            <button class="tablinks" data-skill="HTML" onclick="openTab(event, 'HTML')">
 				<img src="assets/html-logo-only.png" alt="HTML Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="CSS" onclick="openTab(event, 'HTML')">
 				<img src="assets/css-logo-only.png" alt="CSS Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="Git" onclick="openTab(event, 'Git')">
+				<img src="assets/git-logo-only.png" alt="Git Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="PowerBI" onclick="openTab(event, 'PowerBI')">
+				<img src="assets/powerbi-logo-only.png" alt="PowerBI Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="Tableau" onclick="openTab(event, 'PowerBI')">
+				<img src="assets/tableau-logo-only.png" alt="Tableau Logo" style="height: 30px;">
 			</button>
         </div>
 
         <div id="Excel" class="tabcontent" style="display:block;">
             <h3>Microsoft Excel</h3>
             <ul>
-				<li><strong>Advanced Financial Modeling:</strong> Expertise in building integrated financial models with dynamic forecasting and DCF analysis.</li>
-				<li><strong>Data Processing:</strong> Proficient in data cleaning using functions like TRIM and SUBSTITUTE, along with Power Query for efficient transformation.</li>
-				<li><strong>Formulas and What-If Analysis:</strong> Skilled in advanced Excel functions (e.g., nested IFs, INDEX/MATCH) and performing What-If analysis using Scenario Manager and Goal Seek.</li>
-				<li><strong>Interactive Dashboards and Automation:</strong> Capable of creating sophisticated dashboards with charts and slicers, and familiar with automating tasks through Macros and basic VBA scripting.</li>
+				<li><strong>Advanced Financial Modeling:</strong> Expertise in building integrated financial models with dynamic forecasting and DCF analysis.<br><br></li>
+				<li><strong>Data Processing:</strong> Proficient in data cleaning using functions like SUBSTITUTE, along with Power Query for efficient transformation.<br><br></li>
+				<li><strong>Formulas and What-If Analysis:</strong> Skilled in advanced Excel functions (e.g., nested IFs, INDEX/MATCH) and performing What-If analysis using Scenario Manager and Goal Seek.<br><br></li>
+				<li><strong>Interactive Dashboards and Automation:</strong> Capable of creating sophisticated dashboards with charts and slicers, and familiar with automating tasks through Macros and basic VBA scripting.<br><br></li>
+			</ul>
+        </div>
+
+        <div id="PowerPoint" class="tabcontent">
+            <h3>PowerPoint</h3>
+            <ul>
+				<li><strong>Presentation Design:</strong> Comfortable creating visually engaging PowerPoint presentations that effectively convey ideas and insights.<br><br></li>
+                <li><strong>Data Visualization:</strong> Skilled in using PowerPoint to present data through charts, graphs, and tables to make insights clearer.<br><br></li>
+                <li><strong>Storytelling & Structure:</strong> Able to organize presentations in a clear and logical manner, ensuring smooth information flow.<br><br></li>
+                <li><strong>Advanced Features:</strong> Familiar with using animations, transitions, and custom layouts to enhance presentation impact and engagement.<br><br></li>
 			</ul>
         </div>
 
         <div id="Python" class="tabcontent">
             <h3>Python</h3>
             <ul>
-                <li><strong>Data Analysis and Manipulation:</strong> Proficient in using Pandas for data analysis, including data retrieval, cleaning, and manipulation of financial datasets.</li>
-				<li><strong>Financial Modeling:</strong> Understanding of portfolio optimization and risk assessment techniques, with the ability to apply fundamental financial models.</li>
-				<li><strong>Statistical Analysis:</strong> Knowledge of calculating key financial metrics, such as returns, volatility, and risk-adjusted performance measures.</li>
-				<li><strong>Data Visualization:</strong> Able to create informative visualizations using Matplotlib to effectively communicate data insights.</li>
+                <li><strong>Data Analysis & Manipulation:</strong> Proficient in Python for cleaning, transforming, and analyzing large datasets using libraries like Pandas and NumPy for efficient processing.<br><br></li>
+                <li><strong>Statistical Modeling & Optimization:</strong> Experienced in developing statistical models and implementing optimization algorithms, including convex optimization and Monte Carlo simulations, to solve complex problems.<br><br></li>
+                <li><strong>Data Visualization:</strong> Skilled in creating interactive and insightful visualizations with tools like Plotly, Matplotlib, and Seaborn to effectively communicate data-driven insights.<br><br></li>
+                <li><strong>Web Development & Automation:</strong> Capable of building interactive Python-based web applications with Streamlit, integrating APIs, and automating workflows to streamline processes and ensure scalability.<br><br></li>
             </ul>
         </div>
 
         <div id="Git" class="tabcontent">
             <h3>Git</h3>
             <ul>
-                <li><strong>Version Control:</strong> Solid understanding of Git fundamentals, including repositories, commits, branches, and merges, with practical experience using them in projects.</li>
-                <li><strong>Repository Management:</strong> Capable of creating, cloning, and managing both local and remote repositories, including setting up and maintaining connections to remote repositories.</li>
-				<li><strong>Common Git Commands:</strong> Familiar with essential Git commands, including git init, git add, git commit, git push, git pull, git status, and git diff, with the ability to track and review changes effectively.</li>
-				<li><strong>Branching and Merging:</strong> Proficient in creating branches for feature development and merging changes back to the main branch, with a basic understanding of conflict resolution and the ability to handle simple merge conflicts.</li>
+                <li><strong>Version Control:</strong> Solid understanding of Git fundamentals, including repositories, commits, branches, and merges, with practical experience using them in projects.<br><br></li>
+                <li><strong>Repository Management:</strong> Capable of creating, cloning, and managing both local and remote repositories, including setting up and maintaining connections to remote repositories.<br><br></li>
+				<li><strong>Common Git Commands:</strong> Familiar with essential Git commands, including git init, git add, git commit, git push, git pull, git status, and git diff, with the ability to track and review changes effectively.<br><br></li>
+				<li><strong>Branching and Merging:</strong> Proficient in creating branches for feature development and merging changes back to the main branch, with a basic understanding of conflict resolution and the ability to handle simple merge conflicts.<br><br></li>
             </ul>
         </div>
 
         <div id="SQL" class="tabcontent">
             <h3>SQL</h3>
             <ul>
-                <li><strong>Basic Querying and Data Manipulation:</strong> Familiar with writing basic SQL queries to select, filter, and sort data using SELECT, WHERE, and ORDER BY, as well as performing INSERT, UPDATE, and DELETE operations.</li>
-                <li><strong>Joins and Relationships:</strong> Understanding of different types of joins (INNER, LEFT, RIGHT) to combine data from multiple tables effectively.</li>
-				<li><strong>Aggregate Functions:</strong> Proficient in using aggregate functions like COUNT, SUM, and AVG with GROUP BY to summarize and calculate data.</li>
-				<li><strong>Basic Subqueries:</strong> Experience with writing subqueries to retrieve data based on results from other queries.</li>
+                <li><strong>SQL Querying & Data Retrieval:</strong> Proficient in crafting complex SQL queries, handling multiple tables, and using various clauses for efficient data retrieval and manipulation.<br><br></li>
+                <li><strong>Data Cleaning & Transformation:</strong> Skilled in cleaning datasets, filling NULL values, converting data types, and splitting columns to ensure data quality.<br><br></li>
+                <li><strong>Analytical Functions & CTEs:</strong> Experienced in using analytical and window functions, along with Common Table Expressions (CTEs) and temporary tables, to perform advanced calculations and manage intermediate results.<br><br></li>
+                <li><strong>Database Design & Optimization:</strong> Strong understanding of database design principles, including normalization, indexing, and strategies to enhance query performance.<br><br></li>
             </ul>
         </div>
 
-        <div id="HTMLCSS" class="tabcontent">
+        <div id="HTML" class="tabcontent">
             <h3>HTML, CSS</h3>
             <ul>
-                <li><strong>Basic HTML Structure:</strong> Familiar with creating simple HTML documents, including the use of common elements like headings, paragraphs, links, and images.</li>
-                <li><strong>CSS Styling:</strong> Understanding of basic CSS concepts, including selectors, properties, and values, to apply simple styles to HTML elements.</li>
-				<li><strong>Layout Techniques:</strong> Some experience with basic layout techniques using CSS, such as margins, padding, and simple positioning.</li>
-				<li><strong>Responsive Design Awareness:</strong> Awareness of the importance of responsive design and media queries, though limited practical experience.</li>
+                <li><strong>HTML & CSS Fundamentals:</strong> Solid understanding of HTML structure and CSS styling, gained through self-learning and hands-on practice.<br><br></li>
+                <li><strong>Website Creation & Styling:</strong> Able to apply HTML and CSS to build and style web pages.<br><br></li>
+                <li><strong>Responsive Layouts:</strong> Familiar with using CSS techniques like Flexbox and Grid combined with JavaScript to create flexible, responsive layouts and ensure a seamless user experience across devices.<br><br></li>
             </ul>
         </div>
+
+        <div id="PowerBI" class="tabcontent">
+            <h3>PowerBI and Tableau</h3>
+            <ul>
+                <li><strong>Data Visualization Fundamentals:</strong> Strong understanding of data visualization principles, with hands on experience in using Tableau and PowerBI to create insightful reports and dashboards.<br><br></li>
+                <li><strong>Dashboard Creation:</strong> Familiar with building interactive dashboards in Tableau and PowerBI, showcasing key metrics and data trends for clear communication of business insights.<br><br></li>
+                <li><strong>Data Manipulation & Transformation:</strong> Proficient in using Tableau and PowerBI's built-in data transformation tools to clean, reshape, and organize datasets for accurate visualizations.<br><br></li>
+                <li><strong>Data Integration & Interactivity:</strong> Familiar with integrating multiple data sources into Tableau and PowerBI and creating interactive elements such as filters, slicers, and drilldowns to enhance user engagement and data exploration.<br><br></li>
+            </ul>
+        </div>
+
+
+
 		<p style="text-align:center;">
 			<a href="portfolio.html">View Portfolio</a>
 		</p>
@@ -595,7 +628,7 @@
             <p><strong>Self-Motivated:</strong> Took the initiative to achieve educational and personal development goals independently through self-learning.</p>
             <p><strong>Continuous Learner:</strong> Pursued ongoing education to acquire new skills and stay updated in the fields of finance and technology.</p>
             <p><strong>Resourceful:</strong> Leveraged diverse online platforms and communities to access essential information and tools for projects, maximizing available resources.</p>
-            <p><strong>Detail-Oriented:</strong> Maintained a strong focus on detail in all projects, ensuring high-quality results and accuracy.</p>
+            <p><strong>Detail-Oriented:</strong> Maintained a strong focus on detail in all projects, prioritizing high-quality results and accuracy.</p>
         </div>
     </section>
 
