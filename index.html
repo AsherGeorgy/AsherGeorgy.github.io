@@ -150,7 +150,7 @@
         .about-section h3 {
             text-align: center;
             font-size: 24px;
-            /* color: #666;  */
+            color: #009688; 
             margin-bottom: 15px;
             text-decoration: underline;
         }
@@ -162,7 +162,22 @@
             margin: auto;
             font-size: 18px;
             line-height: 1.6;
-            color: #666;
+            color: #666; /* Paragraph color */
+        }
+
+        .about-section a {
+            color: #5C6BC0; /* Lighter blue color for unvisited links */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+
+        .about-section a:hover {
+            color: #3F51B5; /* Slightly darker blue on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .about-section a:visited {
+            color: #3F51B5; /* Same color for visited links */
         }
         
         /* Qualities Section */
@@ -317,7 +332,7 @@
 			padding: 20px;
 			border-radius: 8px;
 			width: 80%;
-			max-width: 750px;
+			max-width: 600px;
 			animation: popIn 0.4s ease-out;
 			transform-origin: center;
 		}
