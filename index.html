@@ -20,7 +20,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"">
     
     <!-- Favicon Links -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -125,7 +125,7 @@
 		/* Link Styles */
 		a {
 			color: #009688; 
-			text-decoration: none; 
+			text-decoration: underline; 
 			transition: color 0.3s ease; 
 		}
 
@@ -146,6 +146,15 @@
             font-size: 36px; 
             margin-bottom: 30px; 
         }
+
+        .about-section h3 {
+            text-align: center;
+            font-size: 24px;
+            /* color: #666;  */
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+
 
         .about-section p {
             text-align: center;
@@ -289,6 +298,108 @@
 			color: white;
         }
 
+        .modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.4);
+			overflow: auto;
+		}
+
+		.modal-content {
+			position: relative;
+			background-color: #fefefe;
+			margin: 10% auto;
+			padding: 20px;
+			border-radius: 8px;
+			width: 80%;
+			max-width: 400px;
+			animation: popIn 0.4s ease-out;
+			transform-origin: center;
+		}
+		
+		.modal-content a {
+			color: #00796B;
+			text-align: center;
+			text-decoration: underline;
+			transition: color 0.3s ease;
+		}
+		
+		.modal-content a:hover {
+			color: #0000ff 
+		}
+
+        /* Modal and Icon Styles */
+		.info-icon {
+			color: #808080;
+			transition: color 0.3s ease, transform 0.3s ease;
+			cursor: pointer;
+			margin-left: 1px;
+            vertical-align: text-top;
+			font-size: 0.5em; 
+		}
+
+		.info-icon:hover {
+			color: #36a9e1;
+			transform: scale(1.2);
+		}
+
+		.close {
+			color: #aaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+			cursor: pointer;
+			position: absolute; /* Make sure it's positioned absolutely */
+			top: 10px; /* Adjust position as necessary */
+			right: 15px; /* Adjust position as necessary */
+			z-index: 10; /* Ensure it appears above other content */
+		}
+
+		.close:hover {
+			color: black;
+		}
+
+		@keyframes popIn {
+			0% {
+				transform: scale(0.8);
+				opacity: 0;
+			}
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+		.tab {
+			display: flex;
+			border-bottom: 2px solid #ddd; /* Add a bottom border */
+			justify-content: space-around;
+		}
+
+		.tab button {
+			background-color: transparent; /* Make background transparent */
+			border: none; /* Remove border */
+			padding: 10px 15px; /* Add padding */
+			cursor: pointer; /* Change cursor to pointer */
+			transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+			outline: none; /* Remove outline */
+		}
+
+		.tab button:hover {
+			background-color: #D3D3D3; /* Background color on hover */
+			color: white; /* Change text color on hover */
+		}
+
+		.tab button.active {
+			background-color: #D3D3D3; /* Active tab background */
+			color: white; /* Active tab text color */
+			border-radius: 5px 5px 0 0; /* Rounded corners on active tab */
+		}
+
         /* Accessibility: Focus Styles */
         .navbar a:focus, 
         .header .cta-button:focus, 
@@ -346,14 +457,137 @@
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <h2><strong>About Me</strong></h2>
+        <h2><strong>Hi there, I'm Asher 👋</strong></h2>
+    
+        <!-- <h3>My Background</h3> -->
         <p>
-            I am a <strong>self-taught</strong> data analyst and developer with a strong foundation in accounting and business, holding <strong><u>ACCA affiliate</u></strong> status and a B.Com degree.<br><br>
-            Through hands-on projects, experimentation with generative AI, and continuous learning on platforms like <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> and <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>, I developed varied levels of proficiency in Python, Microsoft Excel, SQL, Git and in web development.<br><br>
-            My passion for solving both complex and everyday problems through technology drives me to create efficient solutions. I am committed to expanding my expertise in <strong>data-driven decision-making</strong> and <strong>quantitative analysis</strong>.<br><br>
-			I’m proficient in English and Malayalam. Currently, I'm learning intermediate Spanish and Hindi on <a href="https://www.duolingo.com/profile/Ash_Geo" target="_blank" rel="noopener noreferrer">Duolingo</a>.
+            I’m a finance professional turned tech enthusiast. Although I hold an ACCA affiliate status and a B.Com degree, I’m currently transitioning from a non-CS background into self-taught data analysis and development.<br><br>
         </p>
+    
+        <h3>My Journey into Tech</h3>
+        <p>
+            My journey into tech began when I sought to track EPL and NBA scores using Excel. I quickly discovered the power of macros to automate tasks, which sparked my interest in programming and technology. This led me to explore areas such as data management, data visualization, and web development.<br><br>
+        </p>
+    
+        <h3>Turning a Hobby into Passion</h3>
+        <p>
+            Over time, my hobby turned into a passion. I began creating automated spreadsheets for personal tasks such as time management, to-do lists, and goal tracking. While pursuing a career in finance, I realized the huge potential of combining finance and big data with technology. While finance was interesting, using technology to create financial models was truly exciting. This drove me to explore advanced Excel and eventually dive into Python, SQL, data visualization tools like Tableau and Power BI, and even web development (HTML/CSS).<br><br>
+        </p>
+    
+        <h3>Continuous Learning and Projects</h3>
+        <p>
+            Through hands-on projects, experimentation with generative AI, and continuous learning on platforms like <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> and <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>, I’ve developed proficiency in Python, SQL, data visualization, and web development.<br><br>
+        </p>
+    
+        <h3>What I Do Now</h3>
+        <p>
+            I am committed to constantly working to improve my expertise in data-driven decision-making and quantitative analysis. Recently, I developed and <a href="https://optimize-this-portfolio.streamlit.app/" target="_blank rel="noopener noreferrer">launched my first app </a>on Streamlit.  I’m currently diving deeper into <strong>Machine Learning with Python</strong> and <strong>advanced statistics</strong>, including the <strong>Stanford CS229</strong> course.<br><br>
+        </p>
+    
+        <!-- <h3>Languages</h3>
+        <p>
+            I am proficient in English and Malayalam, and I’m also learning intermediate Spanish and Hindi on <a href="https://www.duolingo.com/profile/Ash_Geo" target="_blank" rel="noopener noreferrer">Duolingo</a>.
+        </p> -->
     </section>
+    
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <h2><strong>Technical Skills</strong>
+            <span class="info-icon" title="Click to view details." onclick="openModal('skillsModal')">
+                <i class="fas fa-info-circle"></i>
+            </span>
+        </h2>
+        <div class="skill-icons">
+            <img src="assets/excel-logo-only.png" alt="Excel Logo" title="Excel" >
+			<img src="assets/python-logo-only.png" alt="Python Logo" title="Python">
+            <img src="assets/tableau-logo-only.png" alt="Tableau Logo" title="Tableau">
+            <img src="assets/powerbi-logo-only.png" alt="PowerBi Logo" title="PowerBi">
+            <img src="assets/powerpoint-logo-only.png" alt="Powerpoint Logo" title="Powerpoint" >
+            <img src="assets/sql-logo-only.png" alt="SQL Logo" title="SQL" >
+            <img src="assets/html-logo-only.png" alt="HTML Logo" title="HTML">
+            <img src="assets/css-logo-only.png" alt="CSS Logo" title="CSS" >
+            <img src="assets/git-logo-only.png" alt="Git Logo" title="Git">
+        </div>
+    </section>
+
+    <!-- Modal -->
+<div id="skillsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('skillsModal')">&times;</span>
+        <div class="tab">
+            <button class="tablinks" data-skill="Excel" onclick="openTab(event, 'Excel')">
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="Python" onclick="openTab(event, 'Python')">
+                <img src="assets/python-logo-only.png" alt="Python Logo" style="height: 30px;">
+            </button>
+            <button class="tablinks" data-skill="Git" onclick="openTab(event, 'Git')">
+				<img src="assets/git-logo-only.png" alt="Git Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="SQL" onclick="openTab(event, 'SQL')">
+				<img src="assets/sql-logo-only.png" alt="SQL Logo" style="height: 30px;">
+			</button>
+            <button class="tablinks" data-skill="HTMLCSS" onclick="openTab(event, 'HTMLCSS')">
+				<img src="assets/html-logo-only.png" alt="HTML Logo" style="height: 30px;">
+				<img src="assets/css-logo-only.png" alt="CSS Logo" style="height: 30px;">
+			</button>
+        </div>
+
+        <div id="Excel" class="tabcontent" style="display:block;">
+            <h3>Microsoft Excel</h3>
+            <ul>
+				<li><strong>Advanced Financial Modeling:</strong> Expertise in building integrated financial models with dynamic forecasting and DCF analysis.</li>
+				<li><strong>Data Processing:</strong> Proficient in data cleaning using functions like TRIM and SUBSTITUTE, along with Power Query for efficient transformation.</li>
+				<li><strong>Formulas and What-If Analysis:</strong> Skilled in advanced Excel functions (e.g., nested IFs, INDEX/MATCH) and performing What-If analysis using Scenario Manager and Goal Seek.</li>
+				<li><strong>Interactive Dashboards and Automation:</strong> Capable of creating sophisticated dashboards with charts and slicers, and familiar with automating tasks through Macros and basic VBA scripting.</li>
+			</ul>
+        </div>
+
+        <div id="Python" class="tabcontent">
+            <h3>Python</h3>
+            <ul>
+                <li><strong>Data Analysis and Manipulation:</strong> Proficient in using Pandas for data analysis, including data retrieval, cleaning, and manipulation of financial datasets.</li>
+				<li><strong>Financial Modeling:</strong> Understanding of portfolio optimization and risk assessment techniques, with the ability to apply fundamental financial models.</li>
+				<li><strong>Statistical Analysis:</strong> Knowledge of calculating key financial metrics, such as returns, volatility, and risk-adjusted performance measures.</li>
+				<li><strong>Data Visualization:</strong> Able to create informative visualizations using Matplotlib to effectively communicate data insights.</li>
+            </ul>
+        </div>
+
+        <div id="Git" class="tabcontent">
+            <h3>Git</h3>
+            <ul>
+                <li><strong>Version Control:</strong> Solid understanding of Git fundamentals, including repositories, commits, branches, and merges, with practical experience using them in projects.</li>
+                <li><strong>Repository Management:</strong> Capable of creating, cloning, and managing both local and remote repositories, including setting up and maintaining connections to remote repositories.</li>
+				<li><strong>Common Git Commands:</strong> Familiar with essential Git commands, including git init, git add, git commit, git push, git pull, git status, and git diff, with the ability to track and review changes effectively.</li>
+				<li><strong>Branching and Merging:</strong> Proficient in creating branches for feature development and merging changes back to the main branch, with a basic understanding of conflict resolution and the ability to handle simple merge conflicts.</li>
+            </ul>
+        </div>
+
+        <div id="SQL" class="tabcontent">
+            <h3>SQL</h3>
+            <ul>
+                <li><strong>Basic Querying and Data Manipulation:</strong> Familiar with writing basic SQL queries to select, filter, and sort data using SELECT, WHERE, and ORDER BY, as well as performing INSERT, UPDATE, and DELETE operations.</li>
+                <li><strong>Joins and Relationships:</strong> Understanding of different types of joins (INNER, LEFT, RIGHT) to combine data from multiple tables effectively.</li>
+				<li><strong>Aggregate Functions:</strong> Proficient in using aggregate functions like COUNT, SUM, and AVG with GROUP BY to summarize and calculate data.</li>
+				<li><strong>Basic Subqueries:</strong> Experience with writing subqueries to retrieve data based on results from other queries.</li>
+            </ul>
+        </div>
+
+        <div id="HTMLCSS" class="tabcontent">
+            <h3>HTML, CSS</h3>
+            <ul>
+                <li><strong>Basic HTML Structure:</strong> Familiar with creating simple HTML documents, including the use of common elements like headings, paragraphs, links, and images.</li>
+                <li><strong>CSS Styling:</strong> Understanding of basic CSS concepts, including selectors, properties, and values, to apply simple styles to HTML elements.</li>
+				<li><strong>Layout Techniques:</strong> Some experience with basic layout techniques using CSS, such as margins, padding, and simple positioning.</li>
+				<li><strong>Responsive Design Awareness:</strong> Awareness of the importance of responsive design and media queries, though limited practical experience.</li>
+            </ul>
+        </div>
+		<p style="text-align:center;">
+			<a href="portfolio.html">View Portfolio</a>
+		</p>
+    </div>
+</div>
+    
 
     <!-- Qualities Section -->
     <section class="qualities-section">
@@ -366,26 +600,13 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills-section">
-        <h2><strong>Technical Skills</strong></h2>
-        <div class="skill-icons">
-            <img src="assets/excel-logo-only.png" alt="Excel Logo" title="Excel" >
-			<img src="assets/python-logo-only.png" alt="Python Logo" title="Python">
-            <img src="assets/git-logo-only.png" alt="Git Logo" title="Git">
-            <img src="assets/sql-logo-only.png" alt="SQL Logo" title="SQL" >
-            <img src="assets/html-logo-only.png" alt="HTML Logo" title="HTML">
-            <img src="assets/css-logo-only.png" alt="CSS Logo" title="CSS" >
-        </div>
-    </section>
-
     <!-- Projects Section -->
     <section class="projects-section">
         <h2><strong>Featured Projects</strong></h2>
         <article class="project-card">
             <img src="assets/python-logo-only.png" alt="Python Logo" style="width:40px; height:40px">
-            <h3><a href="portfolio.html#Project1">Optimization with Python</a></h3>
-            <p>Developed a Python model for optimizing investment portfolios, utilizing historical market data to assess asset performance relative to a benchmark index.</p>
+            <h3><a href="portfolio.html#Project1">Portfolio Optimization Web App</a></h3>
+            <p>Developed a Python-based application for analyzing and optimizing financial portfolios using Modern Portfolio Theory (MPT) and convex optimization.</p>
         </article>
 
         <article class="project-card">
@@ -422,6 +643,61 @@
 </footer>
 
 <script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Open modal function
+    function openModal(id) {
+        document.getElementById(id).style.display = 'block';
+
+        // Create a synthetic event for the Excel tab
+        const excelTab = document.querySelector(".tablinks[data-skill='Excel']");
+        if (excelTab) {
+            excelTab.classList.add("active"); // Set Excel tab as active
+        }
+
+        // Show the Excel content by default
+        openTab({ currentTarget: excelTab }, 'Excel'); // Pass the synthetic event
+    }
+
+    // Close modal function
+    function closeModal(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+
+    // Close with esc key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeModal('skillsModal');
+        }
+    });
+
+    // Close modal when clicking or touching outside
+    function handleModalClose(event) {
+        const modal = document.getElementById('skillsModal');
+        if (event.target === modal) {
+            closeModal('skillsModal');
+        }
+    }
+
+    window.addEventListener('click', handleModalClose);
+    window.addEventListener('touchstart', handleModalClose); // Add touch event listener
+
+    function openTab(evt, skillName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";  
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active"); // Remove active class from all tabs
+        }
+        document.getElementById(skillName).style.display = "block";  
+        evt.currentTarget.classList.add("active"); // Add active class to the clicked tab
+    }
+
 let prevScrollPos = window.pageYOffset;
 	const navbar = document.querySelector('.navbar');
 
