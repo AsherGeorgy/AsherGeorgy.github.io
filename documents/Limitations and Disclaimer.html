@@ -9,14 +9,14 @@
             font-family: Arial, sans-serif;
             background-color: #f4f7fa;
             color: #333;
-            margin: 0 300px ;
+            margin: 0;
             padding: 0;
         }
 
         header {
             background-color: #2a3d66;
             color: #fff;
-            padding: 30px 30px;
+            padding: 30px 20px;
             text-align: center;
         }
 
@@ -72,6 +72,27 @@
             padding: 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        a {
+            color: #2a3d66;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* New styles for footer links */
+        footer a {
+            color: #fff; /* Light color for visibility */
+            text-decoration: underline
+        }
+
+        footer a:hover {
+            color: #4a70c4; /* Change to a lighter color on hover */
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -81,9 +102,7 @@
 </header>
 
 <div class="container">
-    <p>This document outlines the limitations and legal disclaimer for the <a href="https://optimize-this-portfolio.streamlit.app/">Portfolio Optimization Streamlit App</a>. It highlights the app's assumptions, constraints, and risks, providing a clear understanding of its capabilities and legal terms.</p>
-
-    
+    <p>This document outlines the limitations and legal disclaimer for the <a href="https://optimize-this-portfolio.streamlit.app/" target="_blank">Portfolio Optimization Streamlit App</a>. It highlights the app's assumptions, constraints, and risks, providing a clear understanding of its capabilities and legal terms.</p>
 
     <h2>Limitations</h2>
 
@@ -106,10 +125,7 @@
 </div>
 
 <footer>
-    <footer>
-        <p>&copy; 2024 Asher Georgy. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p>
-    </footer>
-    
+    <p>&copy; 2024 Asher Georgy. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p>
 </footer>
 
 </body>
