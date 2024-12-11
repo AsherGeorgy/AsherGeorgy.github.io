@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project List</title>
+    <meta charset="UTF-8">
+	<style>
+		.project-card {
+			margin: 15px 0;
+			padding: 20px;
+			background-color: white;
+			border: 1px solid #e0e0e0;
+			border-radius: 5px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			transition: box-shadow 0.3s ease, transform 0.3s ease; 
+		}
+
+		.project-card:hover {
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+			transform: translateY(-2px);
+		}
+
+		.project-title {
+			color: #009688;
+			font-weight: bold;
+			font-size: 1.25rem; /* Scalable font size */
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.highlight {
+			background-color: #e8eaf6; 
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		/* Media Queries for Responsiveness */
+		@media (max-width: 768px) {
+			.project-card {
+				padding: 15px;
+			}
+			.project-title {
+				font-size: 1.1rem; 
+			}
+		}
+
+	</style>
+</head>
+<body>
+    <section id="projects">
+		<!-- Portfolio Optimization Project -->
+		<article id="Project1" class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Portfolio Optimization Python Web App</span>
+				<div class="project-icons">
+					<img src="https://streamlit.io/favicon.svg" alt="Streamlit Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/portfolio-optimization.html"></iframe>
+			</div>
+		</article>
+
+		<!-- SQL Data Cleaning Project -->
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Data Cleaning with SQL</span>
+				<div class="project-icons">
+					<img src="assets/sql-logo-only.png" alt="SQL Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/Data Cleaning with SQL.html"></iframe>
+			</div>
+		</article>
+
+		<!-- Tableau AirBnB Project -->
+		<article id="Project3" class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Market Analysis and Visualization with Tableau</span>
+				<div class="project-icons">
+					<img src="assets/tableau-logo-only.png" alt="Tableau Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/Airbnb Market Analysis and Visualization.html"></iframe>
+			</div>
+		</article>
+
+		<!-- DCF Valuation Project -->
+		<article id="Project3" class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Dynamic DCF Valuation and Financial Modeling in Excel</span>
+				<div class="project-icons">
+					<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/dcf valuation.html"></iframe>
+			</div>
+		</article>
+
+		<!-- S&P 500 Momentum Project -->
+		<article id="Project2" class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Momentum Investment Strategy with Python</span>
+				<div class="project-icons">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/quantitative momentum.html"></iframe>
+			</div>
+		</article>
+
+		<!-- SQL Data Cleaning Project -->
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Data Exploration with SQL</span>
+				<div class="project-icons">
+					<img src="assets/sql-logo-only.png" alt="SQL Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/Data Exploration with SQL.html"></iframe>
+			</div>
+		</article>
+
+		<!-- Stock and Portfolio Project -->
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Portfolio Risk Analysis with Python</span>
+				<div class="project-icons">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/stock and portfolio.html"></iframe>
+			</div>
+		</article>
+
+		<!-- Interactive Bank Statement Project -->
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Interactive Bank Statement Analysis Tool in Excel</span>
+				<div class="project-icons">
+					<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/Interactive Bank Statement.html"></iframe>
+			</div>
+		</article>
+
+		<!-- Portfolio Returns and CAGR Project -->
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Portfolio Returns and CAGR Analysis with Python</span>
+				<div class="project-icons">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/Portfolio Returns and CAGR.html"></iframe>
+			</div>
+		</article>
+
+		<!-- Three-Statement Project -->
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Three-Statement Financial Model in Excel</span>
+				<div class="project-icons">
+					<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/Three-Statement Financial Model.html"></iframe>
+			</div>
+		</article>
+
+		<!-- CAPM Analysis and Risk-Return Project -->
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>CAPM Analysis and Risk-Return Evaluation with Python</span>
+				<div class="project-icons">
+					<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/CAPM Analysis and Risk-Return.html"></iframe>
+			</div>
+		</article>
+
+		<!-- Automated Cash Register Project -->
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Automated Cash Register System in Excel</span>
+				<div class="project-icons">
+					<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/Automated Cash Register.html"></iframe>
+			</div>
+		</article>
+
+		<!-- Clash of Clans Project -->
+		<article class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Clash of Clans Hero Upgrade Planner in Excel</span>
+				<div class="project-icons">
+					<img src="assets/google-sheets-logo-only.png" alt="Google Sheets Logo" class="project-icon" style="width: 25px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/Clash of Clans.html"></iframe>
+			</div>
+		</article>
+
+		<!-- Personal Website -->
+		<article id="Project4" class="project-card">
+			<header class="project-title" onclick="toggleDescription(this)">
+				<span>Personal Website</span>
+				<div class="project-icons">
+					<img src="assets/html-logo-only.png" alt="HTML Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<img src="assets/css-logo-only.png" alt="CSS Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+					<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				</div>
+			</header>
+			<div class="project-description">
+				<iframe src="overviews/personal website.html"></iframe>
+			</div>
+		</article>
+
+    </section>
+
+<script>
+	// Function to highlight the project based on the URL hash
+	function highlightProject() {
+	const hash = window.location.hash; // Get the hash from the URL
+	const projectDiv = document.querySelector(hash); // Select the project div using the hash
+
+	if (projectDiv) {
+		projectDiv.classList.add('highlight'); // Add highlight class to the project
+
+		// Remove highlight after 2 seconds
+		setTimeout(() => {
+			projectDiv.classList.remove('highlight'); // Remove highlight class
+		}, 2000);
+	}
+}
+
+	// Call the highlightProject function when the page loads
+	window.onload = highlightProject;
+
+</script>
+</body>
+</html>
