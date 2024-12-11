@@ -6,48 +6,81 @@
     <title>Automated Monthly Cash Flow Manager</title>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; }
-        h1, h2, h3, h4 { color: #333; }
+        h1, h2, h3 { color: #333; }
         img { max-width: 100%; height: auto; }
-        code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
-        hr { border: 1px solid #ccc; }
-		
-		/* Base font size for portrait mode */
-		body {
-			font-size: 16px; /* Default font size */
-		}
 
-		/* Adjust font size for landscape orientation */
-		@media screen and (orientation: landscape) {
-			body {
-				font-size: 14px; /* Smaller font size for landscape */
-			}
-		}
+        /* Base font size for portrait mode */
+        body {
+            font-size: 16px; /* Default font size */
+        }
+
+        /* Adjust font size for landscape orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 14px; /* Smaller font size for landscape */
+            }
+        }
+
+        /* General styling for paragraphs */
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* List styling */
+        ul {
+            margin-bottom: 15px;
+        }
+
+        /* Links */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Preformatted text for code snippets */
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Styling for images */
+        img {
+            width: 75%;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
 
-<h2>Overview</h2>
-<p>This Excel-based system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month.</p> 
+<h1 style="text-align: center;"><u>Overview</u></h1>
+<p>This Excel-based system automates the tracking of transactions, categorizes them by type and particulars, and generates a summary table for each month.</p>
 
 <p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Microsoft%20Excel/Automated%20Monthly%20Cash%20Flow%20Manager.md" target="_blank">View the full project on Github</a>.</strong></p>
 
-<h2>How It Works</h2>
+<h2><u>How It Works</u></h2>
 <ul>
     <li>Users enter the date, type, particulars, and amount in the 'Register' sheet.</li>
     <li>The 'Summary' sheet automatically updates with categorized transactions for each month.</li>
 </ul>
 
-<h2>Formulas Used</h2>
+<h2><u>Formulas Used</u></h2>
 <h4>Populate the transaction type and particulars:</h4>
 <pre><code>= SORT(UNIQUE(FILTER('Register'!$D:$E, ('Register'!$D:$D<>""  ) + ('Register'!$E:$E<>""))))</code></pre>
 
 <h4>Obtain corresponding summary:</h4>
 <pre><code>= SUMIFS('Register'!$F:$F,'Register'!$D:$D,Summary!$B5,'Register'!$E:$E,Summary!$C5,'Register'!$G:$G,Summary!D$2)</code></pre>
+
 <hr>
 
-<h2>Screenshots:</h2>
+<h2><u>Screenshots</u></h2>
+
 <h3>Register Sheet:</h3>
-<img src="images/Register Sheet.png" alt="Register Sheet" style="width:75%; height:auto;">
+<img src="images/Register Sheet.png" alt="Register Sheet">
 
 <hr>
 
