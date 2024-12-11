@@ -448,6 +448,10 @@
 				object-fit: contain;
 				transition: transform 0.2s ease;
             }
+            .project-card {
+                max-width: 90%; 
+                margin: auto;
+            }
         }
     </style>
 
@@ -547,7 +551,7 @@
             <button class="tablinks" data-skill="HTML" onclick="openTab(event, 'HTML')">
 				<img src="assets/html-logo-only.png" alt="HTML Logo" style="height: 30px;">
 			</button>
-            <button class="tablinks" data-skill="CSS" onclick="openTab(event, 'HTML')">
+            <button class="tablinks" data-skill="CSS" onclick="openTab(event, 'CSS')">
 				<img src="assets/css-logo-only.png" alt="CSS Logo" style="height: 30px;">
 			</button>
             <button class="tablinks" data-skill="Git" onclick="openTab(event, 'Git')">
@@ -556,7 +560,7 @@
             <button class="tablinks" data-skill="PowerBI" onclick="openTab(event, 'PowerBI')">
 				<img src="assets/powerbi-logo-only.png" alt="PowerBI Logo" style="height: 30px;">
 			</button>
-            <button class="tablinks" data-skill="Tableau" onclick="openTab(event, 'PowerBI')">
+            <button class="tablinks" data-skill="Tableau" onclick="openTab(event, 'Tableau')">
 				<img src="assets/tableau-logo-only.png" alt="Tableau Logo" style="height: 30px;">
 			</button>
         </div>
@@ -612,7 +616,16 @@
         </div>
 
         <div id="HTML" class="tabcontent">
-            <h3>HTML, CSS</h3>
+            <h3>HTML</h3>
+            <ul>
+                <li><strong>HTML & CSS Fundamentals:</strong> Solid understanding of HTML structure and CSS styling, gained through self-learning and hands-on practice.<br><br></li>
+                <li><strong>Website Creation & Styling:</strong> Able to apply HTML and CSS to build and style web pages.<br><br></li>
+                <li><strong>Responsive Layouts:</strong> Familiar with using CSS techniques like Flexbox and Grid combined with JavaScript to create flexible, responsive layouts and ensure a seamless user experience across devices.<br><br></li>
+            </ul>
+        </div>
+
+        <div id="CSS" class="tabcontent">
+            <h3>CSS</h3>
             <ul>
                 <li><strong>HTML & CSS Fundamentals:</strong> Solid understanding of HTML structure and CSS styling, gained through self-learning and hands-on practice.<br><br></li>
                 <li><strong>Website Creation & Styling:</strong> Able to apply HTML and CSS to build and style web pages.<br><br></li>
@@ -621,7 +634,7 @@
         </div>
 
         <div id="PowerBI" class="tabcontent">
-            <h3>PowerBI and Tableau</h3>
+            <h3>PowerBI</h3>
             <ul>
                 <li><strong>Data Visualization Fundamentals:</strong> Strong understanding of data visualization principles, with hands on experience in using Tableau and PowerBI to create insightful reports and dashboards.<br><br></li>
                 <li><strong>Dashboard Creation:</strong> Familiar with building interactive dashboards in Tableau and PowerBI, showcasing key metrics and data trends for clear communication of business insights.<br><br></li>
@@ -629,6 +642,17 @@
                 <li><strong>Data Integration & Interactivity:</strong> Familiar with integrating multiple data sources into Tableau and PowerBI and creating interactive elements such as filters, slicers, and drilldowns to enhance user engagement and data exploration.<br><br></li>
             </ul>
         </div>
+
+        <div id="Tableau" class="tabcontent">
+            <h3>Tableau</h3>
+            <ul>
+                <li><strong>Data Visualization Fundamentals:</strong> Strong understanding of data visualization principles, with hands on experience in using Tableau and PowerBI to create insightful reports and dashboards.<br><br></li>
+                <li><strong>Dashboard Creation:</strong> Familiar with building interactive dashboards in Tableau and PowerBI, showcasing key metrics and data trends for clear communication of business insights.<br><br></li>
+                <li><strong>Data Manipulation & Transformation:</strong> Proficient in using Tableau and PowerBI's built-in data transformation tools to clean, reshape, and organize datasets for accurate visualizations.<br><br></li>
+                <li><strong>Data Integration & Interactivity:</strong> Familiar with integrating multiple data sources into Tableau and PowerBI and creating interactive elements such as filters, slicers, and drilldowns to enhance user engagement and data exploration.<br><br></li>
+            </ul>
+        </div>
+
 
 
 
