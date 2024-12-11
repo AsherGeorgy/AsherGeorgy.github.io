@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Market Analysis and Visualization Project</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        img { max-width: 100%; height: auto; }
+        
+        /* Base font size for portrait mode */
+        body {
+            font-size: 16px; /* Default font size */
+        }
+
+        /* Adjust font size for landscape orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 14px; /* Smaller font size for landscape */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center;"><u>Overview</u></h1>
+<p> This project aims to identify optimal locations and property types for starting an Airbnb business by analyzing trends in pricing, revenue, and competition across different zip codes and time periods. The goal is to provide actionable insights to help potential hosts make informed decisions about where to invest and what types of properties are likely to be the most profitable in the Airbnb market.</p>
+
+<ul>
+    <li><a href="https://public.tableau.com/views/AirBnBanalysisbyLocationandNoofbedrooms/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" , target="_blank"><b>View on Tableau Public</b></a></li>
+</ul>
+
+<h2><u>Data</u></h2>
+<p>Utilized a dataset consisting of three sheets:</p>
+<ul>
+    <li><b>Listings:</b> Detailed property and host information.</li>
+    <li><b>Reviews:</b> User feedback and review timestamps.</li>
+    <li><b>Calendar:</b> Availability and pricing information over time.</li>
+</ul>
+
+<h2><u>Key Insights Delivered</u></h2>
+<ul>
+    <li><b>Price Trends:</b> We visualized average Airbnb prices across various zip codes using both bar charts and an interactive map. This allowed us to identify the most lucrative areas for potential Airbnb investments, revealing regions with high revenue opportunities and optimal pricing strategies.</li>
+    
+    <li><b>Revenue Trends:</b> We analyzed total Airbnb revenue throughout the year, focusing on key trends such as seasonality and peak booking periods. This analysis helped uncover patterns in booking demand, allowing hosts to optimize pricing strategies and anticipate high-traffic seasons.</li>
+    
+    <li><b>Pricing vs. Property Features:</b> This insight delved into how Airbnb pricing varies based on property features, particularly the number of bedrooms. By understanding this relationship, potential hosts can better select the property type that aligns with their investment goals, balancing cost with potential revenue.</li>
+    
+    <li><b>Competition Analysis:</b> We assessed the distribution of Airbnb listings by bedroom count to gauge market saturation. This analysis revealed areas with high competition, helping potential hosts identify underserved locations with fewer listings for a competitive advantage.</li>
+</ul>
+
+
+
+<h2><u>Methodology</u></h2>
+<ul>
+    <li>Data was cleaned and joined using Tableau, connecting the Listings and Calendar sheets via unique listing IDs.</li>
+    <li>Created multiple interactive visualizations:
+        <ul>
+            <li><b>Bar Charts:</b> Show average prices by zip code.</li>
+            <li><b>Maps:</b> Display pricing geographically.</li>
+            <li><b>Time Series:</b> Track revenue trends over weeks.</li>
+            <li><b>Scatter Plots:</b> Compare pricing across property types.</li>
+            <li><b>Tables:</b> Highlight listing competition by property size.</li>
+        </ul>
+    </li>
+    <li>Integrated all visualizations into a comprehensive dashboard for easy exploration and decision-making.</li>
+</ul>
+
+
+
+<h2><u>Outcome</u></h2>
+<p>This project provides actionable insights into the best-performing Airbnb locations, pricing strategies, and ideal property features, offering a data-driven foundation for starting an Airbnb business.</p>
+
+
+<img src="images/Airbnb_market_dashboard.png">
+<h4 style="text-align: center;">Dashboard</h4>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Cleaning with SQL</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        img { max-width: 100%; height: auto; }
+
+        /* Base font size for portrait mode */
+        body {
+            font-size: 16px; /* Default font size */
+        }
+
+        /* Adjust font size for landscape orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 14px; /* Smaller font size for landscape */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center;"><u>Overview</u></h1>
+<p>This project is focused on data cleaning tasks applied to the <b>NashvilleHousing</b> database using SQL. The goal of the project is to clean and transform the data to ensure that it is accurate, consistent, and ready for further analysis. Various common data cleaning operations, such as updating date formats, handling NULL values, splitting columns, and removing duplicates, are performed to achieve data integrity and usability.</p>
+
+<ul>
+    <li><a href="https://github.com/AsherGeorgy/SqlScripts/blob/main/DataCleaning_HousingData.sql", target="_blank"><b>View Source Code</b></a></li>
+</ul>
+
+<h2><u>Key Features</u></h2>
+<ul>
+    <li><b>Updating Date Format:</b> The project begins by cleaning the <i>SaleDate</i> column to ensure that it stores only the date (excluding the time), making the data more consistent and easier to analyze.</li>
+    <li><b>Handling NULL Values:</b> NULL values in the <i>PropertyAddress</i> column are handled by using self-joins to fill missing values with corresponding non-null values from other rows within the same <i>ParcelID</i>.</li>
+    <li><b>Splitting Columns:</b> The <i>PropertyAddress</i> column is split into separate columns for <i>Address</i> and <i>City</i>, and similarly, the <i>OwnerAddress</i> is split into <i>Address</i>, <i>City</i>, and <i>State</i> columns using string manipulation functions.</li>
+    <li><b>Data Standardization:</b> The <i>SoldAsVacant</i> column values are standardized from numeric (1/0) to descriptive ('Yes'/'No') values for better readability.</li>
+    <li><b>Removing Duplicates:</b> Duplicate records are identified and removed based on unique attributes such as <i>ParcelID</i>, <i>PropertyAddress</i>, <i>SalePrice</i>, <i>SaleDate</i>, and <i>LegalReference</i>, ensuring that each record is unique.</li>
+    <li><b>Dropping Redundant Columns:</b> Unnecessary columns like <i>OwnerAddress</i>, <i>TaxDistrict</i>, and others are dropped to simplify the dataset and remove outdated or irrelevant information.</li>
+</ul>
+
+<h2><u>Tools and Technologies Used</u></h2>
+<ul>
+    <li><b>SQL Server:</b> SQL Server is used to perform data cleaning operations on the <i>NashvilleHousing</i> dataset.</li>
+    <li><b>SQL Functions:</b> Various SQL functions such as <i>CONVERT()</i>, <i>ISNULL()</i>, <i>SUBSTRING()</i>, <i>CHARINDEX()</i>, <i>PARSENAME()</i>, and <i>ROW_NUMBER()</i> are used to manipulate and clean the data efficiently.</li>
+    <li><b>Self-Joins:</b> Self-joins are used to fill missing values in the <i>PropertyAddress</i> column by referencing data from other rows with the same <i>ParcelID</i>.</li>
+    <li><b>Common Table Expressions (CTEs):</b> CTEs are used to handle the identification and removal of duplicate rows by assigning row numbers to grouped records and deleting duplicates based on these row numbers.</li>
+    <li><b>Data Transformation:</b> The project uses SQL to transform and split columns, standardize values, and drop unnecessary columns, preparing the data for analysis or further processing.</li>
+</ul>
+
+<h2><u>Challenges Solved</u></h2>
+<ul>
+    <li><b>Handling NULL Values:</b> The challenge of filling <i>NULL</i> values in the <i>PropertyAddress</i> column was solved by using a self-join to find non-null values from other records with the same <i>ParcelID</i>.</li>
+    <li><b>Data Formatting:</b> Converting the <i>SaleDate</i> column to store only the date (without time) was necessary for consistency, ensuring that the date is usable for time-based analysis.</li>
+    <li><b>Column Splitting:</b> Complex addresses in the <i>PropertyAddress</i> and <i>OwnerAddress</i> columns were split into multiple columns to facilitate more granular analysis of these fields (e.g., separating city, state, and address).</li>
+    <li><b>Standardization:</b> Numeric values in the <i>SoldAsVacant</i> column were standardized to 'Yes' and 'No' for better understanding and readability, rather than working with raw numeric values.</li>
+    <li><b>Removing Duplicates:</b> Identifying and removing duplicate records based on key columns ensured data quality and reduced redundancy, leading to a more accurate dataset for analysis.</li>
+    <li><b>Efficient Column Management:</b> Dropping redundant columns reduced the dataset's complexity and size, ensuring that only relevant information remains in the final dataset.</li>
+</ul>
+
+</body>
+</html>

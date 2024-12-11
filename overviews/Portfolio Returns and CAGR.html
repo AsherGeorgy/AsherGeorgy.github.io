@@ -3,50 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock and Portfolio Performance Analysis</title>
+    <title>Stock Performance and Portfolio Returns Analysis</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        h1, h2, h3 { color: #333; }
-        img { max-width: 100%; height: auto; }
-        code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
-		
-		/* Base font size for portrait mode */
-		body {
-			font-size: 16px; /* Default font size */
-		}
-
-		/* Adjust font size for landscape orientation */
-		@media screen and (orientation: landscape) {
-			body {
-				font-size: 14px; /* Smaller font size for landscape */
-			}
-		}
-
-		th {
-			background-color: #f4f4f4;
-		}
-
-		@media (max-width: 600px) {
-			th, td {
-				font-size: 14px; /* Adjust font size for smaller screens */
-			}
-		}
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h3 {
+            color: #555;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ol, ul {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
     </style>
 </head>
 <body>
 
-<h2>Overview</h2>
-<p>This project provides a comprehensive analysis of individual stock performance and portfolio returns using Python. The analysis includes calculating key metrics such as <strong>simple and log returns</strong>, <strong>cumulative returns</strong>, and <strong>Compound Annual Growth Rate (CAGR)</strong>, while also comparing the performance of multiple stocks in a portfolio over a specified period.</p>
+<h1><u>Overview</u></h1>
+<p>
+    This project provides a comprehensive analysis of individual stock performance and portfolio returns using Python. The analysis includes calculating key metrics such as <strong>simple and log returns</strong>, <strong>cumulative returns</strong>, and <strong>Compound Annual Growth Rate (CAGR)</strong>, while also comparing the performance of multiple stocks in a portfolio over a specified period.
+</p>
+<p>
+    Investors need to evaluate both individual stock performance and the overall performance of their investment portfolios to make informed decisions. This project addresses this need by offering a framework to calculate essential metrics for both individual stocks and portfolios.
+</p>
+<p>
+    These metrics help investors understand the risk and return profiles of their investments, enabling them to make better strategic choices.
+</p>
+<p>
+    <strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Portfolio%20returns%20and%20CAGR.md" target="_blank">View the full project on Github</a>.</strong>
+</p>
 
-<p>Investors need to evaluate both individual stock performance and the overall performance of their investment portfolios to make informed decisions. This project addresses this need by offering a framework to calculate essential metrics for both individual stocks and portfolios.</p>
-
-<p>These metrics help investors understand the risk and return profiles of their investments, enabling them to make better strategic choices.</p>
-
-<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Portfolio%20returns%20and%20CAGR.md" target="_blank">View the full project on Github</a>.</strong></p>
-
-<h2>Approach and Methodology</h2>
+<h2><u>Approach and Methodology</u></h2>
 <ol>
-    <li><strong>Data Retrieval</strong>: 
+    <li><strong>Data Retrieval</strong>:
         <p>Used Yahoo Finance API to fetch historical daily adjusted closing prices for stocks. Conducted analysis over specified periods to calculate returns and growth rates.</p>
     </li>
     <li><strong>Individual Stock Analysis</strong>:
@@ -68,17 +77,18 @@
     </li>
 </ol>
 
-<h2>Visuals</h2>
+<h2><u>Visuals</u></h2>
 <h3>Annualized Simple Returns:</h3>
 <img src="images/Annualized Simple Returns.png" alt="Annualized Simple Returns">
+
 <h3>Annualized Log Returns:</h3>
 <img src="images/Annualized Log Returns.png" alt="Annualized Log Returns">
+
 <h3>Cumulative Return and CAGR Calculation:</h3>
 <img src="images/Cumulative Return and CAGR Calculation.png" alt="Cumulative Return and CAGR Calculation">
+
 <h3>Relative Stock Price Movement:</h3>
 <img src="images/Relative Stock Price Movement.png" alt="Relative Stock Price Movement">
-
-
 
 </body>
 </html>

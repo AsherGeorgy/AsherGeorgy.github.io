@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S&P 500 Momentum Strategy</title>
+    <title>Momentum-based Investment Strategy</title>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; }
         h1, h2, h3 { color: #333; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
-        th { background-color: #f4f4f4; }
-
-        /* Prevent horizontal scroll */
-        .table-container {
-            overflow-x: auto; /* Allow horizontal scrolling if needed */
-        }
+        img { max-width: 100%; height: auto; }
 
         /* Base font size for portrait mode */
         body {
@@ -28,23 +21,53 @@
             }
         }
 
-        /* Adjust font size for smaller screens */
-        @media (max-width: 600px) {
-            th, td {
-                font-size: 14px; /* Smaller font size */
-                padding: 8px; /* Adjust padding */
-            }
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        /* Links */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* General styling for paragraphs */
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* List styling */
+        ul {
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
 
-<h2>Overview</h2>
+<h1 style="text-align: center;"><u>Overview</u></h1>
 <p>This project implements a momentum-based investment strategy for selecting stocks from the S&P 500 index. It identifies top-performing stocks based on historical returns over multiple time frames and calculates the optimal number of shares to buy for a specified portfolio size. Investing in "momentum stocks"—those with strong recent performance—is a popular strategy among traders and investors. This project addresses the challenge of identifying these top momentum stocks and determining the appropriate share quantities to maximize potential returns by capturing ongoing upward trends.</p>
 
 <p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/quantitative%20momentum.md" target="_blank">View the full project on Github</a>.</strong></p>
 
-<h2>Approach and Methodology</h2>
+<h2><u>Approach and Methodology</u></h2>
 <ol>
     <li><strong>Data Collection:</strong> 
         <ul>
@@ -79,7 +102,7 @@
     </li>
 </ol>
 
-<h2>Visuals</h2>
+<h2><u>Visuals</u></h2>
 <div class="table-container">
     <table>
         <thead>

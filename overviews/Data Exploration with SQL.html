@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Data Exploration with SQL</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        img { max-width: 100%; height: auto; }
+
+        /* Base font size for portrait mode */
+        body {
+            font-size: 16px; /* Default font size */
+        }
+
+        /* Adjust font size for landscape orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 14px; /* Smaller font size for landscape */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center;"><u>Overview</u></h1>
+<p>This project is focused on exploring and analyzing COVID-19 data through SQL queries. By querying the `CovidDeaths` and `CovidVaccinations` tables, we gain insights into various aspects of the COVID-19 pandemic, such as infection rates, death rates, vaccination progress, and regional trends. The project involves querying large datasets to explore global and country-specific data, uncover trends, and make data-driven observations.</p>
+
+<ul>
+    <li><a href="https://github.com/AsherGeorgy/SqlScripts/blob/main/Covid_data_exploration.sql", target="_blank"><b>View Source Code</b></a></li>
+</ul>
+
+<h2><u>Key Features</u></h2>
+<ul>
+    <li><b>Global and Country-Specific Analysis:</b> The project analyzes global and regional trends in COVID-19 data, including the total number of cases, deaths, infection rates, and vaccination rates.</li>
+    <li><b>Death Rate and Infection Rate Exploration:</b> It calculates death rates (total deaths divided by total cases) and infection rates (total cases per capita) for specific countries like India, providing insights into how different regions are affected by the pandemic.</li>
+    <li><b>Vaccination Progress:</b> The project tracks the cumulative number of vaccinations and calculates the percentage of the population vaccinated by country. This is achieved by using SQL window functions like `SUM()` with `PARTITION BY`.</li>
+    <li><b>Data Aggregation with CTEs and TEMP Tables:</b> SQL Common Table Expressions (CTEs) and TEMP tables are used to aggregate vaccination data, making the analysis more efficient and modular.</li>
+    <li><b>Identification of High-Risk Regions:</b> The queries identify the countries and continents with the highest death rates, infection rates, and total cases, helping to spotlight the most affected regions.</li>
+</ul>
+
+<h2><u>Tools and Technologies Used</u></h2>
+<ul>
+    <li><b>SQL Server:</b> SQL Server is used to query and manipulate the COVID-19 data stored in the `CovidDeaths` and `CovidVaccinations` tables.</li>
+    <li><b>SQL Functions:</b> Various SQL functions such as `SUM()`, `CAST()`, `NULLIF()`, `PARTITION BY`, and `OVER()` are used to calculate metrics like death rates, infection rates, and vaccination coverage.</li>
+    <li><b>Common Table Expressions (CTEs):</b> CTEs are used to modularize complex queries, allowing for better data transformation and exploration.</li>
+    <li><b>TEMP Tables:</b> TEMP tables are used to store intermediate data, helping with the calculation of vaccination percentages and ensuring efficient processing.</li>
+    <li><b>SQL Views:</b> Views are created to simplify the querying of aggregated vaccination data and to provide reusable results for further analysis.</li>
+</ul>
+
+<h2><u>Challenges Solved</u></h2>
+<ul>
+    <li><b>Handling Missing Data:</b> The project tackles issues related to missing or zero values, particularly in death rates and vaccination calculations, using techniques like `NULLIF()` to avoid errors in calculations.</li>
+    <li><b>Efficient Data Aggregation:</b> By using window functions and partitioning, large datasets are aggregated efficiently, helping to uncover insights from both global and country-specific data.</li>
+    <li><b>Complex Data Transformations:</b> Complex calculations such as the cumulative total of vaccinations and the percentage of vaccinated individuals were performed using SQL techniques like `SUM()` and `CAST()`, making the analysis more accurate and reliable.</li>
+    <li><b>Visualization of Key Trends:</b> By focusing on death rates, infection rates, and vaccination progress, the project provides a comprehensive view of the pandemic's trajectory in different regions, helping to identify trends and areas of concern.</li>
+</ul>
+
+</body>
+</html>

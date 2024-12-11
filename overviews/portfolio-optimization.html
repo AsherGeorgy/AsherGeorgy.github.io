@@ -24,42 +24,76 @@
 </head>
 <body>
 
-<h2>Overview</h2>
-<p>This project conducts a comprehensive analysis of a portfolio consisting of Apple Inc. (AAPL) and Walmart Inc. (WMT) stocks over a 10-year period. It utilizes portfolio optimization techniques to balance risk and return. By analyzing historical performance and applying methods such as mean-variance optimization and Markowitz efficient frontier analysis, it provides insights into how different asset allocations can impact overall portfolio performance and risk.</p>
+<h1 style="text-align: center;"><u>Overview</u></h1>
+<p>The Portfolio Optimization Model is an interactive web application built with <b>Python</b> and <b>Streamlit</b>. It applies <b>Modern Portfolio Theory</b> and <b>Convex Optimization</b> to help users analyze and optimize financial portfolios.</p>
 
-<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Portfolio%20Optimization%20with%20Python.md" target="_blank">View the full project on Github</a>.</strong></p>
+<ul>
+    <li><a href="https://optimize-this-portfolio.streamlit.app/" , target="_blank"><b>Try the App</b></a></li>
+    <li><a href="https://github.com/AsherGeorgy/Portfolio-Optimization-Model/tree/main", target="_blank"><b>View Source Code</b></a></li>
+</ul>
 
-<h2>Approach and Methodology</h2>
-<ol>
-    <li><strong>Data Collection:</strong> Historical daily adjusted closing price data for AAPL and WMT from Yahoo Finance.</li>
-    <li><strong>Data Analysis:</strong>
+<h2><u>Key Features</u></h2>
+<ul>
+    <li><b>User-Friendly Interface:</b> Test with randomly generated inputs or run with customized input stock tickers, target growth rates (CAGR), and benchmark indices.</li>
+    <li><b>Portfolio Analysis:</b>
         <ul>
-            <li>Calculation of annualized returns and volatility for each asset.</li>
-            <li>Construction of a correlation matrix to assess the relationships between the assets.</li>
+            <li>Calculates essential metrics such as returns, volatility, and Sharpe ratios.</li>
+            <li>Simulates and visualizes the <b>Efficient Frontier</b> to highlight optimal portfolios.</li>
         </ul>
     </li>
-    <li><strong>Optimization Techniques:</strong>
+    <li><b>Portfolio Optimization:</b>
         <ul>
-            <li><strong>Mean-Variance Optimization:</strong> Using cvxpy to minimize portfolio volatility while achieving a target return.</li>
-            <li><strong>Markowitz Efficient Frontier Analysis:</strong> Identification of portfolios that offer the minimum volatility, maximum return, and maximum Sharpe ratio.</li>
+            <li>Leverages advanced <b>convex optimization</b> techniques to suggest the best portfolio allocation.</li>
+            <li>Ensures allocations meet the user’s risk and return objectives.</li>
         </ul>
     </li>
-    <li><strong>Visualization:</strong> Plotting the efficient frontier and optimized portfolio allocations.</li>
-</ol>
+    <li><b>Visualization Tools:</b>
+        <ul>
+            <li>Generate dynamic charts using <b>Plotly</b> to compare portfolio performance.</li>
+            <li>Provides detailed correlation heatmaps and performance breakdowns of individual assets.</li>
+        </ul>
+    </li>
+</ul>
 
-<h2>Visuals</h2>
-<h3>Mean-Variance Optimization Results</h3>
-<img src="images/output_10_2.png" alt="Optimized">
+<h2><u>Tools and Technologies Used</u></h2>
+<ul>
+    <li><b>Python Libraries:</b>
+        <ul>
+            <li><b>Streamlit</b> for building interactive web applications.</li>
+            <li><b>NumPy</b> and <b>Pandas</b> for data manipulation and analysis.</li>
+            <li><b>Plotly</b> for creating interactive visualizations.</li>
+            <li><b>cvxpy</b> for convex optimization used in portfolio optimization.</li>
+            <li><b>Seaborn</b> for statistical data visualization.</li>
+        </ul>
+    </li>
+    <li><b>Yahoo Finance API:</b> Retrieves historical stock and index data for analysis.</li>
+    <li><b>Modern Portfolio Theory:</b> Calculates risk-adjusted returns using statistical modeling to optimize investment portfolios.</li>
+    <li><b>Data Visualization:</b>
+        <ul>
+            <li>Displays <b>Heatmaps</b> for visualizing asset correlations.</li>
+            <li>Interactive <b>line charts</b> to track cumulative performance over time.</li>
+            <li>Visualizes the <b>Efficient Frontier</b> to identify optimal portfolio allocations.</li>
+            <li>Calculates and displays <b>Sharpe Ratios</b> for portfolio risk-return optimization.</li>
+        </ul>
+    </li>
+</ul>
 
-<h3>Markowitz Efficient Frontier Analysis</h3>
-<p>Interactive Efficient Frontier with plotly:</p>
-<img src="images/output_10_5.png" alt="Interactive Eff Frontier">
-<p>Minimum Volatility Portfolio:</p>
-<img src="images/output_10_7.png" alt="Min Volatility">
-<p>Maximum Return Portfolio:</p>
-<img src="images/output_10_9.png" alt="Max Return">
-<p>Maximum Sharpe Ratio Portfolio:</p>
-<img src="images/output_10_11.png" alt="Max Sharpe">
+<h2><u>Challenges Solved</u></h2>
+<ul>
+    <li><b>Streamlit Integration:</b> Integrated the Python script with Streamlit, enabling interactive user input and dynamic visualizations for real-time portfolio analysis and optimization.</li>
+    <li><b>Dynamic Interface:</b> Developed a user-friendly interface to accommodate input for stock tickers, target growth rates (CAGR), and benchmark indices.</li>
+    <li><b>Computational Optimization:</b> Implemented Monte Carlo simulations to efficiently process large datasets for robust portfolio analysis.</li>
+    <li><b>Real-Time Validation:</b> Integrated checks for stock tickers and benchmark indices to ensure the accuracy of the retrieved data.</li>
+</ul>
+
+<hr>
+
+<h2><u>Screenshots</u></h2>
+
+<img src="https://github.com/AsherGeorgy/Portfolio-Optimization-Model/blob/main/sample_outputs/Efficient%20Frontier.png?raw=true" alt="Efficient Frontier Visualization">
+<h4 style="text-align: center;">Efficient Frontier</h4>
+<img src="https://github.com/AsherGeorgy/Portfolio-Optimization-Model/blob/main/sample_outputs/Efficient%20Portfolios%20Backtest.png?raw=true" alt="Cumulative Returns Comparison">
+<h4 style="text-align: center;">Cumulative Returns Comparison</h4>
 
 </body>
 </html>

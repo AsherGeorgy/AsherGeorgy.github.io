@@ -5,55 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capital Asset Pricing Model (CAPM)</title>
     <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        img { max-width: 100%; height: auto; }
+
+        /* Base font size for portrait mode */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            font-size: 16px; /* Default font size */
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+
+        /* Adjust font size for landscape orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 14px; /* Smaller font size for landscape */
+            }
         }
+
+        /* General styling for paragraphs */
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* List styling */
+        ul {
+            margin-bottom: 15px;
+        }
+
+        /* Links */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Preformatted text for code snippets */
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Styling for images */
         img {
-            max-width: 100%;
-            height: auto;
+            width: 50%;
+            margin: 20px 0;
         }
-		
-		/* Base font size for portrait mode */
-		body {
-			font-size: 16px; /* Default font size */
-		}
-
-		/* Adjust font size for landscape orientation */
-		@media screen and (orientation: landscape) {
-			body {
-				font-size: 14px; /* Smaller font size for landscape */
-			}
-		}
-
-		th {
-			background-color: #f4f4f4;
-		}
-
-		@media (max-width: 600px) {
-			th, td {
-				font-size: 14px; /* Adjust font size for smaller screens */
-			}
-		}
     </style>
 </head>
 <body>
 
-<h2>Overview</h2>
+<h1 style="text-align: center;"><u>Overview</u></h1>
 <p>
     This project provides a brief overview of the <strong>Capital Asset Pricing Model (CAPM)</strong> and its practical applications in financial analysis. It explores the implementation of CAPM using <u>Walmart Inc, Coca-Cola Co, Lockheed Martin Corp and Pfizer Inc</u> stocks as examples, demonstrating how to calculate <strong>beta values</strong> and <strong>expected returns</strong>, as well as assess <strong>risk-adjusted returns</strong> using the <strong>Sharpe Ratio</strong> with Python.
 </p>
 <p>
-	Investors require a systematic approach to evaluate the expected returns of securities based on their risk. The CAPM serves as a foundational model in finance for understanding the relationship between risk and return, while the Sharpe Ratio helps investors assess the risk-adjusted performance of their investments. Together, these tools enable more informed investment decisions.
+    Investors require a systematic approach to evaluate the expected returns of securities based on their risk. The CAPM serves as a foundational model in finance for understanding the relationship between risk and return, while the Sharpe Ratio helps investors assess the risk-adjusted performance of their investments. Together, these tools enable more informed investment decisions.
 </p>
 
 <p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Capital%20Asset%20Pricing%20Model.md" target="_blank">View the full project on Github</a>.</strong></p>
 
-<h2>Approach</h2>
+<h2><u>Approach</u></h2>
 <ol>
     <li>
         <strong>Data Retrieval:</strong> Historical stock prices are fetched using the Yahoo Finance API. 
@@ -73,13 +87,16 @@
     </li>
 </ol>
 
-<h2>Visuals</h2>
+<h2><u>Visuals</u></h2>
 
-<p><em>Beta Values</em></p><img src="images/Beta Values.png" alt="Beta Values" style="width:50%; height=auto;">
-<p><em>Expected Returns as per CAPM</em></p><img src="images/Expected Return.png" alt="Expected Return" style="width:50%; height:auto;">
+<p><em>Beta Values</em></p>
+<img src="images/Beta Values.png" alt="Beta Values" style="width:50%; height:auto;">
+
+<p><em>Expected Returns as per CAPM</em></p>
+<img src="images/Expected Return.png" alt="Expected Return" style="width:50%; height:auto;">
+
 <p><em>Sharpe Ratios</em></p>
 <img src="images/Sharpe Ratio.png" alt="Sharpe Ratio" style="width:50%; height:auto;">
-
 
 </body>
 </html>

@@ -3,45 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock and Portfolio Analysis</title>
+    <title>Portfolio Risk Analysis</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        h1, h2, h3 { color: #333; }
-        img { max-width: 100%; height: auto; }
-        code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
-		
-		/* Base font size for portrait mode */
-		body {
-			font-size: 16px; /* Default font size */
-		}
-
-		/* Adjust font size for landscape orientation */
-		@media screen and (orientation: landscape) {
-			body {
-				font-size: 14px; /* Smaller font size for landscape */
-			}
-		}
-
-		th {
-			background-color: #f4f4f4;
-		}
-
-		@media (max-width: 600px) {
-			th, td {
-				font-size: 14px; /* Adjust font size for smaller screens */
-			}
-		}
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h3 {
+            color: #555;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ol, ul {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
     </style>
 </head>
 <body>
 
+<h1><u>Overview</u></h1>
+<p>
+    This project provides a comprehensive analysis of individual stocks and their performance within a portfolio context, calculating key metrics such as <strong>risk and return, variance, covariance, correlation</strong>, and <strong>portfolio risk decomposition</strong> using historical data fetched from Yahoo Finance. Investors need to understand the risk and return profiles of individual stocks and how they behave together in a portfolio.
+</p>
+<p>
+    By delivering insights into stock performance metrics and portfolio risk through various quantitative methods, the project evaluates the expected return and risk associated with investing in different stocks and highlights how diversification impacts overall portfolio risk.
+</p>
+<p>
+    <strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Portfolio%20Risk%20Analysis.md" target="_blank">View the full project on Github</a>.</strong>
+</p>
 
-<h2>Overview</h2>
-<p>This project provides a comprehensive analysis of individual stocks and their performance within a portfolio context, calculating key metrics such as <strong>risk and return, variance, covariance, correlation</strong>, and <strong>portfolio risk decomposition</strong> using historical data fetched from Yahoo Finance. Investors need to understand the risk and return profiles of individual stocks and how they behave together in a portfolio.<br><br> By delivering insights into stock performance metrics and portfolio risk through various quantitative methods, the project evaluates the expected return and risk associated with investing in different stocks and highlights how diversification impacts overall portfolio risk.</p>
-
-<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Portfolio%20Risk%20Analysis.md" target="_blank">View the full project on Github</a>.</strong></p>
-
-<h2>Approach and Methodology</h2>
+<h2><u>Approach and Methodology</u></h2>
 <ol>
     <li><strong>Data Collection</strong>: Fetching historical adjusted close prices for selected stocks from Yahoo Finance using the <code>yfinance</code> library.</li>
     <li><strong>Individual Stock Analysis</strong>:
@@ -59,12 +68,15 @@
     <li><strong>Visualization</strong>: Plotting stock price movements and risk metrics for better understanding and interpretation.</li>
 </ol>
 
-<h2>Visuals</h2>
+<h2><u>Visuals</u></h2>
 <h3>Risk and Return Calculation:</h3>
 <img src="images/Risk and Return Calculation.png" alt="Risk and Return Calculation">
+
 <h3>Covariance and Correlation Analysis:</h3>
 <img src="images/Covariance and Correlation Analysis.png" alt="Covariance and Correlation Analysis">
+
 <h3>Portfolio Risk Decomposition:</h3>
 <img src="images/Portfolio Risk Decomposition.png" alt="Portfolio Risk Decomposition">
 
-
+</body>
+</html>

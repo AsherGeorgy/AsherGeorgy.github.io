@@ -3,60 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank Statement Processing and Analysis</title>
+    <title>Interactive Bank Statement</title>
     <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        img { max-width: 100%; height: auto; }
+
+        /* Base font size for portrait mode */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            font-size: 16px; /* Default font size */
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+
+        /* Adjust font size for landscape orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 14px; /* Smaller font size for landscape */
+            }
         }
+
+        /* General styling for paragraphs */
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* List styling */
+        ul {
+            margin-bottom: 15px;
+        }
+
+        /* Links */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Preformatted text for code snippets */
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Styling for images */
         img {
-            max-width: 100%;
-            height: auto;
-        }
-        .visual {
+            width: 50%;
             margin: 20px 0;
         }
-		
-		/* Base font size for portrait mode */
-		body {
-			font-size: 16px; /* Default font size */
-		}
 
-		/* Adjust font size for landscape orientation */
-		@media screen and (orientation: landscape) {
-			body {
-				font-size: 14px; /* Smaller font size for landscape */
-			}
-		}
-
-		th {
-			background-color: #f4f4f4;
-		}
-
-		@media (max-width: 600px) {
-			th, td {
-				font-size: 14px; /* Adjust font size for smaller screens */
-			}
-		}
+        .visual {
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 <body>
 
-
-<h2>Overview</h2>
+<h1 style="text-align: center;"><u>Overview</u></h1>
 <p>
     This project involves processing raw bank statements of a firm to create a user-friendly and interactive Excel file that summarizes financial transactions. The Excel file utilizes various data processing and visualization techniques to provide insights into the firm’s financial activities.
 </p>
 <p>
-	Firms often need to analyze their financial transactions to manage cash flow, monitor expenses, and prepare for audits. This project aims to transform raw bank statements into an organized Excel workbook, enhancing readability and enabling interactive exploration of data. This approach allows for quick insights into financial health and supports more efficient decision-making processes.
+    Firms often need to analyze their financial transactions to manage cash flow, monitor expenses, and prepare for audits. This project aims to transform raw bank statements into an organized Excel workbook, enhancing readability and enabling interactive exploration of data. This approach allows for quick insights into financial health and supports more efficient decision-making processes.
 </p>
 <p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Microsoft%20Excel/Interactive%20Bank%20Statement.md" target="_blank">View the full project on Github</a>.</strong></p>
 
-<h2>Approach and Methodology</h2>
+<h2><u>Approach and Methodology</u></h2>
 <ol>
     <li><strong>Data Processing:</strong> Imported raw data from text/CSV files using Excel's Power Query Editor and applied data cleaning techniques.</li>
     <li><strong>Checking Account Sheet:</strong> Created a detailed accounting of monthly transactions with interactive features like slicers.</li>
@@ -64,7 +78,7 @@
     <li><strong>Check Register Sheet:</strong> Constructed a detailed table for issued checks with slicers for enhanced user interaction.</li>
 </ol>
 
-<h2>Visuals</h2>
+<h2><u>Visuals</u></h2>
 <div class="visual">
     <h3>Checking Account:</h3>
     <img src="images/Checking Account.png" alt="Checking Account">

@@ -3,60 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clash of Clans Hero Equipment Upgrade Planner</title>
+    <title>Clash of Clans Upgrade Planner</title>
     <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        img { max-width: 100%; height: auto; }
+
+        /* Base font size for portrait mode */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            font-size: 16px; /* Default font size */
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+
+        /* Adjust font size for landscape orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 14px; /* Smaller font size for landscape */
+            }
         }
+
+        /* General styling for paragraphs */
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* List styling */
+        ul {
+            margin-bottom: 15px;
+        }
+
+        /* Links */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Preformatted text for code snippets */
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Styling for images */
         img {
-            max-width: 100%;
-            height: auto;
-        }
-        .visual {
+            width: 50%;
             margin: 20px 0;
         }
-		
-		/* Base font size for portrait mode */
-		body {
-			font-size: 16px; /* Default font size */
-		}
 
-		/* Adjust font size for landscape orientation */
-		@media screen and (orientation: landscape) {
-			body {
-				font-size: 14px; /* Smaller font size for landscape */
-			}
-		}
-
-		th {
-			background-color: #f4f4f4;
-		}
-
-		@media (max-width: 600px) {
-			th, td {
-				font-size: 14px; /* Adjust font size for smaller screens */
-			}
-		}
+        .visual {
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 <body>
 
-<h2>Overview</h2>
+<h1 style="text-align: center;"><u>Overview</u></h1>
 <p>
     This began as a <strong>fun personal project</strong> during my time playing Clash of Clans which later evolved into a comprehensive tool for players to effectively plan their Hero Equipment upgrades. It helps optimize upgrade paths based on various in-game parameters, such as Townhall Level, Trophy League, blacksmith balance, and Clan War frequency. Upon receiving <strong>positive feedback from the <a href="https://www.reddit.com/r/ClashOfClans/comments/1atwpa1/plan_your_hero_equipment_upgrades_using_this/" target="_blank">Reddit community</a></strong>, I decided to document it on my GitHub.
 </p>
 <p>
-	The tool is a <strong>Google Sheets-based calculator</strong> that uses formulas and lookup tables to dynamically update based on user input, providing clear visualization of the required resources and time needed for upgrades. The challenge of Clash of Clans is to efficiently plan upgrades due to the complexity of resource management and varying upgrade costs. Balancing resource collection, time, and strategic gameplay decisions is key to quick progress. This project addresses this challenge by offering a structured, user-friendly tool for visualizing and planning upgrades more effectively.
-<p>
-    <p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Fun%20projects/Clash%20of%20Clans%20Upgrade%20Planner.md" target="_blank">View the full project on Github</a>.</strong></p>
+    The tool is a <strong>Google Sheets-based calculator</strong> that uses formulas and lookup tables to dynamically update based on user input, providing clear visualization of the required resources and time needed for upgrades. The challenge of Clash of Clans is to efficiently plan upgrades due to the complexity of resource management and varying upgrade costs. Balancing resource collection, time, and strategic gameplay decisions is key to quick progress. This project addresses this challenge by offering a structured, user-friendly tool for visualizing and planning upgrades more effectively.
 </p>
+<p><strong><a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Fun%20projects/Clash%20of%20Clans%20Upgrade%20Planner.md" target="_blank">View the full project on Github</a>.</strong></p>
 
-<h2>Approach and Methodology</h2>
+<h2><u>Approach and Methodology</u></h2>
 <ol>
     <li><strong>Data Input:</strong> Players input their Townhall Level, Trophy League, blacksmith balance, and Clan War frequency.</li>
     <li><strong>Dynamic Calculation:</strong> The tool uses formulas to dynamically calculate the resources required and the time needed to collect these resources based on user inputs.</li>
@@ -64,7 +78,8 @@
     <li><strong>Customization:</strong> Allows for personalized upgrade paths, enhancing decision-making and strategic planning.</li>
 </ol>
 
-<h2>Visuals</h2>
+<h2><u>Visuals</u></h2>
+
 <div class="visual">
     <h3>Example Dashboard:</h3>
     <p>A <strong>Townhall 15 at Champion III</strong> that wars once a week and has a blacksmith balance of [15529 Shiny Ores, 680 Glowy Ores, and 32 Starry Ores] will need 272 days to upgrade Frozen Arrow from level 17 to 27. The Dashboard will look like this:</p>
