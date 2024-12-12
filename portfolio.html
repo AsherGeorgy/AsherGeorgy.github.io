@@ -71,21 +71,6 @@
 			margin: auto;
 		}
 
-		.project-card {
-			margin: 15px 0;
-			padding: 20px;
-			background-color: white;
-			border: 1px solid #e0e0e0;
-			border-radius: 5px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-			transition: box-shadow 0.3s ease, transform 0.3s ease; 
-		}
-
-		.project-card:hover {
-			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-			transform: translateY(-2px);
-		}
-
 		.project-title {
 			color: #666;
 			font-weight: bold;
@@ -179,16 +164,56 @@
 			background-color: #e8eaf6; 
 		}
 
+		@media (max-width: 768px) {
+			.w3-container {
+				padding: 10px;
+			}
+
+			.project-title {
+				font-size: 1.1rem;
+			}
+		}
+
+		.project-card {
+			margin: 15px 0;
+			padding: 20px;
+			background-color: white;
+			border: 1px solid #e0e0e0;
+			border-radius: 5px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			transition: box-shadow 0.3s ease, transform 0.3s ease; 
+		}
+
+		.project-card:hover {
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+			transform: translateY(-2px);
+		}
+
+		.project-card.highlight {
+			border: 2px solid #007BFF; /* Blue border for highlighting */
+			background-color: #f0f8ff; /* Light blue background */
+		}
+
+		.project-title {
+			color: #009688;
+			font-weight: bold;
+			font-size: 1.25rem; /* Scalable font size */
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.highlight {
+			background-color: #e8eaf6; 
+		}
+
 		html {
 			scroll-behavior: smooth;
 		}
 
 		/* Media Queries for Responsiveness */
 		@media (max-width: 768px) {
-			.w3-container {
-				max-width: 100%;
-				padding: 10px;
-			}
 			.project-card {
 				padding: 15px;
 			}
@@ -196,7 +221,6 @@
 				font-size: 1.1rem; 
 			}
 		}
-
 
     </style>
 </head>
@@ -213,22 +237,213 @@
 
 <!-- Portfolio Section -->
 <main id="portfolio" class="w3-container w3-padding-32 w3-white w3-margin-top">
-    <h1 class="w3-center">Project Portfolio<i class="fa-solid fa-laptop-file" style="margin-left:10px; color: #009688;"></i></h1>
+    <h1 class="w3-center">Project Portfolio<i class="fa-solid fa-laptop-file" style="margin-left:10px;"></i></h1>
 	<h5 class="w3-center">An overview of some of the projects I have worked on</h5>
 
     <hr>
 
-	<section id="projects">
-		<div id="project-list-placeholder"></div>
-		<script>
-			fetch("project-list.html")
-				.then(response => response.text())
-				.then(data => {
-					document.getElementById("project-list-placeholder").innerHTML = data;
-				})
-				.catch(error => console.error("Error loading project list:", error));
-		</script>
-	</section>
+<!-- Project List -->
+<section id="projects">
+	<!-- Portfolio Optimization Project -->
+	<article id="Project1" class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Portfolio Optimization Python Web App</span>
+			<div class="project-icons">
+				<img src="https://streamlit.io/favicon.svg" alt="Streamlit Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/portfolio-optimization.html"></iframe>
+		</div>
+	</article>
+
+	<!-- SQL Data Cleaning Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Data Cleaning with SQL</span>
+			<div class="project-icons">
+				<img src="assets/sql-logo-only.png" alt="SQL Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/Data Cleaning with SQL.html"></iframe>
+		</div>
+	</article>
+
+	<!-- Tableau AirBnB Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Market Analysis and Visualization with Tableau</span>
+			<div class="project-icons">
+				<img src="assets/tableau-logo-only.png" alt="Tableau Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/Airbnb Market Analysis and Visualization.html"></iframe>
+		</div>
+	</article>
+
+	<!-- DCF Valuation Project -->
+	<article id="Project3" class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Dynamic DCF Valuation and Financial Modeling in Excel</span>
+			<div class="project-icons">
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/dcf valuation.html"></iframe>
+		</div>
+	</article>
+
+	<!-- S&P 500 Momentum Project -->
+	<article id="Project2" class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Momentum Investment Strategy with Python</span>
+			<div class="project-icons">
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/quantitative momentum.html"></iframe>
+		</div>
+	</article>
+
+	<!-- SQL Data Cleaning Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Data Exploration with SQL</span>
+			<div class="project-icons">
+				<img src="assets/sql-logo-only.png" alt="SQL Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/Data Exploration with SQL.html"></iframe>
+		</div>
+	</article>
+
+	<!-- Stock and Portfolio Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Portfolio Risk Analysis with Python</span>
+			<div class="project-icons">
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/stock and portfolio.html"></iframe>
+		</div>
+	</article>
+
+	<!-- Interactive Bank Statement Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Interactive Bank Statement Analysis Tool in Excel</span>
+			<div class="project-icons">
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/Interactive Bank Statement.html"></iframe>
+		</div>
+	</article>
+
+	<!-- Portfolio Returns and CAGR Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Portfolio Returns and CAGR Analysis with Python</span>
+			<div class="project-icons">
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/Portfolio Returns and CAGR.html"></iframe>
+		</div>
+	</article>
+
+	<!-- Three-Statement Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Three-Statement Financial Model in Excel</span>
+			<div class="project-icons">
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/Three-Statement Financial Model.html"></iframe>
+		</div>
+	</article>
+
+	<!-- CAPM Analysis and Risk-Return Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>CAPM Analysis and Risk-Return Evaluation with Python</span>
+			<div class="project-icons">
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/CAPM Analysis and Risk-Return.html"></iframe>
+		</div>
+	</article>
+
+	<!-- Automated Cash Register Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Automated Cash Register System in Excel</span>
+			<div class="project-icons">
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/Automated Cash Register.html"></iframe>
+		</div>
+	</article>
+
+	<!-- Clash of Clans Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Clash of Clans Hero Upgrade Planner in Excel</span>
+			<div class="project-icons">
+				<img src="assets/google-sheets-logo-only.png" alt="Google Sheets Logo" class="project-icon" style="width: 25px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/Clash of Clans.html"></iframe>
+		</div>
+	</article>
+
+	<!-- Personal Website -->
+	<article id="Project4" class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Personal Website</span>
+			<div class="project-icons">
+				<img src="assets/html-logo-only.png" alt="HTML Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<img src="assets/css-logo-only.png" alt="CSS Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
+				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<iframe src="overviews/personal website.html"></iframe>
+		</div>
+	</article>
+
+</section>
+
 
 </main>
 
@@ -244,68 +459,75 @@
     <i class="fa fa-chevron-up" aria-hidden="true"></i> Top
 </button>
 
-<!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="myBtn" title="Scroll to top"><i class="fa fa-chevron-up" aria-hidden="true"></i> Top</button>
 
 <script>
-	// Function to toggle the visibility of project descriptions
-	function toggleDescription(element) {
-		const description = element.nextElementSibling; // Get the next sibling element (description)
-		const isExpanded = element.getAttribute('aria-expanded') === 'true'; // Check if it's currently expanded
+    // Function to toggle the visibility of project descriptions
+    function toggleDescription(element) {
+        const description = element.nextElementSibling;
+        const isExpanded = element.getAttribute('aria-expanded') === 'true';
 
-		// Close all other open descriptions
-		document.querySelectorAll('.project-description').forEach((desc) => {
-			desc.style.display = 'none'; // Hide all descriptions
-			desc.previousElementSibling.setAttribute('aria-expanded', 'false'); // Update aria-expanded attribute
-		});
+        // Close all other open descriptions
+        document.querySelectorAll('.project-description').forEach((desc) => {
+            desc.style.display = 'none';
+            desc.previousElementSibling.setAttribute('aria-expanded', 'false');
+        });
 
-		// Toggle the visibility of the selected description
-		description.style.display = isExpanded ? 'none' : 'block'; // Show/hide the description
-		element.setAttribute('aria-expanded', !isExpanded); // Update aria-expanded attribute for the clicked element
-	}
+        // Toggle the selected description
+        description.style.display = isExpanded ? 'none' : 'block';
+        element.setAttribute('aria-expanded', !isExpanded);
+    }
 
-	// Function to highlight the project based on the URL hash
-	function highlightProject() {
-		const hash = window.location.hash; // Get the hash from the URL
-		const projectDiv = document.querySelector(hash); // Select the project div using the hash
+    // Function to highlight project based on URL hash
+    function highlightProject() {
+        const hash = window.location.hash;
+        if (!hash) return;
 
-		if (projectDiv) {
-			projectDiv.classList.add('highlight'); // Add highlight class to the project
+        const projectDiv = document.querySelector(hash);
+        if (projectDiv) {
+            event.preventDefault();
+            projectDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            projectDiv.classList.add('highlight');
+            setTimeout(() => projectDiv.classList.remove('highlight'), 2000);
+        }
+    }
 
-			// Remove highlight after 2 seconds
-			setTimeout(() => {
-				projectDiv.classList.remove('highlight'); // Remove highlight class
-			}, 2000);
-		}
-	}
+    // Event listener for DOM content loaded
+    document.addEventListener('DOMContentLoaded', highlightProject);
 
-	// Call the highlightProject function when the page loads
-	window.onload = highlightProject;
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector('nav');
 
-	let prevScrollPos = window.pageYOffset; // Store the previous scroll position
-	const navbar = document.querySelector('nav'); // Select the navbar element
+    // Throttled scroll event
+    let scrollTimeout;
+    window.onscroll = () => {
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            let currentScrollPos = window.pageYOffset;
+            navbar.style.top = (currentScrollPos === 0 || prevScrollPos > currentScrollPos) ? "0" : "-60px";
+            prevScrollPos = currentScrollPos;
 
-	// Combined scroll function for navbar and scroll button
-	window.onscroll = function() {
-		let currentScrollPos = window.pageYOffset; // Get the current scroll position
+            const scrollButton = document.getElementById("myBtn");
+            if (scrollButton) {
+                scrollButton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+            }
+        }, 50);
+    };
 
-		// Show the navbar when at the top or scrolling up, hide it when scrolling down
-		if (currentScrollPos === 0 || prevScrollPos > currentScrollPos) {
-			navbar.style.top = "0"; // Show navbar
-		} else {
-			navbar.style.top = "-60px"; // Hide navbar
-		}
-		prevScrollPos = currentScrollPos; // Update previous scroll position
+    // Smooth scroll to top
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-		// Show/hide scroll-to-top button based on scroll position
-		const scrollButton = document.getElementById("myBtn"); // Get the scroll button
-		scrollButton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
-	};
-
-	// Function to scroll to the top of the page smoothly
-	function scrollToTop() {
-		window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top with smooth behavior
-	}
+    // Smooth scrolling for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    });
 </script>
 
 </body>
