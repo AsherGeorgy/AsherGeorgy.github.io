@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Survey Analysis and Visualization Project</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        img { max-width: 100%; height: auto; }
+        
+        /* Base font size for portrait mode */
+        body {
+            font-size: 16px; /* Default font size */
+        }
+
+        /* Adjust font size for landscape orientation */
+        @media screen and (orientation: landscape) {
+            body {
+                font-size: 14px; /* Smaller font size for landscape */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center;"><u>Overview</u></h1>
+<p>This Power BI project analyzes a survey dataset to uncover key insights into the data profession. The goal is to understand salary distribution, job satisfaction, programming languages, and demographic factors that influence career paths in data-related roles. This interactive dashboard is designed to help both professionals and employers better understand the current trends in the industry and identify key areas of improvement.</p>
+
+<h2><u>Dataset</u></h2>
+<p>This project uses <a href="https://github.com/AlexTheAnalyst/Power-BI/raw/refs/heads/main/Power%20BI%20-%20Final%20Project.xlsx" target="_blank"><b>survey data</b></a> collected from professionals in data-related roles, featuring demographic information and responses to various questions about job satisfaction, career paths, and programming preferences. The dataset includes the following information:</p>
+<ul>
+    <li><b>Unique ID:</b> A unique identifier for each respondent.</li>
+    <li><b>Email:</b> Contact email of the respondent.</li>
+    <li><b>Country, City, and Role:</b> Geographic location and professional title.</li>
+    <li><b>Salary & Job Satisfaction:</b> Data on salary figures and responses regarding job satisfaction in areas like salary, work-life balance, and management.</li>
+    <li><b>Programming Language Preferences:</b> Favorite programming languages used by survey participants.</li>
+    <li><b>Demographics:</b> Information on age, gender, education, and ethnicity.</li>
+</ul>
+
+<h2><u>Key Insights Delivered</u></h2>
+<ul>
+    <li><b>Salary Trends by Job Title:</b> The stacked bar chart shows salary distribution across various data roles, providing insights into pay gaps between junior and senior-level positions.</li>
+    
+    <li><b>Regional Salary Distribution:</b> The treemap visualizes how salary varies across different countries, helping identify high-paying regions for data professionals.</li>
+    
+    <li><b>Programming Language Popularity:</b> A stacked column chart reveals the most commonly used programming languages among data professionals, offering insights into industry trends and skills demand.</li>
+    
+    <li><b>Job Satisfaction Analysis:</b> The gauge visuals track survey responses to satisfaction metrics such as salary, work-life balance, and career progression, highlighting areas where employers can improve.</li>
+    
+    <li><b>Gender Salary Disparity:</b> The donut chart explores the average salary differences between male and female respondents, identifying potential gaps in compensation across genders.</li>
+</ul>
+
+<h2><u>Methodology</u></h2>
+<ul>
+    <li>Data was cleaned and transformed using Power Query Editor in Power BI to ensure consistency and remove anomalies.</li>
+    <li>Key metrics and aggregations, such as average salary, happiness scores, and gender-based salary distribution, were calculated using DAX expressions.</li>
+    <li>Interactive visualizations were created to allow for deeper exploration of the data, with slicers and tooltips providing enhanced interactivity.</li>
+    <li>The dashboard was designed for ease of use, ensuring that stakeholders could filter data by job title, age, and region to uncover targeted insights.</li>
+</ul>
+
+<h2><u>Outcome</u></h2>
+<p>This Power BI dashboard provides a comprehensive overview of the state of the data profession, offering actionable insights into salary trends, job satisfaction, and career paths. </p>
+
+<img src="images/Data Professional Survey Dashboard.png" alt="Interactive dashboard showing survey analysis, including salary trends, programming languages, and job satisfaction metrics">
+<h4 style="text-align: center;">Dashboard</h4>
+
+</body>
+</html>
