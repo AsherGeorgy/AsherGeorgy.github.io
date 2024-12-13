@@ -4,61 +4,53 @@
     <title>Blog - Asher Georgy</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Asher Georgy's personal blog, covering technology, finance, culture and more.">
+    <meta name="description" content="Asher Georgy's personal blog, covering technology, finance, culture, and more.">
     <meta name="keywords" content="blog, technology, finance, projects">
+    <meta name="author" content="Asher Georgy">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Lobster">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-	
-	<!-- Favicon Links -->
+    
+    <!-- Open Graph Metadata for Social Sharing -->
+    <meta property="og:title" content="Asher Georgy - Blog">
+    <meta property="og:description" content="Explore Asher Georgy's blog.">
+    <meta property="og:url" content="https://ashergeorgy.github.io/blog">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon Links -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest" type="application/manifest+json">
+    
     <style>
+        :root {
+            --primary-color: #009688;
+            --secondary-color: #4CAF50;
+            --text-color: #555;
+            --background-color: #fff;
+            --navbar-bg: #333;
+            --footer-bg: #333;
+            --hover-bg: #ddd;
+        }
+
         body, html {
             font-family: "Roboto", sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #f5f5f5;
+            scroll-behavior: smooth;
         }
-        .container {
-            text-align: center;
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        h1 {
-            color: #009688;
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        h2 {
-            font-size: 1.5rem;
-            color: #555;
-            margin-top: 0;
-        }
-        p {
-            font-size: 1.1rem;
-            color: #333;
-            margin-top: 0;
-        }
-        /* Navbar */
-        nav {
+
+        .navbar {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 999;
-            background-color: #333;
+            background-color: var(--navbar-bg);
             transition: top 0.3s ease;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        nav a {
+
+        .navbar a {
             float: left;
             display: block;
             color: #f2f2f2;
@@ -67,55 +59,353 @@
             text-decoration: none;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-        nav a:hover {
-            background-color: #ddd;
+
+        .navbar a:hover, .navbar a.active {
+            background-color: var(--hover-bg);
             color: black;
         }
-        nav a.active {
-            background-color: #4CAF50;
+
+        .navbar a.active {
+            background-color: var(--secondary-color);
             color: white;
         }
-        /* Footer */
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 50px auto 20px;
+            padding: 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: flex-start; /* Align children to the top */
+            height: 200vh;
+        }
+
+        .main-content {
+            flex: 4;
+            min-width: 300px;
+        }
+
+        .main-content h1 {
+            color: var(--primary-color);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .main-content p.intro-text {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .main-content .blog-post {
+            background-color: var(--background-color);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .main-content .blog-post img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .main-content .blog-post h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .main-content .blog-post p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        .main-content .blog-post .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary-color);
+            font-weight: bold;
+            transition: color 0.3s ease;
+            padding: 8px 16px;
+            border: 1px solid var(--primary-color);
+            border-radius: 4px;
+        }
+
+        /* Reusable hover effect */
+        .blog-post-hover:hover {
+            transform: translateY(-2px);
+            background-color: var(--hover-bg);
+        }
+
+        .main-content .blog-post .read-more:hover {
+            color: #00796b;
+            border-color: #00796b;
+        }
+
+        .main-content .read-all-posts {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            color: white;
+            background-color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .main-content .read-all-posts:hover {
+            background-color: #00796b;
+            transform: translateY(-2px);
+        }
+
+        .coming-soon {
+            font-style: italic;
+            color: #777; /* Light gray color */
+            font-weight: normal;
+        }
+
+        /* Sidebar container */
+        .sidebar {
+            display: block;
+            flex: 2;
+            min-width: 250px;
+            background-color: var(--background-color);
+            padding: 0;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            height: 120%; 
+            overflow-y: hidden; 
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Sidebar header */
+        .sidebar-header {
+            background-color: var(--background-color);
+            padding: 20px 30px 10px; 
+            text-align: center;
+            text-decoration: underline;
+            flex-shrink: 0; 
+        }
+
+        /* Sidebar content */
+        .sidebar-content {
+            padding: 10px;
+            overflow-y: auto; /* Allow content to scroll if it exceeds the height */
+            /* max-height: calc(100vh - 80px); Adjust content height based on the header height */
+            height: 100%;
+        }
+
+        .social-post {
+            margin-bottom: 20px;
+        }
+
         footer {
-            background-color: #333;
+            background-color: var(--footer-bg);
             color: #f2f2f2;
             padding: 30px 20px;
             text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
+
         footer a {
             color: #f2f2f2;
             text-decoration: none;
             margin: 0 10px;
             transition: color 0.3s ease;
         }
+
         footer a:hover {
-            color: #009688;
+            color: var(--primary-color);
         }
+
+        /* Consolidated media queries */
+        @media (max-width: 435px) {
+            .navbar a {
+                padding: 16px 16px;
+                font-size: 1rem;
+            }
+
+            .main-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .main-content p.intro-text {
+                font-size: 1.1rem;
+            }
+
+            .main-content .blog-post h2 {
+                font-size: 1.6rem;
+            }
+
+            .main-content .blog-post p {
+                font-size: 1rem;
+            }
+
+            .main-content .blog-post .read-more {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 395px) {
+            .navbar a {
+                padding: 14px 14px;
+                font-size: 1rem;
+            }
+
+            .main-content h1 {
+                font-size: 2rem;
+            }
+
+            .main-content p.intro-text {
+                font-size: 1rem;
+            }
+
+            .main-content .blog-post h2 {
+                font-size: 1.5rem;
+            }
+
+            .main-content .blog-post p {
+                font-size: 1rem;
+            }
+
+            .main-content .blog-post .read-more {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .navbar a {
+                padding: 12px 12px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 355px) {
+            .navbar a {
+                padding: 14px 10px;
+                font-size: 0.8rem;
+            }
+        }
+
+
     </style>
 </head>
 <body>
 <!-- Navigation Bar -->
-<nav aria-label="Main Navigation">
+<nav class="navbar" aria-label="Main Navigation">
     <a href="index.html">Home</a>
     <a href="resume.html">Resume</a>
     <a href="portfolio.html">Portfolio</a>
     <a class="active" href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
 </nav>
-<main class="container">
-    <h1><i class="fa-solid fa-person-digging"></i> My personal blog is in the works!</h1>
-    <h2>Stay tuned.</h2>
-    <p><br>I intend to share my thoughts on technology, finance, culture, politics, faith, entertainment, and more.</p> 
-	<p>Thanks for visiting!</p>
-</main>
+<div class="container">
+    <!-- Main Blog Content -->
+    <main class="main-content">
+        <h1>Welcome to My Blog!</h1>
+        <p class="intro-text">Here is where I jot down my musings and explore the random thoughts that inspire me.</p>
+		
+        <!-- Sample Blog Post -->
+        <article class="blog-post">
+            <img src="https://unsplash.com/photos/s9CC2SKySJM/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzMwNDQ4NDUxfA&force=true&w=1920" alt="Blogging Header">
+            <h2>Why I made a Blog Page</h2>
+            <p>Why I started this blog, what I hope to explore, and where I think it might lead.</p>
+            <p class="coming-soon">Coming soon. Stay tuned!</p>
+        </article>
+
+        <article class="blog-post">
+            <img src="blog/images/excel-pomo.jpg" alt="Excel and Pomofocus logos">
+            <h2>Productivity Tools: Excel and Pomofocus</h2>
+            <p>How I learned to manage time and boost productivity with Microsoft Excel and Pomofocus.io</p>
+            <p class="coming-soon">Coming soon. Stay tuned!</p>
+        </article>        
+
+        <article class="blog-post">
+            <h2>Generative AI and the Evolving Landscape of Software Development</h2>
+            <p>How generative AI is lowering barriers to entry and changing what it takes to stand out.</p>
+            <p class="coming-soon">Coming soon. Stay tuned!</p>
+            
+        </article>
+		
+		<a href="all-posts.html" class="read-all-posts">Read All Posts >>></a>
+
+    </main>
+	
+    <!-- Sidebar with Social Media Embeds -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h3>Social Media Reposts</h3> 
+        </div>
+        <div style="text-align:center;">
+            <i class="fa-sharp fa-solid fa-thumbs-up" style="color:#1877F2;"></i>
+            <i class="fa-solid fa-heart" style="color:#FF5C8D;"></i>
+            <i class="fa-solid fa-retweet" style="color:#00BA7C;"></i>
+        </div>
+        <div class="sidebar-content" id="social-posts-container">
+            <!-- Social posts will be dynamically loaded here -->
+        </div>
+    </aside>
+    
+    <!-- Include in the main page -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <script>
+        
+        // Fetch the content from social-posts.html and insert it into the container
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('blog/social-posts.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load posts');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    // Insert the fetched HTML content into the container
+                    document.getElementById('social-posts-container').innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error loading social posts:', error);
+                });
+        });
+    </script>
+    
+</div>
+
 <!-- Footer -->
-<footer>
+<!-- <footer>
     <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">GitHub</a> |
     <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
     <a href="mailto:asher.georgy@outlook.com">Email</a>
-</footer>
+</footer> -->
+
+<script>
+	let prevScrollPos = window.pageYOffset;
+	const navbar = document.querySelector('.navbar');
+
+	window.addEventListener('scroll', () => {
+		const currentScrollPos = window.pageYOffset;
+		
+		// Show navbar when scrolling up or at the top
+		if (currentScrollPos === 0 || prevScrollPos > currentScrollPos) {
+			navbar.style.top = "0";
+		} else {
+			navbar.style.top = "-60px";
+		}
+		prevScrollPos = currentScrollPos;
+	});
+</script>
 </body>
 </html>
