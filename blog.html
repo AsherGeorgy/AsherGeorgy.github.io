@@ -130,18 +130,19 @@
             line-height: 1.8;
         }
 
+        /* Base styling for the "Read More" button */
         .main-content .blog-post .read-more {
             display: inline-block;
             margin-top: 15px;
             color: var(--primary-color);
             font-weight: bold;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease; 
             padding: 8px 16px;
             border: 1px solid var(--primary-color);
             border-radius: 4px;
+            text-decoration: none;
         }
 
-        /* Reusable hover effect */
         .blog-post-hover:hover {
             transform: translateY(-2px);
             background-color: var(--hover-bg);
@@ -150,7 +151,14 @@
         .main-content .blog-post .read-more:hover {
             color: #00796b;
             border-color: #00796b;
+            transform: translateY(-2px); 
         }
+
+        .main-content .blog-post .read-more:focus {
+            outline: 3px solid #00796b;
+            outline-offset: 2px;
+        }
+
 
         .main-content .read-all-posts {
             display: block;
@@ -203,8 +211,8 @@
         /* Sidebar content */
         .sidebar-content {
             padding: 10px;
-            overflow-y: auto; /* Allow content to scroll if it exceeds the height */
-            /* max-height: calc(100vh - 80px); Adjust content height based on the header height */
+            overflow-y: auto; 
+            /* max-height: calc(100vh - 80px); 
             height: 100%;
         }
 
@@ -322,7 +330,7 @@
             <img src="https://unsplash.com/photos/s9CC2SKySJM/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzMwNDQ4NDUxfA&force=true&w=1920" alt="Blogging Header">
             <h2>Why I made a Blog Page</h2>
             <p>Why I started this blog, what I hope to explore, and where I think it might lead.</p>
-            <p class="coming-soon">Coming soon. Stay tuned!</p>
+            <a href="/blog/why-i-started-a-blog.html" class="read-more">Read more</a>
         </article>
 
         <article class="blog-post">
@@ -339,7 +347,7 @@
             
         </article>
 		
-		<a href="all-posts.html" class="read-all-posts">Read All Posts >>></a>
+		<a href="/blog/why-i-started-a-blog.html" class="read-all-posts">Read All Posts >>></a>
 
     </main>
 	
@@ -361,24 +369,25 @@
     <!-- Include in the main page -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+    
     <script>
-        
-        // Fetch the content from social-posts.html and insert it into the container
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('blog/social-posts.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to load posts');
-                    }
-                    return response.text();
-                })
-                .then(html => {
-                    // Insert the fetched HTML content into the container
-                    document.getElementById('social-posts-container').innerHTML = html;
-                })
-                .catch(error => {
-                    console.error('Error loading social posts:', error);
-                });
+        // Fetch the GitHub content (which contains the Twitter embeds)
+        fetch('https://api.github.com/repos/AsherGeorgy/blog-files/contents/social-posts.html')
+        .then(response => response.json())
+        .then(data => {
+            const content = atob(data.content); // Decode Base64 content
+            
+            // Inject the decoded content into the social-posts-container element
+            const container = document.getElementById('social-posts-container');
+            container.innerHTML = content;
+
+            // Load and initialize Twitter widgets after content is injected
+            if (window.twttr && twttr.widgets) {
+                twttr.widgets.load(container);  // Apply Twitter widgets to the new content
+            }
+        })
+        .catch(error => {
+            console.error('Error loading social posts:', error);
         });
     </script>
     
