@@ -137,12 +137,48 @@
             }
     
             .media-description {
-                font-size: 1em;      
+                font-size: 0.8em;      
                 color: #555555e7;           
                 display: block;        
                 font-style: italic;    
                 text-align: center;     
                 width: 100%;          
+            }
+
+            .image-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .image-container a {
+                flex: 1;
+                min-width: 250px;
+                max-width: 450px;
+                overflow: hidden;
+            }
+
+            .image-container img {
+                width: 100%;
+                object-fit: cover;  
+                object-position: center; 
+            }
+
+            @media screen and (max-width: 600px) {
+                .image-container {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .image-container a {
+                    max-width: 100%;
+                    width: 100%;
+                }
             }
     
             .blog-post {
@@ -211,20 +247,33 @@
     
     <div id="blog-post-content"></div>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
     <script>
-      fetch('https://raw.githubusercontent.com/AsherGeorgy/blog-files/refs/heads/main/why-this-blog.html')
-        .then(response => response.text())
+        // Fetch the GitHub blog content (or any other HTML content)
+        fetch('https://raw.githubusercontent.com/AsherGeorgy/blog-files/refs/heads/main/why-this-blog.html')
+        .then(response => response.text())  // Use .text() for raw HTML (no Base64 encoding)
         .then(html => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
-            const content = doc.querySelector('main'); 
+            const content = doc.querySelector('main');  // Get the <main> content
+
             if (content) {
-            document.getElementById('blog-post-content').appendChild(content);
+                // Inject the content into the page
+                const container = document.getElementById('blog-post-content');
+                container.appendChild(content);
+
+                // Initialize Twitter widgets after content is injected
+                if (window.twttr && twttr.widgets) {
+                    twttr.widgets.load(container);  // Apply Twitter widgets to the new content
+                }
             }
         })
-        .catch(error => console.error('Error loading blog content:', error));
+        .catch(error => {
+            console.error('Error loading blog content:', error);
+        });
     </script>
-    
+
+
 </body>
 </html>
 
