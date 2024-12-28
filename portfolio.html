@@ -15,7 +15,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
@@ -25,108 +25,191 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest" type="application/manifest+json">
 
-    <style>
-		
-		body, html {
-            font-family: "Roboto", sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-			padding-top: 16px;
+    <style>	
+		body {
+			background-color: #b8d9d653   ;
+		}
+		main {
+			margin: 1rem 10rem;
+		}
+		#title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        #title h1 {
+            font-size: 3rem;
+            color: #009688;
+            margin-bottom: -1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem;
         }
 
-		/* Navbar */
-        nav {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			z-index: 999;
-			background-color: #333;
-			transition: top 0.3s ease;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		#title h4 {
+			color: #6b7280;
+			font-weight: normal;
+			margin-bottom: -1rem;
+			margin-left: 0.5rem;
+			font-size: 1.3rem;
 		}
 
-        nav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
+		hr {
+			margin-bottom: 2rem;
+			border-top: 0.0625rem solid #ccc;
+		}
+
+		.project-card {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 0.9375rem;
+            border: 0.0625rem solid #e0e0e0;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
 
-        nav a:hover {
-            background-color: #ddd; 
-            color: black; 
-        }
+		.project-card:hover {
+			transform: translateY(-0.125rem);
+			box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+		}
 
-        nav a.active { 
-            background-color: #4CAF50; 
-            color: white; 
-        }
-		
-		.w3-container {
-			max-width: 1200px;
-			margin: auto;
+		.project-card.highlight {
+			border: 0.125rem solid #007BFF;
+			background-color: #f0f8ff;
 		}
 
 		.project-title {
-			color: #666;
-			font-weight: bold;
-			font-size: 1.25rem; /* Scalable font size */
+			color: #000000b7; 
+			font-weight: 600;
+			font-size: 1.3rem;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			padding: 0.5rem 0;
 			cursor: pointer;
 		}
 
-		.project-description {
-			display: none; 
+		.project-title span:hover {
+			color: var(--secondary-color);
+			text-decoration: underline;
+		}
+
+		/* Project description styling */
+        .project-description {
+			padding: 1.2rem;
+			background-color: #f8fafc;
+			display: none;
+			font-size: 1rem;
+			padding-top: 0.1rem;
+		}
+
+		.project-description.active {
+			display: block;
+		}
+
+		.project-description h3 {
+			font-size: 1.1rem;
+			font-weight: 600;
+			margin-top: 1.5rem;
 			color: #333;
-			background-color: #f9f9f9;
-			padding: 15px;
-			border-radius: 5px;
-			margin-top: 10px;
+			margin-bottom: 0rem;
+		}
+
+		.project-description ul {
+			padding-left: 1.5rem;
+			margin-top: 0.5rem;
+			font-size: 0.95rem;
+			color: #555;
+		}
+
+		.project-description li {
+			margin-bottom: 0.5rem;
+			line-height: 1.6;
+		}
+
+		.project-description img {
+			width: 90%; 
+			padding: 1rem;
+		}
+
+		.project-links {
+			display: flex;
+			gap: 1rem;
+			margin-top: 1rem;
+		}
+
+		.project-link {
+			color: var(--primary-color);
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: 0.875rem;
+		}
+
+		.project-link:hover {
+			color: var(--secondary-color);
+		}
+
+		.project-link i {
+			font-size: 1rem;
 		}
 
 		iframe {
-			width: 100%; /* Full width */
-			height: 100vh; /* Full height of the viewport */
-			overflow-y: auto; /* Enable vertical scrolling */
-			overflow-x: hidden; /* Prevent horizontal scrolling */
+			width: 100%;
+			height: 100vh;
+			border: none;
+			border-radius: 0.25rem;
+			background: white;
 		}
 
-		img {
-			max-width: 100%;
-			height: auto;
+		.project-icons {
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+		}
+
+		.project-icons img {
+			width: 2.2rem;
+			height: 2.2rem;
+			object-fit: contain;
+		}
+
+		.project-icons i {
+			font-size: 1rem;
+			color: #6b7280;
+			transition: transform 0.2s ease;
 		}
 
 		#myBtn {
 			display: none;
 			position: fixed;
-			bottom: 30px;
-			right: 30px;
+			bottom: 1.875rem;
+			right: 1.875rem;
 			z-index: 1000;
-			background: rgba(0, 121, 107, 0.8); 
+			background: rgba(0, 121, 107, 0.8);
 			color: white;
-			padding: 8px 12px;
-			border-radius: 25px; 
+			padding: 0.75rem 1rem;
+			border-radius: 0.5rem;
 			cursor: pointer;
-			transition: background 0.3s, transform 0.2s;
-			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-			font-size: 14px; 
-			border: none; 
+			border: none;
+			box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.15);
+			transition: all 0.3s ease;
 		}
-
+		button {
+			font-size: 1rem;
+		}
 		#myBtn:hover {
-			background: rgba(0, 121, 107, 1); 
-			transform: scale(1.05); 
+			background: rgba(0, 121, 107, 1);
+			transform: translateY(-0.125rem);
+			box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
 		}
 
 		#myBtn:focus {
 			outline: none;
-			box-shadow: 0 0 0 2px rgba(0, 121, 107, 0.5); 
+			box-shadow: 0 0 0 0.125rem rgba(0, 121, 107, 0.5);
 		}
 
 		#myBtn:active {
@@ -138,124 +221,130 @@
 			color: white;
 		}
 
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #f2f2f2;
-            padding: 30px 20px;
-            text-align: center;
-			display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        footer a {
-            color: #f2f2f2;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #009688; 
-        }
-
-		.highlight {
-			background-color: #e8eaf6; 
-		}
-
-		@media (max-width: 768px) {
-			.w3-container {
-				padding: 10px;
-			}
-
-			.project-title {
-				font-size: 1.1rem;
+		/* Media Queries for Mobile Responsiveness */
+		@media (min-width: 735px) and (max-width: 1100px) {
+			main {
+				margin: 1rem 5rem;
 			}
 		}
-
-		.project-card {
-			margin: 15px 0;
-			padding: 20px;
-			background-color: white;
-			border: 1px solid #e0e0e0;
-			border-radius: 5px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-			transition: box-shadow 0.3s ease, transform 0.3s ease; 
-		}
-
-		.project-card:hover {
-			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-			transform: translateY(-2px);
-		}
-
-		.project-card.highlight {
-			border: 2px solid #007BFF; /* Blue border for highlighting */
-			background-color: #f0f8ff; /* Light blue background */
-		}
-
-		.project-title {
-			color: #009688;
-			font-weight: bold;
-			font-size: 1.25rem; /* Scalable font size */
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			cursor: pointer;
-		}
-
-		.highlight {
-			background-color: #e8eaf6; 
-		}
-
-		html {
-			scroll-behavior: smooth;
-		}
-
-		/* Media Queries for Responsiveness */
-		@media (max-width: 768px) {
-			.project-card {
-				padding: 15px;
+        @media (max-width:735px) {
+            html {
+                font-size: 16px;
+            }
+			main {
+				margin: 2rem;
+			}
+			#title h1 {
+				font-size: 2.2rem;
+			}
+			#title h4 {
+				font-size: 1.2rem;
 			}
 			.project-title {
-				font-size: 1.1rem; 
+				font-size: 1.2rem;
 			}
-		}
+			hr {
+				margin-bottom: 1.5rem;
+			}
+			.project-icons img {
+				width: 1.9rem;
+				height: 1.9rem;
+			}
+			.project-icons i {
+				font-size: 0.8rem;
+			}
+        }        
+        @media (max-width: 450px) {
+            html {
+                font-size: 15.3px;
+            }
+        }
+        @media (max-width: 420px) {
+            html {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 390px) {
+            html {
+                font-size: 13px;
+            }
+        }        
+        @media (max-width: 360px) {
+            html {
+                font-size: 11.8px;
+            }
+        }
+        @media (max-width: 330px) {
+            html {
+                font-size: 10.6px;
+            }
+        }
 
     </style>
 </head>
-<body class="w3-light-grey">
+<body>
 
 <!-- Navigation Bar -->
-<nav>
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a class="active" href="portfolio.html">Portfolio</a>
-	<a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+<nav class="navbar">
+	<div class="nav-content">
+		<ul class="nav-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="resume.html">Resume</a></li>
+			<li><a class="active" href="portfolio.html">Portfolio</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
 </nav>
 
 <!-- Portfolio Section -->
-<main id="portfolio" class="w3-container w3-padding-32 w3-white w3-margin-top">
-    <h1 class="w3-center">Project Portfolio<i class="fa-solid fa-laptop-file" style="margin-left:10px;"></i></h1>
-	<h5 class="w3-center">An overview of some of the projects I have worked on</h5>
-
+<main>
+	<div id="title">
+		<h1>Project Portfolio<i class="fa-solid fa-laptop-file"></i></h1>
+		<h4>An overview of some of the projects I have worked on</h4>
+	</div>
     <hr>
 
 <!-- Project List -->
 <section id="projects">
 	<!-- Portfolio Optimization Project -->
-	<article id="Project1" class="project-card">
+	<article id=Project1 class="project-card">
 		<header class="project-title" onclick="toggleDescription(this)">
-			<span>Portfolio Optimization Python Web App</span>
+			<span>Portfolio Optimization Web App with Python</span>
 			<div class="project-icons">
-				<img src="https://streamlit.io/favicon.svg" alt="Streamlit Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				<img src="https://streamlit.io/favicon.svg" alt="Streamlit Logo" class="project-icon">
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
 			</div>
 		</header>
 		<div class="project-description">
-			<iframe src="overviews/portfolio-optimization.html"></iframe>
+			<h3>Overview</h3>
+			<p>The Portfolio Optimization Model is an interactive web application built with Python and <b>Streamlit</b>, utilizing Modern Portfolio Theory and Convex Optimization to help users analyze and optimize their financial portfolios. The app provides tools to calculate key metrics, simulate optimal portfolio allocations, and visualize portfolio performance.
+			</p>
+			<div class="project-links">
+				<a href="https://optimize-this-portfolio.streamlit.app/" target="_blank" class="project-link">
+					<i class="fas fa-external-link-alt"></i>
+					Try the App
+				</a>
+				<a href="https://github.com/AsherGeorgy/Portfolio-Optimization-Model/tree/main" target="_blank" class="project-link">
+					<i class="fab fa-github"></i>
+					View Code
+				</a>
+			</div>
+
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Interactive Portfolio Analysis:</strong> Allows users to input stock tickers and growth targets, calculating key metrics like returns, volatility, and Sharpe ratios.</li>
+				<li><strong>Optimization & Simulations:</strong> Applies convex optimization and simulates the Efficient Frontier to suggest the best portfolio allocations.</li>
+				<li><strong>Visualization Tools:</strong> Generates dynamic charts and heatmaps for asset correlations and performance breakdowns, providing real-time insights.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+			<li><strong>Python & Streamlit:</strong> Used to create the interactive web application and handle user inputs.</li>
+			<li><strong>Data Libraries:</strong> <em>NumPy</em> and <em>Pandas</em> for data manipulation, <em>Plotly</em> for visualizations, and <em>cvxpy</em> for optimization.</li>
+			<li><strong>Yahoo Finance API:</strong> Retrieves historical stock and index data for analysis.</li>
+			</ul>
 		</div>
 	</article>
 
@@ -264,13 +353,40 @@
 		<header class="project-title" onclick="toggleDescription(this)">
 			<span>Data Cleaning with SQL</span>
 			<div class="project-icons">
-				<img src="assets/sql-logo-only.png" alt="SQL Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				<img src="assets/sql-logo-only.png" alt="SQL Logo">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
 			</div>
 		</header>
 		<div class="project-description">
-			<iframe src="overviews/Data Cleaning with SQL.html"></iframe>
+			<h3>Overview</h3>
+			<p>
+			This project focuses on cleaning and transforming the Nashville Housing database using SQL to ensure data accuracy and consistency for analysis. Common tasks like updating date formats, handling NULL values, splitting columns, and removing duplicates are performed to enhance data integrity and usability.
+			</p>
+			<div class="project-links">
+				<a href="https://github.com/AsherGeorgy/SqlScripts/blob/main/DataCleaning_HousingData.sql" target="_blank" class="project-link">
+					<i class="fab fa-github"></i>
+					View Code
+				</a>
+				<a href="https://github.com/AlexTheAnalyst/PortfolioProjects/raw/refs/heads/main/Nashville%20Housing%20Data%20for%20Data%20Cleaning%20(reuploaded).xlsx" target="_blank" class="project-link">
+					<i class="fa fa-download"></i>
+					View Source Data
+				</a>
+			</div>
+			<h3>Key Features</h3>
+				<ul>
+					<li><strong>Data Cleaning:</strong> Various techniques are applied to address incomplete or inconsistent data and enhance its usability.</li>
+					<li><strong>Standardization:</strong> Data values are standardized for better clarity and consistency across the dataset.</li>
+					<li><strong>Data Simplification:</strong> Redundant information is removed, and the dataset is streamlined for efficient analysis.</li>
+				</ul>
+
+			<h3>Tools and Technologies</h3>
+				<ul>
+					<li><strong>SQL Server & Functions:</strong> SQL Server and various functions like <code>CONVERT()</code>, <code>ISNULL()</code>, and <code>ROW_NUMBER()</code> are used for data manipulation.</li>
+					<li><strong>Self-Joins & CTEs:</strong> Self-joins address <em>NULL</em> values, and CTEs help in identifying and removing duplicate records.</li>
+					<li><strong>Data Transformation:</strong> SQL techniques facilitate column splitting, standardization, and elimination of irrelevant information.</li>
+				</ul>
 		</div>
+		
 	</article>
 
 	<!-- PowerBI Project -->
@@ -278,13 +394,38 @@
 		<header class="project-title" onclick="toggleDescription(this)">
 			<span>Data Professionals Survey Analysis with PowerBI</span>
 			<div class="project-icons">
-				<img src="assets/powerbi-logo-only.png" alt="PowerBI Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				<img src="assets/powerbi-logo-only.png" alt="PowerBI Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
 			</div>
 		</header>
 		<div class="project-description">
-			<iframe src="overviews/Data Survey Analysis and Visualization.html"></iframe>
+			<h3>Overview</h3>
+			<p>
+			This project utilizes Power BI to analyze a survey dataset, uncovering insights into the data profession, including salary trends, job satisfaction, and demographic influences on career paths. The interactive dashboard aims to provide valuable information for professionals and employers to understand industry trends and identify improvement areas.
+			</p>
+
+			<div class="project-links">
+				<a href="https://github.com/AlexTheAnalyst/Power-BI/raw/refs/heads/main/Power%20BI%20-%20Final%20Project.xlsx" target="_blank" class="project-link">
+					<i class="fa fa-download"></i>
+					View Survey Data
+				</a>
+			</div>
+
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Data Analysis:</strong> Key metrics like salary distribution and job satisfaction are analyzed to uncover patterns and trends.</li>
+				<li><strong>Interactive Visualizations:</strong> The dashboard features interactive charts and slicers, allowing users to explore data by various demographics and career factors.</li>
+				<li><strong>Actionable Insights:</strong> The project highlights areas of interest, such as salary gaps and programming language popularity, to guide decision-making in the data profession.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong>Power BI:</strong> Power BI is used for data cleaning, transformation, and creating interactive visualizations.</li>
+				<li><strong>Power Query & DAX:</strong> <em>Power Query Editor</em> is utilized for data preparation, while <code>DAX</code> expressions calculate key metrics and aggregations.</li>
+				<li><strong>Interactive Dashboards:</strong> Interactive elements such as slicers and tooltips enhance data exploration and user engagement.<img src="overviews\images\Data Professional Survey Dashboard.png"></li>
+			</ul>			
 		</div>
+		
 	</article>
 
 	<!-- DCF Valuation Project -->
@@ -292,12 +433,34 @@
 		<header class="project-title" onclick="toggleDescription(this)">
 			<span>Dynamic DCF Valuation and Financial Modeling in Excel</span>
 			<div class="project-icons">
-				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
 			</div>
 		</header>
 		<div class="project-description">
-			<iframe src="overviews/dcf valuation.html"></iframe>
+			<h3>Overview</h3>
+			<p>
+			This project develops a comprehensive financial model that integrates key financial statements—<em>Income Statement</em>, <em>Balance Sheet</em>, and <em>Cash Flow Statement</em>—to assess company performance and valuation. The Excel-based model includes dynamic features for financial forecasting, discounted cash flow analysis, and scenario exploration.
+			</p>
+
+			<a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Microsoft%20Excel/Financial%20Modeling%20and%20Valuation%20Analysis.md" target="_blank" class="project-link">
+				<i class="fab fa-github"></i>
+				View Project
+			</a>
+
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Interlinked Financial Statements:</strong> Provides a unified view of the company's financial health through integrated statements.</li>
+				<li><strong>DCF Valuation & Sensitivity Analysis:</strong> Estimates intrinsic value using projected cash flows, terminal value, and sensitivity analysis with WACC and growth rate variations.</li>
+				<li><strong>Dynamic Dashboard:</strong> Visualizes key metrics and enables scenario analysis, displaying forecasted values and financial performance.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong>Excel:</strong> Microsoft Excel is used to build the financial model, perform calculations, and create interactive dashboards.</li>
+				<li><strong>Scenario Analysis:</strong> Assumptions columns allow users to adjust the model based on different business scenarios.</li>
+				<li><strong>Dynamic Charts & Tables:</strong> Interactive charts and tables are included to display financial projections and valuation sensitivities. <img src="overviews\images\dashboard.png"></li>
+			</ul>
 		</div>
 	</article>
 
@@ -306,12 +469,34 @@
 		<header class="project-title" onclick="toggleDescription(this)">
 			<span>Momentum Investment Strategy with Python</span>
 			<div class="project-icons">
-				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
 			</div>
 		</header>
 		<div class="project-description">
-			<iframe src="overviews/quantitative momentum.html"></iframe>
+			<h3>Overview</h3>
+			<p>
+			This project implements a momentum-based investment strategy to select top-performing stocks from the <em>S&P 500</em> index, identifying those with the best historical returns across various time frames. The strategy calculates the optimal number of shares to purchase for a given portfolio size, aiming to capitalize on strong upward trends in stock performance.
+			</p>
+
+			<a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/quantitative%20momentum.md" target="_blank" class="project-link">
+				<i class="fab fa-github"></i>
+				View Code
+			</a>
+
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Momentum Strategy:</strong> Stocks are ranked based on their returns over multiple time periods, and a <strong>High-Quality Momentum (HQM)</strong> score is calculated to assess top performers.</li>
+				<li><strong>Portfolio Construction:</strong> The project determines the optimal number of shares to buy, ensuring an equal-weighted investment approach within the specified portfolio size.</li>
+				<li><strong>Results Export:</strong> The final list of selected stocks and their corresponding share quantities are exported to an <code>Excel</code> file for further review and analysis.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong>Yahoo Finance API:</strong> Used to fetch daily adjusted closing price data for <em>S&P 500</em> stocks.</li>
+				<li><strong>Python:</strong> Python is utilized for data collection, analysis, and portfolio construction.</li>
+				<li><strong>Excel (<code>xlsxwriter</code>):</strong> Results are exported to an <code>Excel</code> file for easy presentation and further processing.</li>
+			</ul>
 		</div>
 	</article>
 
@@ -320,12 +505,40 @@
 		<header class="project-title" onclick="toggleDescription(this)">
 			<span>Market Analysis and Visualization with Tableau</span>
 			<div class="project-icons">
-				<img src="assets/tableau-logo-only.png" alt="Tableau Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				<img src="assets/tableau-logo-only.png" alt="Tableau Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
 			</div>
 		</header>
 		<div class="project-description">
-			<iframe src="overviews/Airbnb Market Analysis and Visualization.html"></iframe>
+			<h3>Overview</h3>
+			<p>
+			This project analyzes <em>Airbnb</em> trends in <em>Seattle</em> to identify optimal locations and property types for starting an <em>Airbnb</em> business. By examining pricing, revenue, and competition data, the project provides actionable insights for potential hosts to make informed investment decisions.
+			</p>
+			<div class="project-links">
+				<a href="https://public.tableau.com/views/AirBnBanalysisbyLocationandNoofbedrooms/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="project-link">
+					<i class="fas fa-external-link-alt"></i>
+					View on Tableau Public
+				</a>
+				<a href="https://www.kaggle.com/datasets/airbnb/seattle" target="_blank" class="project-link">
+					<i class="fa-brands fa-kaggle"></i>
+					View Source Data
+				</a>
+			</div>
+
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Pricing and Revenue Trends:</strong> The analysis highlights areas with lucrative pricing opportunities and seasonality patterns to optimize revenue potential.</li>
+				<li><strong>Property Features and Competition:</strong> It explores how property features affect pricing and assesses market saturation to help identify areas with lower competition.</li>
+				<li><strong>Interactive Visualizations:</strong> Multiple charts, maps, and time series are used to provide a comprehensive view of the data, allowing for deeper insights into trends.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong><em>Tableau</em>:</strong> Used for data cleaning, joining datasets, and creating interactive visualizations.</li>
+				<li><strong>Maps & Visualizations:</strong> Geographic and time-based visualizations are incorporated to explore pricing and competition trends.</li>
+				<li><strong>Dashboard:</strong> All visualizations are integrated into a user-friendly dashboard for easy exploration and decision-making. <img src="overviews\images\Airbnb_market_dashboard.png"></li>
+			</ul>
+
 		</div>
 	</article>
 
@@ -334,110 +547,86 @@
 		<header class="project-title" onclick="toggleDescription(this)">
 			<span>Data Exploration with SQL</span>
 			<div class="project-icons">
-				<img src="assets/sql-logo-only.png" alt="SQL Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				<img src="assets/sql-logo-only.png" alt="SQL Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
 			</div>
 		</header>
 		<div class="project-description">
-			<iframe src="overviews/Data Exploration with SQL.html"></iframe>
-		</div>
-	</article>
+			<h3>Overview</h3>
+			<p>
+			This project analyzes <em>COVID-19</em> data using <code>SQL</code> queries to explore global and regional trends in infection rates, death rates, and vaccination progress. By querying large datasets, the project identifies key patterns and provides insights into the pandemic's impact across different countries and regions.
+			</p>
+			<div class="project-links">
+				<a href="https://github.com/AsherGeorgy/SqlScripts/blob/main/Covid_data_exploration.sql" target="_blank" class="project-link">
+					<i class="fab fa-github"></i>
+					View Code
+				</a>
+				<a href="https://ourworldindata.org/covid-deaths" target="_blank" class="project-link">
+					<i class="fas fa-external-link-alt"></i>
+					View Source Data
+				</a>
+			</div>
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Global and Regional Analysis:</strong> Analyzes trends in <em>COVID-19</em> cases, deaths, and vaccination rates at global and country levels.</li>
+				<li><strong>Death and Infection Rate Calculation:</strong> Calculates death and infection rates for various regions to understand the severity of the pandemic.</li>
+				<li><strong>Vaccination Progress:</strong> Tracks vaccination data, calculating the percentage of the population vaccinated in different countries.</li>
+			</ul>
 
-	<!-- Stock and Portfolio Project -->
-	<article class="project-card">
-		<header class="project-title" onclick="toggleDescription(this)">
-			<span>Portfolio Risk Analysis with Python</span>
-			<div class="project-icons">
-				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
-			</div>
-		</header>
-		<div class="project-description">
-			<iframe src="overviews/stock and portfolio.html"></iframe>
-		</div>
-	</article>
-
-	<!-- Interactive Bank Statement Project -->
-	<article class="project-card">
-		<header class="project-title" onclick="toggleDescription(this)">
-			<span>Interactive Bank Statement Analysis Tool in Excel</span>
-			<div class="project-icons">
-				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
-			</div>
-		</header>
-		<div class="project-description">
-			<iframe src="overviews/Interactive Bank Statement.html"></iframe>
-		</div>
-	</article>
-
-	<!-- Portfolio Returns and CAGR Project -->
-	<article class="project-card">
-		<header class="project-title" onclick="toggleDescription(this)">
-			<span>Portfolio Returns and CAGR Analysis with Python</span>
-			<div class="project-icons">
-				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
-			</div>
-		</header>
-		<div class="project-description">
-			<iframe src="overviews/Portfolio Returns and CAGR.html"></iframe>
-		</div>
-	</article>
-
-	<!-- Three-Statement Project -->
-	<article class="project-card">
-		<header class="project-title" onclick="toggleDescription(this)">
-			<span>Three-Statement Financial Model in Excel</span>
-			<div class="project-icons">
-				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
-			</div>
-		</header>
-		<div class="project-description">
-			<iframe src="overviews/Three-Statement Financial Model.html"></iframe>
-		</div>
-	</article>
-
-	<!-- CAPM Analysis and Risk-Return Project -->
-	<article class="project-card">
-		<header class="project-title" onclick="toggleDescription(this)">
-			<span>CAPM Analysis and Risk-Return Evaluation with Python</span>
-			<div class="project-icons">
-				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
-			</div>
-		</header>
-		<div class="project-description">
-			<iframe src="overviews/CAPM Analysis and Risk-Return.html"></iframe>
-		</div>
-	</article>
-
-	<!-- Automated Cash Register Project -->
-	<article class="project-card">
-		<header class="project-title" onclick="toggleDescription(this)">
-			<span>Automated Cash Register System in Excel</span>
-			<div class="project-icons">
-				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
-			</div>
-		</header>
-		<div class="project-description">
-			<iframe src="overviews/Automated Cash Register.html"></iframe>
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong><em>SQL Server</em>:</strong> Used to query and manipulate data from the <code>CovidDeaths</code> and <code>CovidVaccinations</code> tables.</li>
+				<li><strong>SQL Functions & CTEs:</strong> SQL functions like <code>SUM()</code>, <code>CAST()</code>, and <code>PARTITION BY</code> are applied for data aggregation and analysis.</li>
+				<li><strong>TEMP Tables & Views:</strong> <em>TEMP</em> tables store intermediate data, and <code>SQL</code> views simplify querying aggregated vaccination data.</li>
+			</ul>
 		</div>
 	</article>
 
 	<!-- Clash of Clans Project -->
 	<article class="project-card">
 		<header class="project-title" onclick="toggleDescription(this)">
-			<span>Clash of Clans Hero Upgrade Planner in Excel</span>
+			<span><em>Clash of Clans</em> Dashboard in Google Sheets</span>
 			<div class="project-icons">
-				<img src="assets/google-sheets-logo-only.png" alt="Google Sheets Logo" class="project-icon" style="width: 25px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				<img src="assets/google-sheets-logo-only.png" alt="Google Sheets Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
 			</div>
 		</header>
 		<div class="project-description">
-			<iframe src="overviews/Clash of Clans.html"></iframe>
+			<h3>Overview</h3>
+			<p>
+				This project began as a personal tool during my time playing <em>Clash of Clans</em> and evolved into a comprehensive resource to optimize Hero Equipment upgrades. The challenge in <em>Clash of Clans</em> is managing upgrades due to resource collection, costs, and time. This tool simplifies planning by providing a structured, interactive <em>Google Sheets</em>-based calculator. 
+			  </p>
+			  <p>
+				Upon receiving positive feedback on Reddit, I documented it on GitHub.
+			  </p>			  
+			<div class="project-links">
+				<a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Fun%20projects/Clash%20of%20Clans%20Upgrade%20Planner.md" target="_blank" class="project-link">
+					<i class="fa-solid fa-file-excel"></i>
+					View on Google Sheets
+				</a>
+				<a href="https://www.reddit.com/r/ClashOfClans/comments/1atwpa1/plan_your_hero_equipment_upgrades_using_this/" target="_blank" class="project-link">
+					<i class="fa-brands fa-reddit-alien"></i>
+					View Reddit Post
+				</a>
+			</div>
+			<h3>Approach and Methodology</h3>
+			<ul>
+				<li><strong>Data Input:</strong> Players enter details like their Townhall Level, Trophy League, blacksmith balance, and Clan War frequency into the tool.</li>
+				<li><strong>Dynamic Calculation:</strong> The tool uses formulas and lookup tables to calculate the required resources and time needed for upgrades based on user inputs.</li>
+				<li><strong>Visual Feedback:</strong> Visual cues and error messages guide users in entering valid data and understanding the results.</li>
+				<li><strong>Customization:</strong> The tool provides personalized upgrade paths, aiding players in making more strategic and informed decisions for faster progression.</li>
+			</ul>
+			<h3>Screenshots:</h3>
+			<p>
+				A <em>Townhall 15</em> at <em>Champion III</em> that wars once a week and has a blacksmith balance of <span style="font-family:monospace;">15,529 Shiny Ores</span>, <span style="font-family:monospace;">680 Glowy Ores</span>, and <span style="font-family:monospace;">32 Starry Ores</span> will need <span style="font-family:monospace;">272 days</span> to upgrade <em>Frozen Arrow</em> from level 17 to 27. 
+			</p>
+			<p>The Dashboard will look like this: 
+				<img src="overviews/images/Example%20Usage.png" alt="Example Dashboard">
+			</p>
+			
+			<p>The hidden Data and Lookup sheet is where the data modeling happens:			
+				<img src="/overviews/images/Data%20and%20Lookup.png">
+			</p>
 		</div>
 	</article>
 
@@ -446,13 +635,246 @@
 		<header class="project-title" onclick="toggleDescription(this)">
 			<span>Personal Website</span>
 			<div class="project-icons">
-				<img src="assets/html-logo-only.png" alt="HTML Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<img src="assets/css-logo-only.png" alt="CSS Logo" class="project-icon" style="width: 30px; height: auto; margin-left: 10px;">
-				<i class="fa fa-chevron-down" aria-hidden="true" style="margin-left: 10px;"></i>
+				<img src="assets/html-logo-only.png" alt="HTML Logo" class="project-icon">
+				<img src="assets/css-logo-only.png" alt="CSS Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
 			</div>
 		</header>
 		<div class="project-description">
-			<iframe src="overviews/personal website.html"></iframe>
+			<h3>Overview</h3>
+			<p>
+			This personal website was created to showcase my professional resume, portfolio, and contact details in an organized and accessible format. What started as a simple online resume has evolved into a multi-page personal hub, reflecting my growth in web development and my self-driven learning journey.
+			</p>
+
+			<h3>Development Process</h3>
+			<ul>
+				<li><strong>Inspiration & Foundation:</strong> The website began with a  <a href="https://www.w3schools.com/howto/howto_website_create_resume.asp" target="_blank" rel="noopener noreferrer">basic resume template from W3Schools</a>, which served as the foundation for the layout and structure.</li>
+				<li><strong>Learning HTML & CSS:</strong> With no formal computer science background, I taught myself HTML and CSS through free online resources to build the website from scratch. The initial learning curve was steep, and progress was slow at first, but as I continued, I became more proficient.</li>
+				<li><strong>Gradual Expansion:</strong> Over time, I expanded the site by adding new sections, such as a portfolio, contact pages, and a blog. The blog, featuring my first post, was added to further enrich the content and boost engagement. Along with these additions, I continuously worked on improving the user experience by refining navigation, styling, and embedding interactive elements like widgets and forms.</li>
+				<li><strong>Customization & Feedback:</strong> To refine the website’s design and functionality, I used generative AI tools for design suggestions and optimizations. AI chatbots also helped me set up the JavaScript needed for interactive elements. It's impossible to overstate how crucial they have been in this endeavor.</li>
+				<li><strong>Mobile Responsiveness:</strong> Ensuring a seamless experience across devices was a priority, so I focused on making the site mobile-responsive. I used <b><code>rem</code></b> units for dimensions and incorporated media queries to optimize the layout for different screen sizes.</li>
+			</ul>
+		</div>
+	</article>
+
+	<!-- Stock and Portfolio Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Portfolio Risk Analysis with Python</span>
+			<div class="project-icons">
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<h3>Overview</h3>
+			<p>
+			This project analyzes individual stocks and their performance within a portfolio context, calculating key metrics like risk, return, variance, covariance, and portfolio risk decomposition using historical data from <em>Yahoo Finance</em>. The analysis helps investors understand how individual stocks perform and interact within a diversified portfolio to optimize risk and return.
+			</p>
+			<div class="project-links">
+				<a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Portfolio%20Risk%20Analysis.md" target="_blank" class="project-link">
+					<i class="fab fa-github"></i>
+					View Code
+				</a>
+			</div>
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Individual Stock Analysis:</strong> Calculates risk, return, volatility, and the relationship between stocks using covariance and correlation.</li>
+				<li><strong>Portfolio Risk and Return:</strong> Assesses the total variance of a portfolio and decomposes the overall risk into diversifiable and non-diversifiable components.</li>
+				<li><strong>Visualization:</strong> Visualizes stock price movements and risk metrics to aid in interpretation and decision-making.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong>Yahoo Finance:</strong> Historical stock data is fetched using the <em>Yahoo Finance API</em> through the <code>yfinance</code> library.</li>
+				<li><strong>Quantitative Methods:</strong> Various statistical methods are applied to calculate risk, return, and the relationship between stocks.</li>
+				<li><strong>Visualization:</strong> Graphs and charts are used to visualize stock performance and portfolio risk for better analysis.</li>
+			</ul>
+		</div>
+	</article>
+
+	<!-- Interactive Bank Statement Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Bank Statement Analysis in Excel</span>
+			<div class="project-icons">
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<h3>Overview</h3>
+			<p>
+			This project processes raw bank statements to create a user-friendly and interactive <em>Excel</em> file that summarizes financial transactions. By leveraging data processing and visualization techniques, it provides a concise overview of the firm's financial activities, helping to manage cash flow, monitor expenses, and prepare for audits.
+			</p>
+			<div class="project-links">
+				<a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Microsoft%20Excel/Interactive%20Bank%20Statement.md" target="_blank" class="project-link">
+					<i class="fab fa-github"></i>
+					View Project
+				</a>
+			</div>
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Data Processing:</strong> Raw bank data is imported, cleaned, and transformed using <em>Excel’s Power Query Editor</em>.</li>
+				<li><strong>Interactive Sheets:</strong> Includes interactive features like slicers, dropdowns, and conditional formatting for easy exploration of financial data.</li>
+				<li><strong>Summary and Detailed Views:</strong> Provides a monthly transaction overview and detailed accounting of issued checks with dynamic, user-friendly summaries.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong>Excel Power Query:</strong> Used for importing and processing raw data from text/CSV files.</li>
+				<li><strong>Excel Features:</strong> Slicers, dropdowns, and conditional formatting enhance user interactivity and data exploration.</li>
+				<li><strong>Data Visualization:</strong> Interactive and visually organized sheets provide insights into financial health.</li>
+				</ul>
+		</div>
+	</article>
+
+	<!-- Portfolio Returns and CAGR Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Portfolio Returns and CAGR Analysis with Python</span>
+			<div class="project-icons">
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<h3>Overview</h3>
+			<p>
+			This project analyzes individual stock performance and portfolio returns using <em>Python</em>, calculating key metrics like simple and log returns, cumulative returns, and Compound Annual Growth Rate (CAGR). The framework helps investors evaluate both individual stocks and the overall performance of their portfolios to make more informed investment decisions.
+			</p>
+			<div class="project-links">
+				<a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Portfolio%20returns%20and%20CAGR.md">
+					<i class="fab fa-github"></i>
+					View Code
+				</a>
+			</div>
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Stock Analysis:</strong> Calculates daily and annualized simple and log returns, as well as cumulative returns and CAGR for individual stocks.</li>
+				<li><strong>Portfolio Evaluation:</strong> Analyzes portfolio performance by comparing relative price movements and calculating weighted average returns and overall growth.</li>
+				<li><strong>Visualization:</strong> Generates charts to visually compare return distributions, price movements, and performance across multiple stocks and portfolios.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong>Python Libraries:</strong> Utilized <em>Yahoo Finance API</em> for data retrieval, along with libraries for data analysis and visualization.</li>
+				<li><strong>Data Analysis:</strong> Calculated performance metrics and growth rates using Python’s data manipulation capabilities.</li>
+				<li><strong>Visualization:</strong> Plotted stock and portfolio performance to provide clear, actionable insights for investors.</li>
+			</ul>
+		</div>
+	</article>
+
+	<!-- Three-Statement Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Three-Statement Financial Model in Excel</span>
+			<div class="project-icons">
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<h3>Overview</h3>
+			<p>
+			This <em>Excel</em>-based financial model provides a comprehensive three-statement forecast for a consumer goods firm, including detailed Profit & Loss, Balance Sheet, and Cash Flow statements. It allows users to analyze different financial scenarios by adjusting key assumptions and drivers, supporting business planning and decision-making.
+			</p>
+			<div class="project-links">
+				<a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Microsoft%20Excel/Three%20Statement%20Model.md" target="_blank" class="project-link">
+					<i class="fab fa-github"></i>
+					View Project
+				</a>
+			</div>
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Three-Statement Forecast:</strong> Develops a four-year forecast for the P&L, Balance Sheet, and Cash Flow statements.</li>
+				<li><strong>Scenario Analysis:</strong> Enables users to adjust financial drivers and evaluate different business scenarios.</li>
+				<li><strong>Supporting Schedules:</strong> Includes schedules for fixed assets, financial liabilities, and equity, essential for accurate forecasting.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong>Excel:</strong> Used for building and organizing the financial model and conducting scenario analysis.</li>
+				<li><strong>Data Cleaning:</strong> Processed historical data to prepare it for analysis and forecasting.</li>
+				<li><strong>Financial Modeling:</strong> Applied financial ratios and forecasting techniques to project key financial statements.</li>
+			</ul>
+		</div>
+	</article>
+
+	<!-- CAPM Analysis and Risk-Return Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>CAPM Analysis and Risk-Return Evaluation with Python</span>
+			<div class="project-icons">
+				<img src="assets/python-logo-only.png" alt="Python Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<h3>Overview</h3>
+			<p>
+			This project explores the <em>Capital Asset Pricing Model (CAPM)</em> and its applications in financial analysis, using the stocks of Walmart Inc, Coca-Cola Co, Lockheed Martin Corp, and Pfizer Inc as examples. By calculating beta values, expected returns, and Sharpe Ratios, the project demonstrates how investors can assess the risk and return of securities to make more informed investment decisions.
+			</p>
+			<div class="project-links">
+				<a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Python/Capital%20Asset%20Pricing%20Model.md" target="_blank" class="project-link">
+					<i class="fab fa-github"></i>
+					View Code
+				</a>
+			</div>
+			<h3>Key Features</h3>
+			<ul>
+				<li><strong>Beta Calculation:</strong> Computes the sensitivity of stock returns to market movements, providing insights into risk exposure.</li>
+				<li><strong>Expected Returns:</strong> Uses the CAPM formula to estimate the expected returns based on the risk-free rate and equity risk premium.</li>
+				<li><strong>Sharpe Ratio:</strong> Evaluates the risk-adjusted returns, allowing for a better understanding of the performance relative to the risk taken.</li>
+			</ul>
+
+			<h3>Tools and Technologies</h3>
+			<ul>
+				<li><strong>Python:</strong> Used for data retrieval, analysis, and calculations, including the <em>Yahoo Finance API</em> and financial metrics.</li>
+				<li><strong>CAPM and Sharpe Ratio:</strong> Fundamental financial models used to assess risk, return, and performance of stocks.</li>
+				<li><strong>Data Analysis:</strong> Monthly log returns are calculated to analyze stock performance and evaluate risk-adjusted returns.</li>
+			</ul>
+		</div>
+	</article>
+
+	<!-- Automated Cash Register Project -->
+	<article class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Automated Cash Register System in Excel</span>
+			<div class="project-icons">
+				<img src="assets/excel-logo-only.png" alt="Excel Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<h3>Overview</h3>
+			<p>
+			This <em>Excel</em>-based system automates the tracking and categorization of financial transactions, making it easier for users to manage their finances. It organizes transactions by type and details, and generates a summary for each month to provide an overview of financial activity.
+			</p>
+			<div class="project-links">
+				<a href="https://github.com/AsherGeorgy/My-Portfolio/blob/main/Microsoft%20Excel/Automated%20Monthly%20Cash%20Flow%20Manager.md" target="_blank" class="project-link">
+					<i class="fab fa-github"></i>
+					View Project
+				</a>
+			</div>
+			<h3>How It Works</h3>
+			<ul>
+				<li><strong>Transaction Entry:</strong> Users input transaction details—date, type, particulars, and amount—into the 'Register' sheet.</li>
+				<li><strong>Automatic Summary:</strong> The 'Summary' sheet is dynamically updated with categorized transactions for each month, enabling users to review their financial data.</li>
+			</ul>
+			
+			<h3>Key Formulas Used</h3>
+			<ul>
+			<li><strong>Populate Transaction Type and Particulars:</strong>
+				<p><code>= SORT(UNIQUE(FILTER('Register'!$D:$E, ('Register'!$D:$D<>"" ) + ('Register'!$E:$E<>"" )))</code></p>
+				<p>This formula filters and sorts the transaction types and particulars from the 'Register' sheet.</p>
+			</li>
+			
+			<li><strong>Obtain Corresponding Summary:</strong>
+				<p><code>= SUMIFS('Register'!$F:$F, 'Register'!$D:$D, Summary!$B5, 'Register'!$E:$E, Summary!$C5, 'Register'!$G:$G, Summary!D$2)</code></p>
+				<p>This formula sums the transaction amounts based on the selected type, particulars, and month, providing the monthly summary.</p>
+			</li>
+			</ul>
 		</div>
 	</article>
 
@@ -462,10 +884,20 @@
 </main>
 
 <!-- Footer -->
-<footer class="w3-container w3-center w3-margin-top" style="padding: 20px 0;">
-    <a class="footer-link" href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">GitHub</a> |
-    <a class="footer-link" href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-    <a class="footer-link" href="mailto:asher.georgy@outlook.com">Email</a>
+<footer class="footer">
+	<div class="container">
+		<div class="social-links">
+			<a href="mailto:asher.georgy@outlook.com">
+                <i class="fas fa-envelope" aria-label="Email"></i>
+            </a>
+            <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-label="GitHub"></i>
+            </a>
+            <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin" aria-label="LinkedIn"></i>
+            </a>
+		</div>
+	</div>
 </footer>
 
 <!-- Back to Top Button -->
@@ -476,20 +908,31 @@
 
 <script>
     // Function to toggle the visibility of project descriptions
-    function toggleDescription(element) {
-        const description = element.nextElementSibling;
-        const isExpanded = element.getAttribute('aria-expanded') === 'true';
+    // Update the toggleDescription function
+	function toggleDescription(element) {
+		const description = element.nextElementSibling;
+		const chevron = element.querySelector('.fa-chevron-down, .fa-chevron-up');
+		
+		// Close all other descriptions
+		document.querySelectorAll('.project-description').forEach(desc => {
+			if (desc !== description) {
+				desc.style.display = 'none';
+				const otherChevron = desc.previousElementSibling.querySelector('.fa-chevron-up');
+				if (otherChevron) {
+					otherChevron.classList.replace('fa-chevron-up', 'fa-chevron-down');
+				}
+			}
+		});
 
-        // Close all other open descriptions
-        document.querySelectorAll('.project-description').forEach((desc) => {
-            desc.style.display = 'none';
-            desc.previousElementSibling.setAttribute('aria-expanded', 'false');
-        });
-
-        // Toggle the selected description
-        description.style.display = isExpanded ? 'none' : 'block';
-        element.setAttribute('aria-expanded', !isExpanded);
-    }
+		// Toggle current description
+		if (description.style.display === 'block') {
+			description.style.display = 'none';
+			chevron.classList.replace('fa-chevron-up', 'fa-chevron-down');
+		} else {
+			description.style.display = 'block';
+			chevron.classList.replace('fa-chevron-down', 'fa-chevron-up');
+		}
+	}
 
     // Function to highlight project based on URL hash
     function highlightProject() {
