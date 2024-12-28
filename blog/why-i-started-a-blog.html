@@ -1,287 +1,761 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Hidden Costs of Social Media: Why I Turned to Blogging</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging and the Hidden Costs of Social Media</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Read my personal experience and reflections on online culture and why I started a blog.">
+    <meta name="keywords" content="social media, blogging, algorithms, mental health, online culture, social media impact, authenticity, personal growth">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Asher Georgy">
+
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Blogging and the Hidden Costs of Social Media">
+    <meta property="og:description" content="A personal exploration of the effects of social media and how blogging provides a healthier alternative for self-expression.">
+    <meta property="og:image" content="https://unsplash.com/photos/s9CC2SKySJM/download?force=true&w=640">
+    <meta property="og:url" content="https://ashergeorgy.github.io/blog/why-i-started-a-blog.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blogging and the Hidden Costs of Social Media">
+    <meta name="twitter:description" content="A personal exploration of the effects of social media and how blogging provides a healthier alternative for self-expression.">
+    <meta name="twitter:image" content="https://unsplash.com/photos/s9CC2SKySJM/download?force=true&w=640">
+
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest" type="application/manifest+json">
+
+    <!-- External CSS & Fonts -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Lobster|Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="Explore the hidden costs of social media and why I turned to blogging. Read my personal experience and reflections on authenticity, mental health, and online culture.">
-        <meta name="keywords" content="social media, blogging, algorithms, mental health, online culture, social media impact, authenticity, personal growth">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="Your Name">
-    
-        <!-- Open Graph Tags for Social Media -->
-        <meta property="og:title" content="The Hidden Costs of Social Media and Why I Turned to Blogging">
-        <meta property="og:description" content="A personal exploration of the effects of social media and how blogging provides a healthier alternative for self-expression.">
-        <meta property="og:image" content="https://unsplash.com/photos/s9CC2SKySJM/download?force=true&w=1920">
-        <meta property="og:url" content="https://ashergeorgy.github.io/blog/why-i-started-a-blog.html">
-        <meta property="og:type" content="article">
-    
-        <!-- Twitter Card Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="The Hidden Costs of Social Media and Why I Turned to Blogging">
-        <meta name="twitter:description" content="A personal reflection on how social media algorithms influence mental health and authenticity, and why blogging offers a more meaningful outlet.">
-        <meta name="twitter:image" content="https://unsplash.com/photos/s9CC2SKySJM/download?force=true&w=1920">
-    
-        <!-- Favicon Links -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest" type="application/manifest+json">
-    
-        <!-- External CSS & Fonts -->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Lobster|Open+Sans">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #009688;
+            --secondary-color: #4CAF50;
+            --text-color: #555;
+            --background-color: #b8d9d653;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+
+            font-size: 3rem;
+            margin-bottom: 0.0625rem;
+            font-family: "Lobster", cursive;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-top: 1.875rem;
+            border-bottom: 0.125rem solid var(--primary-color);
+            padding-bottom: 0.625rem;
+            font-family: "Roboto", sans-serif;
+            text-transform: capitalize;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7; 
+            margin-bottom: 1.25rem;
+            text-align: justify;
+        }
+        ol {
+                margin-left:-1rem;
+            }
+        a {
+            color: #009688;
+            text-decoration: underline; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+            color: #4CAF50;
+            transition: color 0.3s ease;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: top 0.3s ease;
+        }
+        .nav-content {
+            max-width: 75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: underline;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar a:hover, .navbar a.active {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar a.active {
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: underline;
+        }
+
+
+        .header-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .title-hr {
+            width: 20%;
+            margin: 0.5rem auto;
+            border: 0;
+            border-top: 0.125rem solid #77777799;
+        }
+        .post-meta {
+            font-size: 0.875rem;
+            color: var(--text-color);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin-top: 0.5rem;
+        }
+        .meta-hr {
+            width: 50%;
+            margin: 0.25rem auto;
+            border: 0;
+            border-top: 0.0625rem solid var(--primary-color);
+        }
+        .post-meta .author,
+        .post-meta .date {
+            display: block;
+            margin: 0.25rem 0;
+        }
+        .post-meta .author {
+            font-weight: bold;
+        }
+        .post-meta .date {
+            color: #777;
+        }
+
+
+        .blog-post {
+            max-width: 65rem;
+            margin: auto;
+            padding: 3rem;
+            background-color: #fff;
+            box-shadow: 0 0 0.625rem rgba(0,0,0,0.1);
+            flex: 1; 
+        }
         
-        <style>
-            :root {
-                --primary-color: #009688;
-                --text-color: #555;
-                --background-color: #fff;
-            }
-            body {
-                font-family: "Open Sans", sans-serif;
-                margin: 0;
-                padding: 20px;
-                color: var(--text-color);
-                background-color: var(--background-color);
-                line-height: 1.6;
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-            }
-            .header-section {
-                text-align: center;
-                margin-bottom: 30px;
-            }
-            .back-button-link {
-                display: block;
-                width: fit-content;
-                margin: 25px auto; 
-                color: white;
-                background-color: var(--primary-color);
-                padding: 8px 15px;
-                border-radius: 5px;
-                text-align: center;
-                transition: background-color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease;
-                text-decoration: none; 
-                font-size: 0.8rem;		
-            }
-            .back-button-link:hover {
-                color: white;
-                background-color: #4CAF50; 
-                transform: translateY(-2px); 
-                text-decoration: underline;
+        .image-container-cover {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            width: 100%;
+            max-width: 50rem;
+            margin: 0 auto;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            width: 50%;
+            max-width: 50rem;
+            margin: 0 auto;
+        }
+        .image-container a,.image-container-cover a {
+            flex: 1;
+            min-width: 15.625rem;
+            max-width: 28.125rem;
+            overflow: hidden;
+        }
+        .image-container img, .image-container-cover img {
+            width: 100%;
+            object-fit: cover;  
+            object-position: center; 
+        }
+
+        .embed {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            width: 90%;
+            box-sizing: border-box; 
+        }
+
+        .emphasized-quote {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: bold;   
+            color: #333;         
+            border-left: 0.25rem solid #009688;
+            padding-left: 0.625rem;
+            margin: 0.625rem 0;
+            background-color: #f2f2f290;
+            border-radius: 0.5rem;
+        }
+
+        .source-info {
+            font-size: 1rem;
+            color: #555;        
+            display: block;       
+            margin-top: 0.3125rem;
+            font-style: italic;   
+            text-align: right;     
+            width: 100%;           
+        }
+
+        .media-description {
+            font-size: 0.9em;      
+            color: #555555e7;           
+            display: block;        
+            font-style: italic;    
+            text-align: center;     
+            width: 100%;          
+        }
+
+        .conclusion {
+            border-left: 0.25rem solid #009688;
+            border-right: 0.25rem solid #009688;
+            padding: 1rem 1.5rem; 
+            margin: 1rem 0; 
+            background-color: #cccccc3a; 
+            color: #333;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            line-height: 1.6; 
+        }
+        .conclusion p {
+            margin: 0.5rem 0;
+            text-align: center; 
+        }
+        .conclusion strong {
+            color: #009688; /
+        }
+
+
+        .social-share {
+            margin: 1rem 0;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 0.5rem;
+        }
+        .social-share a {
+            display: inline-block;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-share a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-0.125rem);
+        }
+
+        .back-button {
+            text-align: center;
+        }
+        .back-button-link {
+            display: inline-block;
+            text-align: center;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;	
+            background-color:  var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            margin: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .back-button-link:hover {
+            color: white;
+            background-color: #4CAF50; 
+            transform: translateY(-0.25rem);
+            box-shadow: 0 0.5rem 0.375rem rgba(0, 0, 0, 0.1); 
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #ffffff;
+            padding: 1rem 0.5rem;
+            text-align: center;
+            margin-top: auto; 
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 580px) {
+            html {
+                font-size: 16px
             }
             h1 {
-                color: var(--primary-color);
-                font-size: 3rem;
-                margin-bottom: 1px;
-                font-family: "Lobster", cursive;
+                font-size: 2.8rem;
             }
             h2 {
-                font-size: 2rem;
-                color: #333;
-                margin-top: 30px;
-                border-bottom: 2px solid var(--primary-color);
-                padding-bottom: 10px;
-                font-family: "Roboto", sans-serif;
-                text-transform: capitalize;
+                font-size: 1.8rem;
+            }
+            h3 {
+                font-size: 1.45rem;
             }
             p {
-                font-size: 1.1rem;
-                line-height: 1.7; 
-                margin-bottom: 20px;
-                text-align: justify;
+                font-size: 1.08rem;
             }
-            a {
-                color: #009688;
-                text-decoration: underline; 
+            ol {
+                margin-left:-1rem;
             }
-    
-            a:hover {
-                text-decoration: underline; 
-                color: #4CAF50;
-                transition: color 0.3s ease;
+            .embed {
+                width: 100%; 
+                overflow: hidden; 
             }
-            .emphasized-quote {
-                display: block;
-                font-size: 1.1rem;
-                font-weight: bold;   
-                color: #333;         
-                border-left: 4px solid #009688; 
-                padding-left: 10px;  
-                margin: 10px 0;      
-                background-color: #f2f2f290;
-            }
-            .conclusion{
-                border-left: 4px solid #009688; 
-                border-right: 4px solid #009688;
-                padding-left: 10px;  
-                padding-right: 10px;
-                margin: 10px 0; 
-                color: #333;
-                background-color: #cccccc3a; 
-                font-weight: bold;
-            }
-            .source-info {
-                font-size: 0.7em;     
-                color: #555;        
-                display: block;       
-                margin-top: 5px;      
-                font-style: italic;   
-                text-align: right;     
-                width: 100%;           
-            }
-    
-            .media-description {
-                font-size: 0.8em;      
-                color: #555555e7;           
-                display: block;        
-                font-style: italic;    
-                text-align: center;     
-                width: 100%;          
-            }
-
             .image-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-                width: 100%;
-                max-width: 800px;
-                margin: 0 auto;
+                width: 80%;
             }
-
-            .image-container a {
-                flex: 1;
-                min-width: 250px;
-                max-width: 450px;
-                overflow: hidden;
+            #h2allbad {
+                margin-top: -3rem;
             }
-
-            .image-container img {
-                width: 100%;
-                object-fit: cover;  
-                object-position: center; 
+            .emphasized-quote ul {
+                margin-left: -0.5rem;
             }
-
-            @media screen and (max-width: 600px) {
-                .image-container {
-                    flex-direction: column;
-                    gap: 10px;
-                }
-
-                .image-container a {
-                    max-width: 100%;
-                    width: 100%;
-                }
+        }
+        @media (max-width: 520px) {
+            h1 {
+                font-size: 2.7rem;
             }
-    
-            .blog-post {
-                max-width: 800px;
-                margin: auto;
-                padding: 20px;
-                background-color: #fff;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                flex: 1; 
+            h2 {
+                font-size: 1.7rem;
             }
-            .header-image {
-                width: 100%;
-                height: 40%;
-                display: block;
-                margin: 0 auto 20px;
+            h3 {
+                font-size: 1.4rem;
             }
-            
-            .social-share {
-                margin: 40px 0 0 0;
-                text-align: center;
+            p {
+                font-size: 1.05rem;
             }
-            .social-share a {
-                margin: 0 10px;
+            ol {
+                margin-left:-2rem;
+            }
+            .embed {
+                width: 100%; 
+                overflow: hidden; 
+            }
+            .image-container {
+                width: 90%;
+            }
+            #h2allbad {
+                margin-top: -5rem;
+            }
+            .emphasized-quote ul {
+                margin-left: -1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            html {
+                font-size: 16px
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            h3 {
                 font-size: 1.3rem;
-                color: var(--primary-color);
             }
-            .comments {
-                margin-top: 40px;
-                border-top: 1px solid #ccc;
-                padding-top: 20px;
+            p {
+                font-size: 1rem;
             }
-            .comment-box {
-                margin-bottom: 20px;
+            ol {
+                margin-left:-2.5rem;
             }
-            /* Footer */
-            footer {
-                background-color: #333;
-                color: #f2f2f2;
-                padding: 30px 20px;
-                text-align: center;
-                position: relative;
-                justify-content: center;
-                align-items: center;
+            .embed {
+                width: 100%; 
+                overflow: hidden; 
             }
-    
-            footer a {
-                color: #f2f2f2;
-                text-decoration: underline;
-                margin: 0 10px;
-                transition: color 0.3s ease;
-            }
-    
-            footer a:hover {
-                color: #009688; 
-            }
-            .blogpost .iframe {
-                height: 100%;
+            .image-container {
                 width: 100%;
             }
-        </style>
-    </head>
-<body>
-    <div class="header-section">
-        <h1>Blogging and the Hidden Costs of Social Media</h1>
-    </div>
-    
-    <div id="blog-post-content"></div>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-    <script>
-        // Fetch the GitHub blog content (or any other HTML content)
-        fetch('https://raw.githubusercontent.com/AsherGeorgy/blog-files/refs/heads/main/why-this-blog.html')
-        .then(response => response.text())  // Use .text() for raw HTML (no Base64 encoding)
-        .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const content = doc.querySelector('main');  // Get the <main> content
-
-            if (content) {
-                // Inject the content into the page
-                const container = document.getElementById('blog-post-content');
-                container.appendChild(content);
-
-                // Initialize Twitter widgets after content is injected
-                if (window.twttr && twttr.widgets) {
-                    twttr.widgets.load(container);  // Apply Twitter widgets to the new content
-                }
+            #h2allbad {
+                margin-top: -7rem;
             }
-        })
-        .catch(error => {
-            console.error('Error loading blog content:', error);
-        });
+            .emphasized-quote ul {
+                margin-left: -1.5rem;
+            }
+        }
+        @media (max-width: 450px) {
+            html {
+                font-size: 15.2px
+            }
+            #h2allbad {
+                margin-top: -8rem;
+            }
+        }
+        @media (max-width: 420px) {
+            html {
+                font-size: 13.9px
+            }
+            #h2allbad {
+                margin-top: -10rem;
+            }
+        }
+        @media (max-width: 390px) {
+            html {
+                font-size: 13.2px
+            }
+            #h2allbad {
+                margin-top: -13rem;
+            }
+        }
+        @media (max-width: 360px) {
+            html {
+                font-size: 12px
+            }
+            #h2allbad {
+                margin-top: -14rem;
+            }
+        }
+        @media (max-width: 330px) {
+            html {
+                font-size: 10.7px
+            }
+            #h2allbad {
+                margin-top: -15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="header-section">
+            <h1>Blogging and the Hidden Costs of Social Media</h1>
+            <hr class="title-hr"> <!-- Horizontal rule after the title -->
+            <div class="post-meta">
+                <span class="author">By <a href="/index.html" target="_blank">Asher Georgy</a></span>
+                <span class="date">Posted December 20, 2024</span>
+            </div>
+        </div>
+        
+        
+        <div id="blog-post-content">
+            <div class="blog-post">
+                <p>In today’s world, most people turn to social media—whether it’s Facebook, Instagram, Twitter (or whatever it's called these days)—to share their thoughts and experiences, while professionals flock to LinkedIn. It’s a convenient way to stay connected and informed on anything under the sun. Elon Musk famously referred to Twitter as “ <a href="https://x.com/elonmusk/status/1507777261654605828?lang=en" target="_blank" rel="noopener noreferrer">the de facto town square.</a> ”</p>
+                    
+                <p><b>Why then, am I here on my own personal corner of the internet?</b> </p>
+
+            <div class="image-container-cover">
+                <a href="https://unsplash.com/photos/s9CC2SKySJM" target="_blank" rel="noopener noreferrer">
+                    <img src="https://unsplash.com/photos/s9CC2SKySJM/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0NDU2MzMxfA&force=true&w=640" alt="Blogging">
+                </a>
+                <a href="https://www.gettyimages.in/search/2/image?phrase=social+media">
+                    <img src="https://media.gettyimages.com/id/599703424/photo/social-media.jpg?s=612x612&w=0&k=20&c=AKZazj7NslnZrr3rqpx4zbPp0IuwQpd7gB2tWoZGvdA=" alt="Social media">
+                </a>
+            </div>
+                
+            
+            <h2>Let’s talk about Algorithms</h2>
+            <p>
+                At the heart of any tech company lies its algorithms. They power everything from search engines to recommendations and data analysis, allowing them to process big data to improve and personalize user experiences. Algorithms curate content based on activity history, both on the platform and across the web, using cookies to keep track of the user's interests. The effectiveness of algorithms is crucial to their success and competitiveness. 
+            </p>
+            
+            <p>
+                Sounds harmless enough, right? RIGHT?
+            </p>
+
+            <p>
+                For the most part, yes. However there are some important considerations:
+            </p>
+            
+            <ol>
+                <h3><li>The Echo Chambers</li></h3>
+                        <p>
+                            An echo chamber is defined as <em>"an environment where individuals are exposed primarily to information that reinforces their existing beliefs, leading to a distorted or limited understanding of diverse perspectives."</em> Algorithms, by design, create such "chambers" where our beliefs are constantly validated without ever being challenged. We get a false sense of satisfaction from thinking we are right about everything—until the day someone challenges us with a different perspective, and the house of cards we had carefully constructed comes crashing down.
+                        </p> 
+                        <p>
+                            Understandably, many do not react gracefully to such challenges. But, as a wise man once said, personal growth begins only at the end of our comfort zones. In order to think, we need to risk being offended.
+                        </p>
+                <h3><li>The Doomscrolling</li></h3>
+                        <p>
+                            Algorithms are designed to promote content with high engagement rates. While this, in theory, should help spread positivity throughout the internet, the pendulum swings the other way more often.
+                        </p> 
+                        <p>
+                            <div class="emphasized-quote">
+                                "Negative words in headlines increased consumption rates, while positive words decreased them. Each additional negative word in an average-length headline boosted click-through rates by 2.3%."
+                                <span class="source-info">Research from <a href="https://www.nature.com/articles/s41562-023-01538-4" target="_blank" rel="noopener noreferrer">nature.com</a></span>
+                            </div>
+                        </p>
+                        <p>
+                            Since algorithms inherently prioritize content that captures attention, and negative, sensational headlines tend to do so more effectively. This, in turn, leads to ‘doomscrolling,’ where users are fed a steady diet of ragebait and conspiracy theories. As a result, platforms inadvertently amplify such content, since their business model is built on maximizing user engagement and traffic.
+                        </p>
+                        <p>
+                            Things get worse when 'bots' enter the picture. Bots are used not only by some influencers trying to artificially boost their social media presence, but also by bad-faith actors manipulating algorithms to <a href="https://www.npr.org/2024/09/07/nx-s1-5101895/doj-says-russia-paid-right-wing-influencers-to-spread-russian-propaganda" target="_blank" rel="noopener noreferrer">spread propaganda</a>, <a href="https://www.cnbc.com/2024/10/23/chinese-influence-operation-targets-down-ballot-races-microsoft-says.html" target="_blank" rel="noopener noreferrer">interfere with elections</a>, and promote hate, fear, and misinformation. In fact, there are large scale operations, particularly in East Asian countries, known as ‘<a href="https://edition.cnn.com/style/vietnam-farms-jack-latham-beggars-honey/index.html" target="_blank" rel="noopener noreferrer">click farms</a>’ that do this as on a commercial scale. 
+                        </p>
+                        
+                        <div class="embed">
+                            <blockquote class="twitter-tweet" data-media-max-width="450">
+                                <p lang="es" dir="ltr">
+                                    Granja de bots, así se difunden las Fake news y los falsos seguidores 🤯
+                                    <a href="https://t.co/L6aS6c2h1R">pic.twitter.com/L6aS6c2h1R</a>
+                                </p>
+                                &mdash; Más Ciencia (@MsCiencia2) 
+                                <a href="https://twitter.com/MsCiencia2/status/1849430314017255525?ref_src=twsrc%5Etfw">October 24, 2024</a>
+                            </blockquote>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                        <span class="media-description">
+                            An alleged commercial "click farm"
+                        </span>
+
+                        <p>
+                            Content amplified by click farms creates a distorted version of reality in the user's mind, leading them to believe in alternate narratives that may not accurately reflect the opinions held by the average person, potentially causing feelings of anger or fear.
+                        </p>
+                <h3><li>The Dilemma of Authenticity</li></h3>
+                        <p>
+                            Whether the goal is to make entertaining or educational content, or if it is more cynical (as discussed above), gaining the algorithm’s good favor is key. The choice is often between staying original and true to yourself or conforming to what the algorithm gods are smiling on at the time.
+                        </p>
+                        <p>
+                            This may be why social media is plagued with content that lacks originality, authenticity, or even truth. A quick scroll through LinkedIn reveals how similar the top viral posts are—their essence and/or structure.
+                        </p> 
+                            
+                        <div class="image-container">
+                            <img src="https://www.dropbox.com/scl/fi/x9vx4s11c223vgx41v2t6/120844917_1620737391440351_9215627387136603821_n.jpg?rlkey=64q502j52mm3ip6bmrs1x881v&st=om7z0q7o&raw=1" alt="Satirical LinkedIn viral post">
+                        </div>
+                        <span class="media-description">A satirical LinkedIn viral post.</span>
+
+                        <p>The algorithm favors posts that conform to certain patterns, leading to a sea of uniform content from people trying too hard to get noticed. Some such LinkedIn posts are so cringe-worthy that there's now a <a href="https://www.reddit.com/r/LinkedInLunatics/" target="_blank" rel="noopener noreferrer">subreddit</a> dedicated to them.</p>
+                            
+                <h3><li>The Façade of Wellness</li></h3>
+                        <p>
+                            Social media presence has become a key part of one's identity. Both organizations and individuals look to social media to evaluate others, creating the pressure to maintain a persona that may have little to do with reality. Someone could be going through tough times personally, yet their latest posts would suggest otherwise. There, you'll find a happy, well-adjusted individual who seems to be thriving.
+                        </p>
+                        
+                        <div class="embed">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/0EFHbruKEmw?si=NiZRrfTxE_BoXJou" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <span class="media-description">
+                            A YouTube video from 2017 (with 23M+ views) attempts to capture this social pressure and façade.
+                        </span>
+                        
+                        <p>
+                            While it's a broad generalization, those who frequently post on social media (without any real incentive to do so) might be seeking validation, dealing with insecurity, or experiencing loneliness. Often, they share personal photos in response to trivial reasons—such as birthday wishes, current events, or motivational quotes. Though this observation may not apply to everyone, there may still be some truth to it.
+                        </p>
+
+                        <p>
+                            <div class="emphasized-quote">
+                                “The better you feel about yourself, the less you feel the need to show off.”
+                                    <span class="source-info">
+                                        Quote from <a href="https://en.wikipedia.org/wiki/Robert_Hand" target="_blank" rel="noopener noreferrer">Robert Hand</a>
+                                    </span>
+                            </div>
+                        </p>
+
+                        <p>
+                            I deactivated my facebook profile when I was in high school and never even started with Instagram. I felt like the pressure to constantly post and maintain an appearance was unnecessary and unhealthy. I was not a particularly bright kid, but I still believe this was one of the best decisions I ever made. 
+                        </p>
+                <h3><li>The Perpetual Insecurity</li></h3>
+                        <p>
+                            Scrolling through a feed filled with others’ carefully curated best moments can take a toll on anyone’s self-perception. <a href="https://www.theverge.com/2021/9/15/22675130/facebook-instagram-teens-mental-health-damage-internal-research" target="_blank" rel="noopener noreferrer">Internal research conducted by Facebook</a> in 2021 revealed that the platform can have (among others) detrimental effects on the self-image of its users, especially teenage girls. 
+                        </p>
+                            
+                        <p>
+                            <div class="emphasized-quote">
+                                “The constant cycle of [conscious and subconscious] social comparison and dissatisfaction has led many to develop mental health issues such as depression, anxiety, and low self-esteem.”
+                                <span class="source-info">
+                                    <a href="https://www.teenvogue.com/story/the-science-behind-social-medias-hold-on-our-mental-health" target="_blank" rel="noopener noreferrer">teenvogue.com</a>
+                                </span>
+                            </div>
+                        </p>
+                            
+                        <p>
+                            On the professional side of social media, LinkedIn inadvertently creates a sense of perpetual dissatisfaction and anxiety, as users strive to match or surpass others’ achievements (which may themselves be exaggerated or distorted).
+                        </p>
+
+                        <div class="image-container">
+                            <img src="https://www.dropbox.com/scl/fi/1v3bf0mlajkjeagnneazv/seem-about-right-v0-iupbmplytw1e1.PNG?rlkey=hsb6qfu8jjqzph9k3o8cnc0vr&st=59dhavs5&raw=1">
+                        </div>
+                <h3><li>The Dopamine Dependence </li></h3>
+                        <p>
+                            Dopamine is the chemical that’s often referred to as the ‘happy hormone’. It’s released when one experiences happiness or satisfaction from  something. This reward system works as an evolutionary mechanism that keeps humans motivated to repeat those behaviours that promote happiness and well-being. 
+                        </p>
+                        <p>
+                            Unfortunately, this mechanism has been hijacked by the instant and effortless dopamine hits one can get from social media and video games. They are designed to exploit this reward system, causing a myriad of issues such as dopamine cravings, compulsive behaviour, and dependence on social validation, instant gratification, and novelty.
+                        </p>
+                
+                        <p> 
+                            Justin Rosenstein, <a href="https://thehill.com/policy/technology/354574-the-engineer-that-created-the-facebook-like-now-limits-his-use-of-facebook/" target="_blank" rel="noopener noreferrer">the Facebook engineer who created the “Like” button</a>, referred to it as “bright dings of pseudo-pleasure” and voiced concerns about its negative impact, such as addiction and distraction. He decries how it contributed to a culture of constant comparison and approval-seeking, urging people to prioritize meaningful connections over seeking validation through 'likes'.
+                        </p>
+                <h3><li>The Toll on Productivity</li></h3>
+                        <p>
+                            Short-form media content ('reels', 'tiktoks', 'shorts') is hugely popular among creators and consumers alike. It is (relatively) easy to create and consume, requiring minimal time commitment while offering instant gratification. These videos are designed to be swiped on endlessly, with little to no interruption.
+                        </p>
+                        <p>
+                            This seemingly endless bombardment of fast-paced, engaging videos can, however, create a cycle of distraction, impairing focus, reducing productivity, and hindering the ability to retain information. In turn, this affects work efficiency and learning, as well as poses long-term consequences for mental well-being, leading to increased stress and a diminished sense of accomplishment.
+                        </p>
+                <h3><li>The Incurable Toxicity</li></h3>
+                        <p>
+                            Like any addiction, the addiction to dopamine hits from social media has the potential to escalate—requiring more to feel the same level of satisfaction. This may explain why influencers often turn to riskier or edgier content over time.
+                        </p> 
+                        <p> 
+                            This phenomenon could also help explain the prevalence of toxicity on these platforms. Many individuals seek to build a presence by constantly posting vitriol and engaging in endless arguments. They don't shy away from calling for, or even celebrating, violence or harm toward those deemed to be on the 'other side,' often hiding behind the anonymity these platforms provide. Mike Tyson once commented on this (ironically) on his Facebook:
+                        </p> 
+                        <div class="embed">
+                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02Xk7cN39jKEwAvE1ffxqPncS7aEuGcqjUAJvHD5RCXKSd14CbEYw4mc17e8jgG8Xgl%26id%3D1436354686635680&show_text=true&width=500" width="500" height="436" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>  
+            </ol>
+
+            <h2 id="h2allbad">Is Social Media All Bad?</h2>
+                <p>
+                    <b>Absolutely not.</b>
+                </p> 
+                <p>
+                    Many use social media to grow businesses, expand professional networks, raise awareness about important issues, and stay connected with loved ones. Social comparisons can motivate individuals to improve, set goals, and strive for excellence. Following successful people can inspire and encourage personal growth.
+                </p>
+
+                <p>
+                    That said, it is important to remember that everyone is on their own journey with their own ups and downs.
+                </p> 
+                <div class="emphasized-quote">
+                    <ul> 
+                        <li>Not everyone starts from the same point, faces the same obstacles, or is given the same opportunities.</li> 
+                        <li>Social media should always be taken with a grain of salt. While some may genuinely be thriving, many are likely exaggerating or outright faking it.</li> 
+                        <li>No one has every aspect of their life completely figured out or perfectly lined up, even if it may appear that way.</li> 
+                        <li>Life is meant to be built steadily, with a long-term goals. Rome wasn’t built in a day.</li> 
+                    </ul>
+                </div>
+                <p>
+                    It's helpful to take a step back and appreciate the blessings in our own lives. To put things into perspective, <a href="https://www.cnbc.com/2018/11/01/how-much-money-you-need-to-be-part-of-the-1-percent-worldwide.html" target="_blank" rel="noopener noreferrer">according to CNBC</a>, if you have a net worth of $4,210 (₹3,50,000), you're already in the top 50% of the world — meaning more than half of the global population would trade places with you financially.
+                </p>
+
+            <h2>Why I made this Blog</h2>
+                <p>
+                    This is my first-ever blog post (excluding a few Quora posts from years ago), and it is more of a personal development project than a social critique. My decision to step off the bandwagon is personal — it's what feels right for me. This is not a judgement on others' choices. 
+                </p>
+
+                <p>
+                    Writing, by itself, has immense personal and professional benefits, such as improving communication skills, fostering cognitive development, and encouraging reflection. A blog offers the opportunity to be authentic, free from the constraints of social media algorithms and terms of service. The focus is on personal development, not on seeking external validation, and there need not be any metrics required to define success. Not contributing to a system that fuels division, hate, and mental health issues is another definite plus. 
+                </p>
+
+                <div class="conclusion">
+                    <p>
+                        If you've made it this far, I want to take a moment to thank you. Whether you’re here for a brief moment or for a longer stretch, I appreciate you being part of the journey.
+                    </p>
+                    
+                    <p>
+                        I'm not a writer or a social critic by any measure. Excuse me if this came across as preachy or judgemental. That was never my intention.
+                    </p>
+                </div>
+                    
+                <!-- Social Share Buttons -->
+                <div class="social-share">
+                    <h3>Share this post:</h3>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=ashergeory.github.io/blogposts/Post1.html" aria-label="Share on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=ashergeory.github.io/blogposts/Post1.html&text=Check%20out%20this%20blog%20post%20on%20the%20hidden%20costs%20of%20social%20media" aria-label="Share on Twitter" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=ashergeory.github.io/blogposts/Post1.html" aria-label="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20blog%20post%20on%20the%20hidden%20costs%20of%20social%20media%20https%3A%2F%2Fashergeory.github.io%2Fblogposts%2FPost1.html" aria-label="Share on Whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <div class="back-button">
+                    <a href="/blog.html" class="back-button-link">Back to Blog</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:asher.georgy@outlook.com">
+                    <i class="fas fa-envelope" aria-label="Email"></i>
+                </a>
+                <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github" aria-label="GitHub"></i>
+                </a>
+                <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-label="LinkedIn"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+        
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector('.navbar');
+
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+
+            // Show navbar when scrolling up, hide when scrolling down
+            if (currentScrollPos === 0) {
+                navbar.style.top = "0"; // Navbar should be visible at the top
+            } else if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0"; // Navbar visible
+            } else {
+                navbar.style.top = "-60px"; // Navbar hidden
+            }
+            prevScrollPos = currentScrollPos;
+        };
+
     </script>
-
-
-</body>
-</html>
-
-<!-- Footer -->
-<footer>
-    <div>&copy; 2024 Asher Georgy. All rights reserved.<br><br></div>
-    <div>Contact: <a href="mailto:asher.georgy@outlook.com">asher.georgy@outlook.com</a></div>
-</footer>
 
 </body>
 </html>
