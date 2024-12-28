@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Blog - Asher Georgy</title>
+    <title>Asher Georgy - Blog</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Asher Georgy's personal blog, covering technology, finance, culture, and more.">
     <meta name="keywords" content="blog, technology, finance, projects">
     <meta name="author" content="Asher Georgy">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Stylesheets -->
+	<link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Lobster">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
@@ -20,401 +22,398 @@
     <!-- Favicon Links -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="manifest" href="site.webmanifest" type="application/manifest+json">
-    
+
     <style>
-        :root {
-            --primary-color: #009688;
-            --secondary-color: #4CAF50;
-            --text-color: #555;
-            --background-color: #fff;
-            --navbar-bg: #333;
-            --footer-bg: #333;
-            --hover-bg: #ddd;
-        }
-
-        body, html {
-            font-family: "Roboto", sans-serif;
-            margin: 0;
+        /* * {
             padding: 0;
-            scroll-behavior: smooth;
-        }
-
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 999;
-            background-color: var(--navbar-bg);
-            transition: top 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .navbar a:hover, .navbar a.active {
-            background-color: var(--hover-bg);
-            color: black;
-        }
-
-        .navbar a.active {
-            background-color: var(--secondary-color);
-            color: white;
-        }
-
+        } */
+        body {
+			background-color: #b8d9d653;
+		} 
+        
         .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 50px auto 20px;
-            padding: 20px;
-            gap: 20px;
-            flex-wrap: wrap;
-            align-items: flex-start; /* Align children to the top */
-            height: 200vh;
+            max-width: 75rem;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 1fr 18.75rem;
+            gap: 2rem;
         }
 
+        /* Main Content */
         .main-content {
-            flex: 4;
-            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
-        .main-content h1 {
-            color: var(--primary-color);
+        .page-header {
+            text-align: center;
+            margin-bottom: 0rem;
+        }
+
+        .page-header h1 {
+            color: #009688;
             font-size: 3rem;
-            text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 0.5rem;
         }
 
-        .main-content p.intro-text {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--text-color);
-            margin-bottom: 30px;
-            line-height: 1.6;
+        .intro-text {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: -1rem;
         }
 
-        .main-content .blog-post {
-            background-color: var(--background-color);
-            margin-bottom: 30px;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            position: relative;
+
+        .blog-post {
+            display: flex; 
+            gap: 1rem; 
+            flex-wrap: wrap; 
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .blog-post:hover {
+            transform: translateY(-0.0625rem);
+            box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+        }
+
+        .post-images {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: -2rem;
+        }
+
+        .post-images a {
+            flex: 1;
+        }
+
+        .post-images img {
+            width: 100%;
+            height: 15rem;
+            object-fit: cover;
+            border-radius: 0.5rem;
             transition: transform 0.3s ease;
         }
 
-        .main-content .blog-post img {
+        .post-images img:hover {
+            transform: scale(1.02);
+        }
+
+        .post-content {
             width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 8px;
         }
 
-        .main-content .blog-post h2 {
+        .post-content h2 {
             font-size: 2rem;
-            color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 0.5rem;
+            color: #000; 
+            line-height: 1.4;
         }
 
-        .main-content .blog-post p {
+        #link-h {
+            text-decoration: underline;
+        }
+
+        #link-h:hover {
+            color: #4CAF50; 
+            text-decoration: underline;
+        }
+
+        .post-content p {
             font-size: 1.1rem;
-            color: var(--text-color);
-            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1rem;
         }
 
-        /* Base styling for the "Read More" button */
-        .main-content .blog-post .read-more {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--primary-color);
-            font-weight: bold;
-            transition: color 0.3s ease, transform 0.3s ease; 
-            padding: 8px 16px;
-            border: 1px solid var(--primary-color);
-            border-radius: 4px;
-            text-decoration: none;
+        .post-content time {
+            color: #666;
+            font-size: 0.9rem;
         }
 
-        .blog-post-hover:hover {
-            transform: translateY(-2px);
-            background-color: var(--hover-bg);
-        }
-
-        .main-content .blog-post .read-more:hover {
-            color: #00796b;
-            border-color: #00796b;
-            transform: translateY(-2px); 
-        }
-
-        .main-content .blog-post .read-more:focus {
-            outline: 3px solid #00796b;
-            outline-offset: 2px;
-        }
-
-
-        .main-content .read-all-posts {
-            display: block;
-            width: fit-content;
-            margin: 30px auto;
-            color: white;
-            background-color: var(--primary-color);
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-align: center;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        .main-content .read-all-posts:hover {
-            background-color: #00796b;
-            transform: translateY(-2px);
-        }
-
-        .coming-soon {
+        .coming-soon{
             font-style: italic;
-            color: #777; /* Light gray color */
-            font-weight: normal;
+            color: #666;
+            font-size: 0.9rem;
         }
 
-        /* Sidebar container */
         .sidebar {
-            display: block;
-            flex: 2;
-            min-width: 250px;
-            background-color: var(--background-color);
-            padding: 0;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            height: 120%; 
-            overflow-y: hidden; 
-            transition: transform 0.3s ease-in-out;
+            background: white;
+            padding: 0; 
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+            height: calc(100vh - 6.25rem); 
+            display: flex;
+            flex-direction: column;
+            position: relative; 
         }
 
-        /* Sidebar header */
         .sidebar-header {
-            background-color: var(--background-color);
-            padding: 20px 30px 10px; 
+            top: 0;
+            color: #009688;
+            background: white;
+            margin: 0;
+            padding: 1.5rem;
+            border-bottom: 0.0625rem solid #eee;
+            z-index: 1;
             text-align: center;
             text-decoration: underline;
-            flex-shrink: 0; 
         }
 
-        /* Sidebar content */
-        .sidebar-content {
-            padding: 10px;
-            overflow-y: auto; 
-            /* max-height: calc(100vh - 80px); 
-            height: 100%;
+        .social-icons {
+            text-align:center;
         }
 
-        .social-post {
-            margin-bottom: 20px;
+        .social-embed {
+            padding: 1.5rem;
+            overflow-y: auto;
+            flex-grow: 1;
+            width: 100%
         }
 
-        footer {
-            background-color: var(--footer-bg);
-            color: #f2f2f2;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: #f2f2f2;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Consolidated media queries */
-        @media (max-width: 435px) {
-            .navbar a {
-                padding: 16px 16px;
-                font-size: 1rem;
+        @media (max-width: 855px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
             }
 
-            .main-content h1 {
-                font-size: 2.2rem;
+            .sidebar {
+                height: auto; 
+                margin-top: 2rem;
+            }
+            .container {
+                margin: 1rem auto; 
+                padding: 0 1.2rem;
+            }
+            .page-header h1 {
+                font-size: 2.3rem; 
+            }
+            .intro-text {
+                font-size: 1rem; 
             }
 
-            .main-content p.intro-text {
-                font-size: 1.1rem;
+            .blog-post {
+                padding: 1rem; 
             }
-
-            .main-content .blog-post h2 {
+            .post-images img  {
+                height: 10rem; 
+            }
+            .post-content h2 {
                 font-size: 1.6rem;
             }
-
-            .main-content .blog-post p {
-                font-size: 1rem;
-            }
-
-            .main-content .blog-post .read-more {
+            .post-content p {
                 font-size: 0.9rem;
+                margin-bottom: 0.5rem;
             }
-        }
-
-        @media (max-width: 395px) {
-            .navbar a {
-                padding: 14px 14px;
-                font-size: 1rem;
+            .coming-soon, .post-content time {
+                font-size: 0.7rem;
             }
-
-            .main-content h1 {
-                font-size: 2rem;
+            .sidebar-header {
+                font-size: 1.8rem;
+                margin-top: -2.5rem;
             }
-
-            .main-content p.intro-text {
-                font-size: 1rem;
-            }
-
-            .main-content .blog-post h2 {
+            .social-icons {
                 font-size: 1.5rem;
             }
-
-            .main-content .blog-post p {
-                font-size: 1rem;
-            }
-
-            .main-content .blog-post .read-more {
-                font-size: 0.8rem;
+        }
+        @media (min-width: 620px) and (max-width: 855px) {
+            .post-images img {
+                width: 100%;
+                height: 15rem;
             }
         }
-
-        @media (max-width: 375px) {
-            .navbar a {
-                padding: 12px 12px;
-                font-size: 0.9rem;
+        @media (max-width: 450px) {
+            html {
+                font-size: 15.7px; 
             }
         }
-
-        @media (max-width: 355px) {
-            .navbar a {
-                padding: 14px 10px;
-                font-size: 0.8rem;
+        @media (max-width: 420px) {
+            html {
+                font-size: 14.2px; 
             }
         }
-
-
+        @media (max-width: 390px) {
+            html {
+                font-size: 13.2px; 
+            }
+        }
+        @media (max-width: 360px) {
+            html {
+                font-size: 11.9px; 
+            }
+        }
+        @media (max-width: 330px) {
+            html {
+                font-size: 10.6px; 
+            }
+        }
     </style>
 </head>
 <body>
-<!-- Navigation Bar -->
-<nav class="navbar" aria-label="Main Navigation">
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a class="active" href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-</nav>
-<div class="container">
-    <!-- Main Blog Content -->
-    <main class="main-content">
-        <h1>Welcome to My Blog!</h1>
-        <p class="intro-text">Here is where I jot down my musings and explore the random thoughts that inspire me.</p>
-		
-        <!-- Sample Blog Post -->
-        <article class="blog-post">
-            <img src="https://unsplash.com/photos/s9CC2SKySJM/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzMwNDQ4NDUxfA&force=true&w=1920" alt="Blogging Header">
-            <h2>Why I made a Blog Page</h2>
-            <p>Why I started this blog, what I hope to explore, and where I think it might lead.</p>
-            <a href="/blog/why-i-started-a-blog.html" class="read-more">Read more</a>
-        </article>
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>    
 
-        <article class="blog-post">
-            <img src="blog/images/excel-pomo.jpg" alt="Excel and Pomofocus logos">
-            <h2>Productivity Tools: Excel and Pomofocus</h2>
-            <p>How I learned to manage time and boost productivity with Microsoft Excel and Pomofocus.io</p>
-            <p class="coming-soon">Coming soon. Stay tuned!</p>
-        </article>        
+    <div class="container">
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Welcome to My Blog!</h1>
+                <p class="intro-text">Here is where I jot down my musings and explore the random thoughts that inspire me.</p>
+            </header>
 
-        <article class="blog-post">
-            <h2>Generative AI and the Evolving Landscape of Software Development</h2>
-            <p>How generative AI is lowering barriers to entry and changing what it takes to stand out.</p>
-            <p class="coming-soon">Coming soon. Stay tuned!</p>
+            <article class="blog-post">
+                <div class="post-images">
+                    <a href="https://unsplash.com/photos/s9CC2SKySJM" target="_blank" rel="noopener noreferrer">
+                        <img src="https://unsplash.com/photos/s9CC2SKySJM/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzM0NDU2MzMxfA&force=true&w=640" alt="Blogging" loading="lazy">
+                    </a>
+                    <a href="https://www.gettyimages.in/search/2/image?phrase=social+media" target="_blank" rel="noopener noreferrer">
+                        <img src="https://media.gettyimages.com/id/599703424/photo/social-media.jpg?s=612x612&w=0&k=20&c=AKZazj7NslnZrr3rqpx4zbPp0IuwQpd7gB2tWoZGvdA=" alt="Social media" loading="lazy">
+                    </a>
+                </div>
+                <div class="post-content">
+                    <a href="/blog/why-i-started-a-blog.html" target="_blank" rel="noopener noreferrer">
+                        <h2 id="link-h">Why I made a Blog Page</h2>
+                    </a>
+                    <p>Why I started this blog, what I hope to explore, and where I think it might lead.</p>
+                    <time datetime="2024-12-20">Posted on December 20, 2024</time>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-images">
+                    <a href="https://depositphotos.com/editorial/microsoft-excel-menu-163828696.html" target="_blank" rel="noopener noreferrer">
+                        <img src="https://st3.depositphotos.com/1006241/16382/i/600/depositphotos_163828696-stock-photo-microsoft-excel-menu.jpg" alt="MS Excel" loading="lazy">
+                    </a>
+                    <a href="https://x.com/pomofocus" target="_blank" rel="noopener noreferrer">
+                        <img src="https://user-images.githubusercontent.com/18032062/151683964-b4c4a6fc-0238-42b7-a193-98b9d0507e49.png" alt="PomoFocus.io" loading="lazy">
+                    </a>
+                </div>
+                <div class="post-content">
+                    <h2>Productivity Tools: Excel and Pomofocus</h2>
+                    <p>How I learned to manage time and boost productivity with Microsoft Excel and Pomofocus.io</p>
+                    <span class="coming-soon">Coming soon. Stay tuned!</span>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-images">
+                    <a href="https://unsplash.com/photos/a-computer-generated-image-of-a-ball-of-string-P5mCQ4KACbM" target="_blank" rel="noopener noreferrer">
+                        <img src="https://unsplash.com/photos/P5mCQ4KACbM/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTl8fGNoYXRncHR8ZW58MHx8fHwxNzM0NjgzMzE1fDA&force=true&w=640" alt="Generative AI" loading="lazy">
+                    </a>
+                    <a href="https://unsplash.com/photos/person-facing-tuned-on-macbook-pro-I8OhOu-wLO4" target="_blank" rel="noopener noreferrer">
+                        <img src="https://unsplash.com/photos/I8OhOu-wLO4/download?force=true&w=640" alt="Software Development" loading="lazy">
+                    </a>
+                </div>
+                <div class="post-content">
+                    <h2>Generative AI and the Evolving Landscape of Software Development</h2>
+                    <p>How generative AI is altering barriers to entry and what it takes to stand out.</p>
+                    <span class="coming-soon">Coming soon. Stay tuned!</span>
+                </div>
+            </article>
             
-        </article>
-		
-		<a href="/blog/why-i-started-a-blog.html" class="read-all-posts">Read All Posts >>></a>
+        </main>
 
-    </main>
-	
-    <!-- Sidebar with Social Media Embeds -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <h3>Social Media Reposts</h3> 
+        <aside class="sidebar">
+            <h3 class="sidebar-header">Social Media Reposts</h3>
+            <div class="social-icons">
+                <i class="fa-sharp fa-solid fa-thumbs-up" style="color:#1877F2;"></i>
+                <i class="fa-solid fa-heart" style="color:#FF5C8D;"></i>
+                <i class="fa-solid fa-retweet" style="color:#00BA7C;"></i>
+            </div>
+            <div class="social-embed" id="social-embed">
+                <!-- Social posts will be dynamically loaded here -->
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="mailto:asher.georgy@outlook.com">
+                <i class="fas fa-envelope" aria-label="Email"></i>
+            </a>
+            <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-label="GitHub"></i>
+            </a>
+            <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin" aria-label="LinkedIn"></i>
+            </a>
         </div>
-        <div style="text-align:center;">
-            <i class="fa-sharp fa-solid fa-thumbs-up" style="color:#1877F2;"></i>
-            <i class="fa-solid fa-heart" style="color:#FF5C8D;"></i>
-            <i class="fa-solid fa-retweet" style="color:#00BA7C;"></i>
-        </div>
-        <div class="sidebar-content" id="social-posts-container">
-            <!-- Social posts will be dynamically loaded here -->
-        </div>
-    </aside>
-    
-    <!-- Include in the main page -->
+    </footer>
+
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+    <script>
+        fetch('https://api.github.com/repos/AsherGeorgy/blog-files/contents/social-posts.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const content = atob(data.content);
+                const container = document.getElementById('social-embed');
+                if (container) {
+                    container.innerHTML = content;
+                    if (window.twttr && twttr.widgets) {
+                        twttr.widgets.load(container);
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error loading social posts:', error);
+                const container = document.getElementById('social-embed');
+                if (container) {
+                    container.innerHTML = '<p>Unable to load social posts at this time.</p>';
+                }
+            });
+    </script>
     
     <script>
-        // Fetch the GitHub content (which contains the Twitter embeds)
-        fetch('https://api.github.com/repos/AsherGeorgy/blog-files/contents/social-posts.html')
-        .then(response => response.json())
-        .then(data => {
-            const content = atob(data.content); // Decode Base64 content
-            
-            // Inject the decoded content into the social-posts-container element
-            const container = document.getElementById('social-posts-container');
-            container.innerHTML = content;
-
-            // Load and initialize Twitter widgets after content is injected
-            if (window.twttr && twttr.widgets) {
-                twttr.widgets.load(container);  // Apply Twitter widgets to the new content
+        // Add this to your scripts at the bottom of the body
+        function adjustSidebarHeight() {
+            const mainContent = document.querySelector('.main-content');
+            const sidebar = document.querySelector('.sidebar');
+            if (mainContent && sidebar) {
+                sidebar.style.height = `${mainContent.offsetHeight}px`;
             }
-        })
-        .catch(error => {
-            console.error('Error loading social posts:', error);
+        }
+
+        // Run on page load and window resize
+        window.addEventListener('load', adjustSidebarHeight);
+        window.addEventListener('resize', adjustSidebarHeight);
+    </script>
+
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScrollPos = window.pageYOffset;
+            
+            // Show navbar when scrolling up or at the top
+            if (currentScrollPos === 0 || prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0";
+            } else {
+                navbar.style.top = "-60px";
+            }
+            prevScrollPos = currentScrollPos;
         });
     </script>
     
-</div>
-
-<!-- Footer -->
-<!-- <footer>
-    <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">GitHub</a> |
-    <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-    <a href="mailto:asher.georgy@outlook.com">Email</a>
-</footer> -->
-
-<script>
-	let prevScrollPos = window.pageYOffset;
-	const navbar = document.querySelector('.navbar');
-
-	window.addEventListener('scroll', () => {
-		const currentScrollPos = window.pageYOffset;
-		
-		// Show navbar when scrolling up or at the top
-		if (currentScrollPos === 0 || prevScrollPos > currentScrollPos) {
-			navbar.style.top = "0";
-		} else {
-			navbar.style.top = "-60px";
-		}
-		prevScrollPos = currentScrollPos;
-	});
-</script>
 </body>
 </html>
