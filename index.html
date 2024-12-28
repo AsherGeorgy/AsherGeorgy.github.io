@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <!-- Metadata --> 
-    <title>Asher Georgy - Finance Professional & Aspiring Data Scientist</title>
+    <title>Asher Georgy</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Asher Georgy is a Finance Professional and aspiring data scientist skilled in Python, web development, and financial modeling. Explore his portfolio and resume.">
-    <meta name="keywords" content="Asher Georgy, finance, data science, web development, Python, portfolio, resume">
+    <meta name="description" content="Asher Georgy is an ACCA affiliate, Finance Professional, and aspiring Data Scientist. Explore his resume, portfolio, and blog to learn about his journey.">
+    <meta name="keywords" content="Asher Georgy, ACCA, Finance Professional, Data Scientist, Resume, Portfolio, Data Analysis, Financial Modeling, Data Science, Financial Strategy, Blog, Data Scientist Portfolio, Finance and Data Science, Career Development, Professional Experience">
     <meta name="author" content="Asher Georgy">
 
     <!-- Open Graph Metadata for Social Sharing -->
-    <meta property="og:title" content="Asher Georgy - Finance Professional & Aspiring Data Scientist">
-    <meta property="og:description" content="Explore Asher Georgy's portfolio, showcasing his skills in finance, Python, web development, and financial modeling.">
+    <meta property="og:title" content="Asher Georgy - ACCA affiliate, Finance Professional, Aspiring Data Scientist">
+    <meta property="og:description" content="Explore the online portfolio of Asher Georgy, an ACCA affiliate, Finance Professional, and aspiring Data Scientist. Discover his resume, portfolio, blog posts.">
     <meta property="og:image" content="https://ashergeorgy.github.io/assets/banner-bg.jpg">
     <meta property="og:url" content="https://ashergeorgy.github.io/">
     <meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image" content="https://ashergeorgy.github.io/assets/banner-bg.jpg">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"">
     
@@ -28,206 +28,146 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest" type="application/manifest+json">
     <style>
-        body, html {
-            font-family: "Roboto", sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-			padding-top: 16px;
-        }
-
-        /* Navbar */
-        .navbar {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			z-index: 999;
-			background-color: #333;
-			transition: top 0.3s ease;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		}
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .navbar a:hover {
-            background-color: #ddd; 
-            color: black; 
-        }
-
-        .navbar a.active { 
-            background-color: #4CAF50; 
-            color: white; 
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #f2f2f2;
-            padding: 30px 20px;
-            text-align: center;
-			display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        footer a {
-            color: #f2f2f2;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #009688; 
-        }
-
+        
         /* Header Section */
         .header {
             background: linear-gradient(rgba(0, 121, 107, 0.7), rgba(0, 121, 107, 0.7)), url('assets/banner-bg.jpg') no-repeat center center/cover;
             color: white;
-            padding: 80px 20px;
+            padding: 5.5rem 0rem;
             text-align: center;
         }
 
         .header h1 { 
-            font-size: 50px; 
+            font-size: 3.125rem; 
             margin: 0; 
         }
 
         .header p { 
-            font-size: 22px; 
-            margin: 10px 0 30px; 
+            font-size: 1.375rem; 
+            margin: 0.625rem 0 1.875rem; 
         }
 
         .header .cta-button {
             background-color: #00796B;
             color: white;
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 0.9375rem 1.875rem;
+            font-size: 1.125rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 0.3125rem;
             transition: background-color 0.3s ease;
         }
 
         .header .cta-button:hover { 
             text-decoration: underline; 
-			background-color: #4CAF50;
+			background-color: var(--secondary-color);
         }
 		
 		/* Link Styles */
 		a {
-			color: #009688; 
+			color: var(--primary-color); 
 			text-decoration: underline; 
 			transition: color 0.3s ease; 
 		}
 
 		a:hover {
 			text-decoration: underline; 
-			color: #4CAF50;
+			color: var(--secondary-color);
 		}
 
         /* About Section */
         .about-section {
-            padding: 60px 20px;
+            padding: 3.75rem 1.25rem;
             background-color: #f4f4f4;
         }
 
         .about-section h2 { 
             text-align: center; 
-            color: #009688; 
-            font-size: 36px; 
-            margin-bottom: 30px; 
+            color: var(--primary-color); 
+            font-size: 2.25rem; 
+            margin-bottom: 1.875rem; 
         }
 
         .about-section h3 {
             text-align: center;
-            font-size: 24px;
-            color: #009688; 
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: var(--primary-color); 
+            margin-bottom: 0.9375rem;
             text-decoration: underline;
+            font-weight: normal;
         }
 
 
         .about-section p {
             text-align: center;
-            max-width: 800px;
+            max-width: 50rem;
             margin: auto;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #666; /* Paragraph color */
+            font-size: 1.125rem;
+            color: #666; 
         }
 
         .about-section a {
-            color: #5C6BC0; /* Lighter blue color for unvisited links */
-            text-decoration: none; /* Remove underline */
-            transition: color 0.3s; /* Smooth color transition on hover */
+            color: #5C6BC0;
+            text-decoration: none; 
+            transition: color 0.3s; 
         }
 
         .about-section a:hover {
-            color: #3F51B5; /* Slightly darker blue on hover */
-            text-decoration: underline; /* Underline on hover */
+            color: #3F51B5; 
+            text-decoration: underline; 
         }
 
         .about-section a:visited {
-            color: #3F51B5; /* Same color for visited links */
+            color: #3F51B5; 
         }
         
         /* Qualities Section */
         .qualities-section {
-            padding: 40px 20px;
+            padding: 2.5rem 1.25rem;
             background-color: #ffffff;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 0.0625rem solid #ccc;
+            box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,0.1);
         }
         .qualities-section h2 {
-            color: #009688;
-            font-size: 28px;
+            color: var(--primary-color);
+            font-size: 2.25rem; 
+            margin-bottom: 2rem; 
             text-align: center; 
         }
         .qualities-list {
             text-align: center;
-            max-width: 800px;
+            max-width: 50rem;
             margin: auto;
-            font-size: 18px;
-            line-height: 1.6;
+            font-size: 1.125rem;
             color: #666;
         }
         .qualities-list p {
-            margin: 15px 0; 
+            margin: 0.9375rem 0; 
         }
         
         /* Skills Section */
         .skills-section {
-            padding: 60px 20px;
+            padding: 2.5rem 1.25rem;
             background-color: white;
             text-align: center;
         }
 
         .skills-section h2 { 
-            font-size: 36px; 
-            margin-bottom: 40px; 
-			color: #009688;
+            font-size: 2.25rem; 
+            margin-bottom: 2.5rem; 
+			color: var(--primary-color);
         }
 
         .skill-icons {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 2.5rem;
             flex-wrap: wrap;
         }
 
         .skill-icons img {
-            width: 60px;
+            width: 3rem;
 			height: auto;
-            max-height: 60px;
+            max-height: 3.75rem;
             transition: transform 0.2s ease;
         }
 
@@ -237,80 +177,84 @@
 
         /* Projects Section */
         .projects-section {
-            padding: 60px 20px;
+            padding: 2.5rem 1.25rem;
             background-color: #f4f4f4;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
 			text-align: center;
-            gap: 20px;
+            gap: 1.25rem;
         }
 
         .projects-section h2 {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
+            font-size: 2.25rem;
+            margin-bottom: 2.5rem;
             width: 100%;
-			color: #009688;
+			color: var(--primary-color);
         }
 
         .project-card {
-            max-width: 300px;
+            max-width: 18.75rem;
             background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 		
 		.project-card:hover {
-			transform: translateY(-10px); 
-			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+			transform: translateY(-0.625rem); 
+			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
 		}
 
         .project-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
+            width: 2.1875rem;
+			height: auto;
+            max-height: 3.75rem;
+            border-radius: 0.3125rem;
         }
 
         .project-card h3 { 
-            font-size: 24px; 
-            margin: 20px 0 10px; 
+            font-size: 1.5rem; 
+            margin: 1.25rem 0 0.625rem; 
+            font-weight: normal;
         }
 
         .project-card p { 
-            font-size: 16px; 
+            font-size: 1rem; 
             color: #666; 
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
 			justify-content: center;
         }
 
         .project-card a {
-            color: #009688;
+            color: var(--primary-color);
             text-decoration: none;
             transition: text-decoration 0.3s ease;
         }
 
         .project-card a:hover { 
             text-decoration: underline; 
-			color: #4CAF50
+			color: var(--secondary-color);
         }
 
         .arrow-button {
             background-color: #00796B;
             color: white;
-            padding: 8px 16px;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
             border: none;
-            border-radius: 5px;
+            border-radius: 0.3125rem;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 0.875rem;
             transition: background-color 0.1s ease;
         }
 
         .arrow-button:hover { 
-            background-color: #4CAF50; 
+            background-color: var(--secondary-color); 
 			color: white;
+            text-decoration: underline;
         }
 
         .modal {
@@ -329,10 +273,10 @@
 			position: relative;
 			background-color: #fefefe;
 			margin: 10% auto;
-			padding: 20px;
-			border-radius: 8px;
+			padding: 1.25rem;
+			border-radius: 0.5rem;
 			width: 80%;
-			max-width: 600px;
+			max-width: 37.5rem;
 			animation: popIn 0.4s ease-out;
 			transform-origin: center;
 		}
@@ -353,7 +297,7 @@
 			color: #808080;
 			transition: color 0.3s ease, transform 0.3s ease;
 			cursor: pointer;
-			margin-left: 1px;
+			margin-left: 0.0625rem;
             vertical-align: text-top;
 			font-size: 0.5em; 
 		}
@@ -366,13 +310,13 @@
 		.close {
 			color: #aaa;
 			float: right;
-			font-size: 28px;
+			font-size: 1.75rem;
 			font-weight: bold;
 			cursor: pointer;
-			position: absolute; /* Make sure it's positioned absolutely */
-			top: 10px; /* Adjust position as necessary */
-			right: 15px; /* Adjust position as necessary */
-			z-index: 10; /* Ensure it appears above other content */
+			position: absolute; 
+			top: 0.0625rem; 
+			right: 0.9375rem; 
+			z-index: 10; 
 		}
 
 		.close:hover {
@@ -391,20 +335,20 @@
 		}
 		.tab {
             display: flex;
-            flex-wrap: wrap; /* Allow tabs to wrap if they don't fit */
+            flex-wrap: wrap; 
             justify-content: space-around;
-            width: 100%; /* Ensure tab container fills the modal */
+            width: 100%; 
         }
 
         .tab button {
             background-color: transparent;
             border: none;
-            padding: 10px 15px;
+            padding: 0.625rem 0.9375rem;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
             outline: none;
             flex: 1; /* Allow buttons to grow equally */
-            min-width: 100px; /* Prevent the buttons from becoming too small */
+            min-width: 6.25rem; 
         }
 
         .tab button:hover {
@@ -415,378 +359,435 @@
         .tab button.active {
             background-color: #D3D3D3;
             color: white;
-            border-radius: 5px 5px 0 0;
+            border-radius: 0.3125rem 0.3125rem 0 0;
         }
 
-        /* Accessibility: Focus Styles */
-        .navbar a:focus, 
-        .header .cta-button:focus, 
-        footer a:focus {
-            outline: 2px solid #009688;
-            outline-offset: 2px;
+        .tablinks img {
+            height: 2.3rem;
+        }
+
+        
+        .tabcontent h3 {
+            font-size: 1.5rem;
+        }
+
+        .tabcontent li {
+            font-size: 1rem;
         }
 
         /* Media Queries for Mobile Responsiveness */
-        @media (max-width: 768px) {
+        @media (max-width: 810px) {
             .header h1 { 
-                font-size: 36px; 
+                font-size: 2.5rem; 
             }
-            
             .header p { 
-                font-size: 18px; 
+                font-size: 1.2rem; 
+                margin: 0.625rem 0 1.875rem; 
             }
-            
-            .about-section h2, 
-            .skills-section h2, 
+            .header .cta-button {
+                padding: 0.7rem 1.6rem;
+                font-size: 0.9rem;
+            }
+            .about-section {
+                padding: 2rem 1.25rem;
+            }
+            .about-section h2 { 
+                font-size: 2rem; 
+                margin-bottom: 1.5rem;
+            }
+            .skills-section h2 { 
+                margin-top: 0;
+            }
+            .skill-icons img {
+                width: 2.5rem;
+            }
+            .qualities-section h2 {
+                margin-top: 0;
+            }
             .projects-section h2 {
-                font-size: 28px; 
-            }
-            
-            .skill-icons img { 
-                width: 60px; 
-                height: 60px;
-				object-fit: contain;
-				transition: transform 0.2s ease;
+                margin-top: 0;
+                margin-bottom: 1rem;
             }
             .project-card {
-                max-width: 90%; 
-                margin: auto;
+                max-width: 12.2rem;
+            }
+            .tabcontent li {
+                margin-left: -1.8rem;
+            }
+        }        
+        @media (max-width: 450px) {
+            html {
+                font-size: 15.2px;
+            }
+            .project-card {
+                max-width: 11.9rem;
+            }
+        }
+        @media (max-width: 420px) {
+            html {
+                font-size: 13.9px;
+            }
+        }
+        @media (max-width: 390px) {
+            html {
+                font-size: 13.2px;
+            }
+            .project-card {
+                max-width: 11.8rem;
+            }
+        }        
+        @media (max-width: 360px) {
+            html {
+                font-size: 12px;
+            }
+        }
+        @media (max-width: 330px) {
+            html {
+                font-size: 10.7px;
             }
         }
     </style>
-
 </head>
+
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <a class="active" href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Portfolio</a>
-	<a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- Header Section -->
-<header class="header">
-    <h1>Asher Georgy</h1>
-    <p>Data Analysis | Financial Modeling | Development</p>
-    <a href="#about" class="cta-button">Learn More About Me</a>
-</header>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Asher Georgy</h1>
+        <p>Data Analysis | Financial Modeling | Development</p>
+        <a href="#about" class="cta-button">Learn More About Me</a>
+    </header>
 
-<!-- Main Content -->
-<main>
+    <!-- Main Content -->
+    <main>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2><strong>Hi there, I'm Asher 👋</strong></h2>
-    
-        <!-- <h3>My Background</h3> -->
-        <p>
-            I’m a finance professional turned tech enthusiast. With a B.Com degree and <strong>ACCA affiliate</strong> status, I have a strong financial foundation. Currently, I’m expanding my expertise by learning data science and development, blending finance with technology. <br><br>
-        </p>
-    
-        <h3>Where It All Started</h3>
-        <p>
-            My journey into tech began when I sought to track EPL and NBA scores using Excel. I quickly discovered the power of macros to automate tasks, which not only expanded my skills but also sparked an excitement for programming and computer science. <br><br> 
-            Soon, I began using Excel to plan everyday tasks, as well as my short and long-term personal development goals. Creating automated spreadsheets for personal use (like time management, to-do lists, road trip expense planning, etc.) became a hobby I genuinely enjoyed. <br><br>
-        </p>
-    
-        <h3>Turning a Hobby into Passion</h3>
-        <p>
-            While pursuing a career in finance, I realized the huge potential of <strong>combining finance and big data with technology</strong>. While finance was interesting, using technology to create financial models was truly exciting. This drove me to explore advanced Excel and eventually dive into Python, SQL, data visualization tools like Tableau and Power BI, and even web development (HTML/CSS).<br><br>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2><strong>Hi there, I'm Asher 👋</strong></h2>
         
-            <!-- <h3>Continuous Learning and Projects</h3> -->
-            Through hands-on projects, experimentation, and continuous learning on platforms like <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> and <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>, I’ve developed proficiency in <strong>data exploration, analysis, visualization, and development</strong>.<br><br>
-        </p>
-    
-        <h3>What I Do Now</h3>
-        <p>
-            I am committed to constantly working to improve my expertise in data-driven decision-making and quantitative analysis. I’m currently diving deeper into <strong>Machine Learning with Python</strong> and <strong>advanced statistics</strong>, including the <strong>Stanford CS229</strong> course, and recently launched my first <a href="https://optimize-this-portfolio.streamlit.app/" target="_blank rel="noopener noreferrer">finance app </a>on Streamlit.  <br><br>
-        </p>
-    
-        <!-- <h3>Languages</h3>
-        <p>
-            I am proficient in English and Malayalam, and I’m also learning intermediate Spanish and Hindi on <a href="https://www.duolingo.com/profile/Ash_Geo" target="_blank" rel="noopener noreferrer">Duolingo</a>.
-        </p> -->
-    </section>
-    
-    <!-- Skills Section -->
-    <section class="skills-section">
-        <h2><strong>Technical Skills</strong>
-            <span class="info-icon" title="Click to view details." onclick="openModal('skillsModal')">
-                <i class="fas fa-info-circle"></i>
-            </span>
-        </h2>
-        <div class="skill-icons">
-            <img src="assets/excel-logo-only.png" alt="Excel Logo" title="Excel">
-            <img src="assets/powerpoint-logo-only.png" alt="PowerPoint Logo" title="PowerPoint">
-            <img src="assets/sql-logo-only.png" alt="SQL Logo" title="SQL">
-            <img src="assets/python-logo-only.png" alt="Python Logo" title="Python">
-            <img src="assets/html-logo-only.png" alt="HTML Logo" title="HTML">
-            <img src="assets/css-logo-only.png" alt="CSS Logo" title="CSS">
-            <img src="assets/git-logo-only.png" alt="Git Logo" title="Git">
-            <img src="assets/tableau-logo-only.png" alt="Tableau Logo" title="Tableau">
-            <img src="assets/powerbi-logo-only.png" alt="PowerBI Logo" title="PowerBI">
-        </div>
-    </section>
-
-    <!-- Modal -->
-<div id="skillsModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('skillsModal')">&times;</span>
-        <div class="tab">
-            <button class="tablinks" data-skill="Excel" onclick="openTab(event, 'Excel')">
-				<img src="assets/excel-logo-only.png" alt="Excel Logo" style="height: 30px;">
-			</button>
-            <button class="tablinks" data-skill="PowerPoint" onclick="openTab(event, 'PowerPoint')">
-				<img src="assets/powerpoint-logo-only.png" alt="PowerPoint Logo" style="height: 30px;">
-			</button>
-            <button class="tablinks" data-skill="SQL" onclick="openTab(event, 'SQL')">
-				<img src="assets/sql-logo-only.png" alt="SQL Logo" style="height: 30px;">
-			</button>
-            <button class="tablinks" data-skill="Python" onclick="openTab(event, 'Python')">
-                <img src="assets/python-logo-only.png" alt="Python Logo" style="height: 30px;">
-            </button>
-            <button class="tablinks" data-skill="HTML" onclick="openTab(event, 'HTML')">
-				<img src="assets/html-logo-only.png" alt="HTML Logo" style="height: 30px;">
-			</button>
-            <button class="tablinks" data-skill="CSS" onclick="openTab(event, 'CSS')">
-				<img src="assets/css-logo-only.png" alt="CSS Logo" style="height: 30px;">
-			</button>
-            <button class="tablinks" data-skill="Git" onclick="openTab(event, 'Git')">
-				<img src="assets/git-logo-only.png" alt="Git Logo" style="height: 30px;">
-			</button>
-            <button class="tablinks" data-skill="PowerBI" onclick="openTab(event, 'PowerBI')">
-				<img src="assets/powerbi-logo-only.png" alt="PowerBI Logo" style="height: 30px;">
-			</button>
-            <button class="tablinks" data-skill="Tableau" onclick="openTab(event, 'Tableau')">
-				<img src="assets/tableau-logo-only.png" alt="Tableau Logo" style="height: 30px;">
-			</button>
-        </div>
-
-        <div id="Excel" class="tabcontent" style="display:block;">
-            <h3>Microsoft Excel</h3>
-            <ul>
-				<li><strong>Advanced Financial Modeling:</strong> Expertise in building integrated financial models with dynamic forecasting and DCF analysis.<br><br></li>
-				<li><strong>Data Processing:</strong> Proficient in data cleaning using functions like SUBSTITUTE, along with Power Query for efficient transformation.<br><br></li>
-				<li><strong>Formulas and What-If Analysis:</strong> Skilled in advanced Excel functions (e.g., nested IFs, INDEX/MATCH) and performing What-If analysis using Scenario Manager and Goal Seek.<br><br></li>
-				<li><strong>Interactive Dashboards and Automation:</strong> Capable of creating sophisticated dashboards with charts and slicers, and familiar with automating tasks through Macros and basic VBA scripting.<br><br></li>
-			</ul>
-        </div>
-
-        <div id="PowerPoint" class="tabcontent">
-            <h3>PowerPoint</h3>
-            <ul>
-				<li><strong>Presentation Design:</strong> Comfortable creating visually engaging PowerPoint presentations that effectively convey ideas and insights.<br><br></li>
-                <li><strong>Data Visualization:</strong> Skilled in using PowerPoint to present data through charts, graphs, and tables to make insights clearer.<br><br></li>
-                <li><strong>Storytelling & Structure:</strong> Able to organize presentations in a clear and logical manner, ensuring smooth information flow.<br><br></li>
-                <li><strong>Advanced Features:</strong> Familiar with using animations, transitions, and custom layouts to enhance presentation impact and engagement.<br><br></li>
-			</ul>
-        </div>
-
-        <div id="Python" class="tabcontent">
-            <h3>Python</h3>
-            <ul>
-                <li><strong>Data Analysis & Manipulation:</strong> Proficient in Python for cleaning, transforming, and analyzing large datasets using libraries like Pandas and NumPy for efficient processing.<br><br></li>
-                <li><strong>Statistical Modeling & Optimization:</strong> Experienced in developing statistical models and implementing optimization algorithms, including convex optimization and Monte Carlo simulations, to solve complex problems.<br><br></li>
-                <li><strong>Data Visualization:</strong> Skilled in creating interactive and insightful visualizations with tools like Plotly, Matplotlib, and Seaborn to effectively communicate data-driven insights.<br><br></li>
-                <li><strong>Web Development & Automation:</strong> Capable of building interactive Python-based web applications with Streamlit, integrating APIs, and automating workflows to streamline processes and ensure scalability.<br><br></li>
-            </ul>
-        </div>
-
-        <div id="Git" class="tabcontent">
-            <h3>Git</h3>
-            <ul>
-                <li><strong>Version Control:</strong> Solid understanding of Git fundamentals, including repositories, commits, branches, and merges, with practical experience using them in projects.<br><br></li>
-                <li><strong>Repository Management:</strong> Capable of creating, cloning, and managing both local and remote repositories, including setting up and maintaining connections to remote repositories.<br><br></li>
-				<li><strong>Common Git Commands:</strong> Familiar with essential Git commands, including git init, git add, git commit, git push, git pull, git status, and git diff, with the ability to track and review changes effectively.<br><br></li>
-				<li><strong>Branching and Merging:</strong> Proficient in creating branches for feature development and merging changes back to the main branch, with a basic understanding of conflict resolution and the ability to handle simple merge conflicts.<br><br></li>
-            </ul>
-        </div>
-
-        <div id="SQL" class="tabcontent">
-            <h3>SQL</h3>
-            <ul>
-                <li><strong>SQL Querying & Data Retrieval:</strong> Proficient in crafting complex SQL queries, handling multiple tables, and using various clauses for efficient data retrieval and manipulation.<br><br></li>
-                <li><strong>Data Cleaning & Transformation:</strong> Skilled in cleaning datasets, filling NULL values, converting data types, and splitting columns to ensure data quality.<br><br></li>
-                <li><strong>Analytical Functions & CTEs:</strong> Experienced in using analytical and window functions, along with Common Table Expressions (CTEs) and temporary tables, to perform advanced calculations and manage intermediate results.<br><br></li>
-                <li><strong>Database Design & Optimization:</strong> Strong understanding of database design principles, including normalization, indexing, and strategies to enhance query performance.<br><br></li>
-            </ul>
-        </div>
-
-        <div id="HTML" class="tabcontent">
-            <h3>HTML</h3>
-            <ul>
-                <li><strong>HTML & CSS Fundamentals:</strong> Solid understanding of HTML structure and CSS styling, gained through self-learning and hands-on practice.<br><br></li>
-                <li><strong>Website Creation & Styling:</strong> Able to apply HTML and CSS to build and style web pages.<br><br></li>
-                <li><strong>Responsive Layouts:</strong> Familiar with using CSS techniques like Flexbox and Grid combined with JavaScript to create flexible, responsive layouts and ensure a seamless user experience across devices.<br><br></li>
-            </ul>
-        </div>
-
-        <div id="CSS" class="tabcontent">
-            <h3>CSS</h3>
-            <ul>
-                <li><strong>HTML & CSS Fundamentals:</strong> Solid understanding of HTML structure and CSS styling, gained through self-learning and hands-on practice.<br><br></li>
-                <li><strong>Website Creation & Styling:</strong> Able to apply HTML and CSS to build and style web pages.<br><br></li>
-                <li><strong>Responsive Layouts:</strong> Familiar with using CSS techniques like Flexbox and Grid combined with JavaScript to create flexible, responsive layouts and ensure a seamless user experience across devices.<br><br></li>
-            </ul>
-        </div>
-
-        <div id="PowerBI" class="tabcontent">
-            <h3>PowerBI</h3>
-            <ul>
-                <li><strong>Data Visualization Fundamentals:</strong> Strong understanding of data visualization principles, with hands on experience in using Tableau and PowerBI to create insightful reports and dashboards.<br><br></li>
-                <li><strong>Dashboard Creation:</strong> Familiar with building interactive dashboards in Tableau and PowerBI, showcasing key metrics and data trends for clear communication of business insights.<br><br></li>
-                <li><strong>Data Manipulation & Transformation:</strong> Proficient in using Tableau and PowerBI's built-in data transformation tools to clean, reshape, and organize datasets for accurate visualizations.<br><br></li>
-                <li><strong>Data Integration & Interactivity:</strong> Familiar with integrating multiple data sources into Tableau and PowerBI and creating interactive elements such as filters, slicers, and drilldowns to enhance user engagement and data exploration.<br><br></li>
-            </ul>
-        </div>
-
-        <div id="Tableau" class="tabcontent">
-            <h3>Tableau</h3>
-            <ul>
-                <li><strong>Data Visualization Fundamentals:</strong> Strong understanding of data visualization principles, with hands on experience in using Tableau and PowerBI to create insightful reports and dashboards.<br><br></li>
-                <li><strong>Dashboard Creation:</strong> Familiar with building interactive dashboards in Tableau and PowerBI, showcasing key metrics and data trends for clear communication of business insights.<br><br></li>
-                <li><strong>Data Manipulation & Transformation:</strong> Proficient in using Tableau and PowerBI's built-in data transformation tools to clean, reshape, and organize datasets for accurate visualizations.<br><br></li>
-                <li><strong>Data Integration & Interactivity:</strong> Familiar with integrating multiple data sources into Tableau and PowerBI and creating interactive elements such as filters, slicers, and drilldowns to enhance user engagement and data exploration.<br><br></li>
-            </ul>
-        </div>
-
-
-
-
-		<p style="text-align:center;">
-			<a href="portfolio.html">View Portfolio</a>
-		</p>
-    </div>
-</div>
-    
-
-    <!-- Qualities Section -->
-    <section class="qualities-section">
-        <h2><strong>Qualities</strong></h2>
-        <div class="qualities-list">
-            <p><strong>Self-Motivated:</strong> Took the initiative to achieve educational and personal development goals independently through self-learning.</p>
-            <p><strong>Continuous Learner:</strong> Pursued ongoing education to acquire new skills and stay updated in the fields of finance and technology.</p>
-            <p><strong>Resourceful:</strong> Leveraged diverse online platforms and communities to access essential information and tools for projects, maximizing available resources.</p>
-            <p><strong>Detail-Oriented:</strong> Maintained a strong focus on detail in all projects, prioritizing high-quality results and accuracy.</p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <h2><strong>Featured Projects</strong></h2>
-        <article class="project-card">
-            <img src="assets/python-logo-only.png" alt="Python Logo" style="width:40px; height:40px">
-            <h3><a href="portfolio.html#Project1">Portfolio Optimization Web App</a></h3>
-            <p>Developed a Python-based application for analyzing and optimizing financial portfolios using Modern Portfolio Theory (MPT) and convex optimization.</p>
-        </article>
-
-        <article class="project-card">
-            <img src="assets/python-logo-only.png" alt="Python Logo" style="width:40px; height:40px">
-            <h3><a href="portfolio.html#Project2">S&P 500 Momentum Strategy</a></h3>
-            <p>Developed a momentum investment strategy to analyze and select top-performing S&P 500 stocks.</p>
-        </article>
+            <p>
+                I’m a finance professional turned tech enthusiast. With a B.Com degree and <strong>ACCA affiliate</strong> status, I have a strong financial foundation. Currently, I’m expanding my expertise by learning <b>data science and development</b>, blending finance with technology. <br><br>
+            </p>
         
-        <article class="project-card">
-            <img src="assets/powerbi-logo-only.png" alt="PowerBI Logo" style="width:40px; height:40px">
-            <h3><a href="portfolio.html#Project3">Data Professionals Survey Analysis</a></h3>
-            <p>Analyzed a survey of data professionals in Power BI, creating dashboards with insights on trends, skills, and job satisfaction.</p>
-        </article>
+            <h3>Where It All Started</h3>
+            <p>
+                My journey into tech began when I sought to track EPL and NBA scores using Excel. I quickly discovered the power of macros to automate tasks, which not only expanded my skills but also sparked an excitement for programming and computer science. <br><br> 
+                Soon, I began using Excel to plan everyday tasks, as well as my short and long-term personal development goals. Creating automated spreadsheets for personal use (like time management, to-do lists, road trip expense planning, etc.) became a hobby I genuinely enjoyed. <br><br>
+            </p>
+        
+            <h3>Turning a Hobby into Passion</h3>
+            <p>
+                While pursuing a career in finance, I realized the huge potential of <strong>combining finance and big data with technology</strong>. While finance was interesting, using technology to create financial models was truly exciting. This drove me to explore advanced Excel and eventually dive into Python, SQL, data visualization tools like Tableau and Power BI, and even web development (HTML/CSS).<br><br>
+            
+                <!-- <h3>Continuous Learning and Projects</h3> -->
+                Through hands-on projects, experimentation, and continuous learning on platforms like <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> and <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>, I’ve developed proficiency in <strong>data exploration, analysis, visualization, and development</strong>.<br><br>
+            </p>
+        
+            <h3>What I Do Now</h3>
+            <p>
+                I am committed to constantly working to improve my expertise in data-driven decision-making and quantitative analysis. I’m currently diving deeper into <strong>Machine Learning with Python</strong> and <strong>advanced statistics</strong>, including the <strong>Stanford CS229</strong> course, and recently launched my first finance <a href="https://optimize-this-portfolio.streamlit.app/" target="_blank rel="noopener noreferrer">web app</a>.  <br><br>
+            </p>
 
+            <p>
+                I am proficient in English and Malayalam, and I’m casually learning Spanish and Hindi at an intermediate level on <a href="https://www.duolingo.com/profile/Ash_Geo" target="_blank" rel="noopener noreferrer">Duolingo</a>.
+            </p>
+        </section>
+        
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2><strong>Technical Skills</strong>
+                <span class="info-icon" title="Click to view details." onclick="openModal('skillsModal')">
+                    <i class="fas fa-info-circle"></i>
+                </span>
+            </h2>
+            <div class="skill-icons">
+                <img src="assets/excel-logo-only.png" alt="Excel Logo" title="Excel">
+                <img src="assets/powerpoint-logo-only.png" alt="PowerPoint Logo" title="PowerPoint">
+                <img src="assets/sql-logo-only.png" alt="SQL Logo" title="SQL">
+                <img src="assets/python-logo-only.png" alt="Python Logo" title="Python">
+                <img src="assets/html-logo-only.png" alt="HTML Logo" title="HTML">
+                <img src="assets/css-logo-only.png" alt="CSS Logo" title="CSS">
+                <img src="assets/git-logo-only.png" alt="Git Logo" title="Git">
+                <img src="assets/tableau-logo-only.png" alt="Tableau Logo" title="Tableau">
+                <img src="assets/powerbi-logo-only.png" alt="PowerBI Logo" title="PowerBI">
+            </div>
+        </section>
 
-        <article class="project-card">
-            <img src="assets/excel-logo-only.png" alt="Excel Logo" style="width:40px; height:40px">
-            <h3><a href="portfolio.html#Project4">Dynamic DCF Valuation Model</a></h3>
-            <p>Developed a financial model for dynamic three-statement modeling, scenario analysis, and discounted cash flow (DCF) valuation.</p>
-        </article>
+        <!-- Modal -->
+        <div id="skillsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('skillsModal')">&times;</span>
+                <div class="tab">
+                    <button class="tablinks" data-skill="Excel" onclick="openTab(event, 'Excel')">
+                        <img src="assets/excel-logo-only.png" alt="Excel Logo">
+                    </button>
+                    <button class="tablinks" data-skill="PowerPoint" onclick="openTab(event, 'PowerPoint')">
+                        <img src="assets/powerpoint-logo-only.png" alt="PowerPoint Logo">
+                    </button>
+                    <button class="tablinks" data-skill="SQL" onclick="openTab(event, 'SQL')">
+                        <img src="assets/sql-logo-only.png" alt="SQL Logo">
+                    </button>
+                    <button class="tablinks" data-skill="Python" onclick="openTab(event, 'Python')">
+                        <img src="assets/python-logo-only.png" alt="Python Logo">
+                    </button>
+                    <button class="tablinks" data-skill="HTML" onclick="openTab(event, 'HTML')">
+                        <img src="assets/html-logo-only.png" alt="HTML Logo">
+                    </button>
+                    <button class="tablinks" data-skill="CSS" onclick="openTab(event, 'CSS')">
+                        <img src="assets/css-logo-only.png" alt="CSS Logo">
+                    </button>
+                    <button class="tablinks" data-skill="Git" onclick="openTab(event, 'Git')">
+                        <img src="assets/git-logo-only.png" alt="Git Logo">
+                    </button>
+                    <button class="tablinks" data-skill="PowerBI" onclick="openTab(event, 'PowerBI')">
+                        <img src="assets/powerbi-logo-only.png" alt="PowerBI Logo">
+                    </button>
+                    <button class="tablinks" data-skill="Tableau" onclick="openTab(event, 'Tableau')">
+                        <img src="assets/tableau-logo-only.png" alt="Tableau Logo">
+                    </button>
+                </div>
 
-        <!-- Button to Portfolio -->
-        <div style="width: 100%; text-align: center;">
-            <a href="portfolio.html" class="arrow-button">View All Projects &rarr;</a>
+                <div id="Excel" class="tabcontent" style="display:block;">
+                    <h3>Microsoft Excel</h3>
+                    <ul>
+                        <li><strong>Advanced Financial Modeling:</strong> Expertise in building integrated financial models with dynamic forecasting and DCF analysis.<br><br></li>
+                        <li><strong>Data Processing:</strong> Proficient in data cleaning using functions like SUBSTITUTE, along with Power Query for efficient transformation.<br><br></li>
+                        <li><strong>Formulas and What-If Analysis:</strong> Skilled in advanced Excel functions (e.g., nested IFs, INDEX/MATCH) and performing What-If analysis using Scenario Manager and Goal Seek.<br><br></li>
+                        <li><strong>Interactive Dashboards and Automation:</strong> Capable of creating sophisticated dashboards with charts and slicers, and familiar with automating tasks through Macros and basic VBA scripting.<br><br></li>
+                    </ul>
+                </div>
+
+                <div id="PowerPoint" class="tabcontent">
+                    <h3>PowerPoint</h3>
+                    <ul>
+                        <li><strong>Presentation Design:</strong> Comfortable creating visually engaging PowerPoint presentations that effectively convey ideas and insights.<br><br></li>
+                        <li><strong>Data Visualization:</strong> Skilled in using PowerPoint to present data through charts, graphs, and tables to make insights clearer.<br><br></li>
+                        <li><strong>Storytelling & Structure:</strong> Able to organize presentations in a clear and logical manner, ensuring smooth information flow.<br><br></li>
+                        <li><strong>Advanced Features:</strong> Familiar with using animations, transitions, and custom layouts to enhance presentation impact and engagement.<br><br></li>
+                    </ul>
+                </div>
+
+                <div id="Python" class="tabcontent">
+                    <h3>Python</h3>
+                    <ul>
+                        <li><strong>Data Analysis & Manipulation:</strong> Proficient in Python for cleaning, transforming, and analyzing large datasets using libraries like Pandas and NumPy for efficient processing.<br><br></li>
+                        <li><strong>Statistical Modeling & Optimization:</strong> Experienced in developing statistical models and implementing optimization algorithms, including convex optimization and Monte Carlo simulations, to solve complex problems.<br><br></li>
+                        <li><strong>Data Visualization:</strong> Skilled in creating interactive and insightful visualizations with tools like Plotly, Matplotlib, and Seaborn to effectively communicate data-driven insights.<br><br></li>
+                        <li><strong>Web Development & Automation:</strong> Capable of building interactive Python-based web applications with Streamlit, integrating APIs, and automating workflows to streamline processes and ensure scalability.<br><br></li>
+                    </ul>
+                </div>
+
+                <div id="Git" class="tabcontent">
+                    <h3>Git</h3>
+                    <ul>
+                        <li><strong>Version Control:</strong> Solid understanding of Git fundamentals, including repositories, commits, branches, and merges, with practical experience using them in projects.<br><br></li>
+                        <li><strong>Repository Management:</strong> Capable of creating, cloning, and managing both local and remote repositories, including setting up and maintaining connections to remote repositories.<br><br></li>
+                        <li><strong>Common Git Commands:</strong> Familiar with essential Git commands, including git init, git add, git commit, git push, git pull, git status, and git diff, with the ability to track and review changes effectively.<br><br></li>
+                        <li><strong>Branching and Merging:</strong> Proficient in creating branches for feature development and merging changes back to the main branch, with a basic understanding of conflict resolution and the ability to handle simple merge conflicts.<br><br></li>
+                    </ul>
+                </div>
+
+                <div id="SQL" class="tabcontent">
+                    <h3>SQL</h3>
+                    <ul>
+                        <li><strong>SQL Querying & Data Retrieval:</strong> Proficient in crafting complex SQL queries, handling multiple tables, and using various clauses for efficient data retrieval and manipulation.<br><br></li>
+                        <li><strong>Data Cleaning & Transformation:</strong> Skilled in cleaning datasets, filling NULL values, converting data types, and splitting columns to ensure data quality.<br><br></li>
+                        <li><strong>Analytical Functions & CTEs:</strong> Experienced in using analytical and window functions, along with Common Table Expressions (CTEs) and temporary tables, to perform advanced calculations and manage intermediate results.<br><br></li>
+                        <li><strong>Database Design & Optimization:</strong> Strong understanding of database design principles, including normalization, indexing, and strategies to enhance query performance.<br><br></li>
+                    </ul>
+                </div>
+
+                <div id="HTML" class="tabcontent">
+                    <h3>HTML</h3>
+                    <ul>
+                        <li><strong>HTML & CSS Fundamentals:</strong> Solid understanding of HTML structure and CSS styling, gained through self-learning and hands-on practice.<br><br></li>
+                        <li><strong>Website Creation & Styling:</strong> Able to apply HTML and CSS to build and style web pages.<br><br></li>
+                        <li><strong>Responsive Layouts:</strong> Familiar with using CSS techniques like Flexbox and Grid combined with JavaScript to create flexible, responsive layouts and ensure a seamless user experience across devices.<br><br></li>
+                    </ul>
+                </div>
+
+                <div id="CSS" class="tabcontent">
+                    <h3>CSS</h3>
+                    <ul>
+                        <li><strong>HTML & CSS Fundamentals:</strong> Solid understanding of HTML structure and CSS styling, gained through self-learning and hands-on practice.<br><br></li>
+                        <li><strong>Website Creation & Styling:</strong> Able to apply HTML and CSS to build and style web pages.<br><br></li>
+                        <li><strong>Responsive Layouts:</strong> Familiar with using CSS techniques like Flexbox and Grid combined with JavaScript to create flexible, responsive layouts and ensure a seamless user experience across devices.<br><br></li>
+                    </ul>
+                </div>
+
+                <div id="PowerBI" class="tabcontent">
+                    <h3>PowerBI</h3>
+                    <ul>
+                        <li><strong>Data Visualization Fundamentals:</strong> Strong understanding of data visualization principles, with hands on experience to create insightful reports and dashboards.<br><br></li>
+                        <li><strong>Dashboard Creation:</strong> Familiar with building interactive dashboards, showcasing key metrics and data trends for clear communication of business insights.<br><br></li>
+                        <li><strong>Data Manipulation & Transformation:</strong> Proficient in using built-in data transformation tools to clean, reshape, and organize datasets for accurate visualizations.<br><br></li>
+                        <li><strong>Data Integration & Interactivity:</strong> Familiar with integrating multiple data sources and creating interactive elements such as filters, slicers, and drilldowns to enhance user engagement and data exploration.<br><br></li>
+                    </ul>
+                </div>
+
+                <div id="Tableau" class="tabcontent">
+                    <h3>Tableau</h3>
+                    <ul>
+                        <li><strong>Data Visualization Fundamentals:</strong> Strong understanding of data visualization principles, with hands on experience in using Tableau and PowerBI to create insightful reports and dashboards.<br><br></li>
+                        <li><strong>Dashboard Creation:</strong> Familiar with building interactive dashboards in Tableau and PowerBI, showcasing key metrics and data trends for clear communication of business insights.<br><br></li>
+                        <li><strong>Data Manipulation & Transformation:</strong> Proficient in using Tableau and PowerBI's built-in data transformation tools to clean, reshape, and organize datasets for accurate visualizations.<br><br></li>
+                        <li><strong>Data Integration & Interactivity:</strong> Familiar with integrating multiple data sources into Tableau and PowerBI and creating interactive elements such as filters, slicers, and drilldowns to enhance user engagement and data exploration.<br><br></li>
+                    </ul>
+                </div>
+
+                <p style="text-align:center;">
+                    <a href="portfolio.html">View Portfolio</a>
+                </p>
+            </div>
         </div>
-    </section>
+        
 
-</main>
+        <!-- Qualities Section -->
+        <section class="qualities-section">
+            <h2><strong>Qualities</strong></h2>
+            <div class="qualities-list">
+                <p><strong>Self-Motivated:</strong> Took the initiative to achieve educational and personal development goals independently through self-learning.</p>
+                <p><strong>Continuous Learner:</strong> Pursued ongoing education to acquire new skills and stay updated in the fields of finance and technology.</p>
+                <p><strong>Resourceful:</strong> Leveraged diverse online platforms and communities to access essential information and tools for projects, maximizing available resources.</p>
+                <p><strong>Detail-Oriented:</strong> Maintained a strong focus on detail in all projects, prioritizing high-quality results and accuracy.</p>
+            </div>
+        </section>
 
-<!-- Footer -->
-<footer>
-    <a class="footer-link" href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">GitHub</a> |
-    <a class="footer-link" href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-    <a class="footer-link" href="mailto:asher.georgy@outlook.com" >Email</a>
-</footer>
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <h2><strong>Featured Projects</strong></h2>
+            <article class="project-card">
+                <img src="assets/python-logo-only.png" alt="Python Logo">
+                <h3><a href="portfolio.html#Project1">Portfolio Optimization Web App</a></h3>
+                <p>Developed a Python-based application for analyzing and optimizing financial portfolios using Modern Portfolio Theory (MPT) and convex optimization.</p>
+            </article>
 
-<script>
-    // Open modal function
-    function openModal(id) {
-        document.getElementById(id).style.display = 'block';
+            <article class="project-card">
+                <img src="assets/python-logo-only.png" alt="Python Logo" >
+                <h3><a href="portfolio.html#Project2">S&P 500 Momentum Strategy</a></h3>
+                <p>Developed a momentum investment strategy to analyze and select top-performing S&P 500 stocks.</p>
+            </article>
+            
+            <article class="project-card">
+                <img src="assets/powerbi-logo-only.png" alt="PowerBI Logo">
+                <h3><a href="portfolio.html#Project3">Data Professionals Survey Analysis</a></h3>
+                <p>Analyzed a survey of data professionals in Power BI, creating dashboards with insights on trends, skills, and job satisfaction.</p>
+            </article>
 
-        // Create a synthetic event for the Excel tab
-        const excelTab = document.querySelector(".tablinks[data-skill='Excel']");
-        if (excelTab) {
-            excelTab.classList.add("active"); // Set Excel tab as active
+
+            <article class="project-card">
+                <img src="assets/excel-logo-only.png" alt="Excel Logo">
+                <h3><a href="portfolio.html#Project4">Dynamic DCF Valuation Model</a></h3>
+                <p>Developed a financial model for dynamic three-statement modeling, scenario analysis, and discounted cash flow (DCF) valuation.</p>
+            </article>
+
+            <!-- Button to Portfolio -->
+            <div style="width: 100%; text-align: center;">
+                <a href="portfolio.html" class="arrow-button">View All Projects &rarr;</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:asher.georgy@outlook.com">
+                    <i class="fas fa-envelope" aria-label="Email"></i>
+                </a>
+                <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github" aria-label="GitHub"></i>
+                </a>
+                <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-label="LinkedIn"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Open modal function
+        function openModal(id) {
+            document.getElementById(id).style.display = 'block';
+
+            // Create a synthetic event for the Excel tab
+            const excelTab = document.querySelector(".tablinks[data-skill='Excel']");
+            if (excelTab) {
+                excelTab.classList.add("active"); // Set Excel tab as active
+            }
+
+            // Show the Excel content by default
+            openTab({ currentTarget: excelTab }, 'Excel'); // Pass the synthetic event
         }
 
-        // Show the Excel content by default
-        openTab({ currentTarget: excelTab }, 'Excel'); // Pass the synthetic event
-    }
-
-    // Close modal function
-    function closeModal(id) {
-        document.getElementById(id).style.display = 'none';
-    }
-
-    // Close with esc key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            closeModal('skillsModal');
+        // Close modal function
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
         }
-    });
 
-    // Close modal when clicking or touching outside
-    function handleModalClose(event) {
-        const modal = document.getElementById('skillsModal');
-        if (event.target === modal) {
-            closeModal('skillsModal');
+        // Close with esc key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal('skillsModal');
+            }
+        });
+
+        // Close modal when clicking or touching outside
+        function handleModalClose(event) {
+            const modal = document.getElementById('skillsModal');
+            if (event.target === modal) {
+                closeModal('skillsModal');
+            }
         }
-    }
 
-    window.addEventListener('click', handleModalClose);
-    window.addEventListener('touchstart', handleModalClose); // Add touch event listener
+        window.addEventListener('click', handleModalClose);
+        window.addEventListener('touchstart', handleModalClose); // Add touch event listener
 
-    function openTab(evt, skillName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";  
+        function openTab(evt, skillName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";  
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active"); // Remove active class from all tabs
+            }
+            document.getElementById(skillName).style.display = "block";  
+            evt.currentTarget.classList.add("active"); // Add active class to the clicked tab
         }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active"); // Remove active class from all tabs
-        }
-        document.getElementById(skillName).style.display = "block";  
-        evt.currentTarget.classList.add("active"); // Add active class to the clicked tab
-    }
 
-let prevScrollPos = window.pageYOffset;
-	const navbar = document.querySelector('.navbar');
+        let prevScrollPos = window.pageYOffset;
+            const navbar = document.querySelector('.navbar');
 
-	window.onscroll = function() {
-		let currentScrollPos = window.pageYOffset;
+            window.onscroll = function() {
+                let currentScrollPos = window.pageYOffset;
 
-		// Show navbar when scrolling up, hide when scrolling down
-		if (currentScrollPos === 0) {
-			navbar.style.top = "0"; // Navbar should be visible at the top
-		} else if (prevScrollPos > currentScrollPos) {
-			navbar.style.top = "0"; // Navbar visible
-		} else {
-			navbar.style.top = "-60px"; // Navbar hidden
-		}
-		prevScrollPos = currentScrollPos;
-	};
-</script>
-
+                // Show navbar when scrolling up, hide when scrolling down
+                if (currentScrollPos === 0) {
+                    navbar.style.top = "0"; // Navbar should be visible at the top
+                } else if (prevScrollPos > currentScrollPos) {
+                    navbar.style.top = "0"; // Navbar visible
+                } else {
+                    navbar.style.top = "-60px"; // Navbar hidden
+                }
+                prevScrollPos = currentScrollPos;
+            };
+    </script>
 
 </body>
 </html>
