@@ -3,219 +3,546 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Contact Asher V Georgy for inquiries regarding projects, collaborations, and more.">
-    <meta name="keywords" content="Asher V Georgy, contact, email, phone, Twitter, Reddit, GitHub, LinkedIn">
-    <meta name="author" content="Asher V Georgy">
-    <title>Contact - Asher V Georgy</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <!-- Metadata -->
+	<title>Asher Georgy - Contact</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Asher Georgy is an ACCA affiliate, Finance Professional, and aspiring Data Scientist.">
+	<meta name="keywords" content="Connect, Contact, Asher Georgy, ACCA, Finance Professional, Data Scientist, Resume, Portfolio, Data Analysis, Financial Modeling, Data Science, Financial Strategy, Blog, Data Scientist Portfolio, Finance and Data Science, Career Development, Professional Experience">
+    <meta name="author" content="Asher Georgy">
+    
+    <!-- Stylesheets -->
+	<link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+    
     <!-- Favicon Links -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest" type="application/manifest+json">
+	<link rel="manifest" href="site.webmanifest" type="application/manifest+json">
+
     <style>
-        body, html {
-            font-family: "Roboto", sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-            padding-top: 16px;
-        }
-
-        /* Navbar */
-        .navbar {
-			position: fixed;
-			top: 0;
-			width: 100%;
-			z-index: 999;
-			background-color: #333;
-			transition: top 0.3s ease;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        body {
+			background-color: #b8d9d653;
 		}
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
+        .page-container {
+            max-width: 87.5rem;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: calc(100vh - 7.5rem); /* Account for footer */
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            align-items: start;
         }
 
-        .navbar a:hover {
-            background-color: #ddd; 
-            color: black; 
+        .content-left {
+            position: static;
+            top: 5rem;
         }
 
-        .navbar a.active { 
-            background-color: #4CAF50; 
-            color: white; 
+        .welcome-section {
+            background: #009688;
+            padding: 2.5rem;
+            border-radius: 1.25rem;
+            color: white;
+            margin-bottom: 2rem;
         }
 
-        .w3-container {
-            max-width: 1200px;
-            margin: auto;
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
-        /* Link Styles */
-        a {
-            color: #009688;
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .welcome-section p {
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 2rem;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #f2f2f2;
-            padding: 30px 20px;
-            text-align: center;
+        .contact-methods {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
         }
 
-        footer a {
-            color: #f2f2f2;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #009688;
-        }
-
-        .contact-item {
-            margin: 10px 0;
-            padding: 19px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .contact-link {
             display: flex;
             align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: white;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 0.125rem solid transparent;
         }
 
-        .contact-item i {
-            margin-right: 10px;
-            color: #00796b;
-            font-size: 20px;
+        .contact-link:hover {
+            transform: translateX(0.125rem);
+            border-color: #009688;
         }
 
-        .w3-row {
-            margin-bottom: 20px;
+        .contact-link i {
+            font-size: 1.5rem;
+            color: #009688;
+            width: 2rem;
+            text-align: center;
         }
 
-        .sidebar {
-            float: right;
-            width: 30%;
-            padding: 10px;
-            display: inline-block;
-            vertical-align: top;
+        .contact-link .details {
+            flex: 1;
         }
 
-        .main-content {
-            float: left;
-            width: 65%;
-            display: inline-block;
-            vertical-align: top;
+        .contact-link .platform {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.2rem;
         }
 
-        @media (max-width: 768px) {
-            .sidebar, .main-content {
-                float: none;
-                width: 100%;
-                display: block;
+        .contact-link .username {
+            font-weight: 500;
+        }
+
+        .contact-form-section {
+            background: white;
+            border-radius: 1.25rem;
+            padding: 3rem;
+            box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.05);
+        }
+
+        .form-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .form-header h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .form-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .form-group label {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            background: white;
+            padding: 0 0.5rem;
+            color: #666;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .form-group input:focus ~ label,
+        .form-group textarea:focus ~ label,
+        .form-group input:not(:placeholder-shown) ~ label,
+        .form-group textarea:not(:placeholder-shown) ~ label {
+            top: -0.5rem;
+            font-size: 0.8rem;
+            color: #009688;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 0.125rem solid #eee;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            background: transparent;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #009688;
+        }
+
+        .form-group textarea {
+            height: 9.375rem;
+            resize: vertical;
+        }
+
+        .form-submit {
+            background: #009688;
+            color: white;
+            border: none;
+            padding: 1.2rem 2rem;
+            border-radius: 0.75rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            background: #00796b;
+            transform: translateY(-0.125rem);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-item {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-item:hover {
+            background: #e9ecef;
+            transform: translateY(-0.1875rem);
+        }
+
+        .social-item i {
+            font-size: 1.5rem;
+            color: #009688;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-item .platform-name {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* form styles */
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+        }
+        .formspree-powered {
+            font-size: 0.9em; 
+            color: #555; 
+            text-align: center; 
+            margin-top: 1.3rem; 
+            opacity: 0.7; 
+        }
+
+        .formspree-powered a {
+            color: #007bff; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+
+        .formspree-powered a:hover {
+            color: #0056b3;
+            text-decoration: underline; 
+        }
+
+        /* media quieries */
+        @media (min-width: 636px) and (max-width: 750px) {
+            .welcome-section h1 {
+                font-size: 1.8rem;
+            }
+            .welcome-section {
+                margin-top: -1rem;
+                padding: 2rem 2rem;
+            }
+            .welcome-section p {
+                font-size: 0.9rem;
+            }
+            .content-left {
+                width: 16rem;
+            }
+            .contact-link i {
+                font-size: 1.4rem;
+                width: 1.5rem;
+                margin-left: -0.5rem;
+            }
+            .contact-link .platform {
+                font-size: 0.8rem;
+            }
+            .contact-link .username {
+                font-size: 0.9rem;
+            }
+            .contact-form-section {
+                padding: 2rem 2rem; 
+                margin-top: -1rem;
+                margin-left: -1.5rem;
+            }
+            /* .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+            } */
+
+            .welcome-section h1 {
+                font-size: 2rem;
+            }
+            .contact-methods {
+                gap: 0.7rem;
+            }
+            .form-header h2 {
+                font-size: 1.5rem;
+            }
+            .form-header p {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 635px) {
+            html {
+                font-size: 16px;
+            }
+            .page-container {
+                grid-template-columns: 1fr;
+            }
+            /* .social-grid {
+                grid-template-columns: repeat(2, 2fr);
+            } */
+            
+            .welcome-section {
+                margin-top: -0.5rem;
+                padding: 1.5rem;
+            }
+        }
+        @media (max-width: 450px) {
+            html {
+                font-size: 15px;
+            }
+            .contact-form-section {
+                padding: 1rem 2rem; 
+                margin-top: -1rem;
+            }
+        }
+        @media (max-width: 420px) {
+            html {
+                font-size: 13.9px;
+            }
+        }
+        @media (max-width: 390px) {
+            html {
+                font-size: 12.7px;
+            }
+        }
+        @media (max-width: 360px) {
+            html {
+                font-size: 11.5px;
+            }
+            .form-header h2 {
+                font-size: 1.7rem;
+            }
+        }
+        @media (max-width: 330px) {
+            html {
+                font-size: 10.3px;
             }
         }
     </style>
 </head>
-<body class="w3-light-grey">
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Portfolio</a>
-	<a href="blog.html">Blog</a>
-    <a class="active" href="contact.html">Contact</a>
-</nav>
+    <div class="page-container">
+        <!-- Left Section -->
+        <div class="content-left">
+            <div class="welcome-section">
+                <h1>Let's Connect!</h1>
+                <p>I'm always excited to hear about new projects and opportunities. Connect with me through any of these channels.</p>
+            </div>
 
-<!-- Contact Section -->
-<main class="w3-container w3-padding-32 w3-white w3-margin-top">
-    <h1 class="w3-center">Contact Me <i class="fa-regular fa-address-card" style="margin-left:10px;"></i></h1>
-    <h5 class="w3-center">Feel free to connect with me through any of the following methods:</h5>
-    <hr>
+            <div class="contact-methods">
+                <a href="mailto:asher.georgy@outlook.com" class="contact-link">
+                    <i class="fa fa-envelope"></i>
+                    <div class="details">
+                        <div class="platform">Email</div>
+                        <div class="username">asher.georgy@outlook.com</div>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/AsherGeorgy" target="_blank" class="contact-link">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="details">
+                        <div class="platform">GitHub</div>
+                        <div class="username">AsherGeorgy</div>
+                    </div>
+                </a>
 
-    <section class="main-content">
-        <article class="contact-item">
-            <i class="fa fa-envelope"></i>
-            <span>Email: <a href="mailto:asher.georgy@outlook.com">asher.georgy@outlook.com</a></span>
-        </article>
-        <article class="contact-item">
-            <i class="fa-brands fa-github"></i>
-            <span>GitHub: <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">github.com/AsherGeorgy</a></span>
-        </article>
-        <article class="contact-item">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>LinkedIn: <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">linkedin.com/in/ashergeorgy</a></span>
-        </article>
-        <br>
-        <h5>Find me elsewhere:</h5>
-        <article class="contact-item">
-            <i class="fa-brands fa-x-twitter"></i>
-            <span>x.com <a href="https://x.com/AsherTweetsHere" target="_blank" rel="noopener noreferrer">@AsherTweetsHere</a></span>
-        </article>
-        <article class="contact-item">
-            <i class="fa-brands fa-reddit-alien"></i>
-            <span>Reddit: <a href="https://www.reddit.com/user/stormcloak573/" target="_blank" rel="noopener noreferrer">u/stormcloak573</a></span>
-        </article>
-        <article class="contact-item">
-            <i class="fa-solid fa-d"></i>
-            <span>Duolingo: <a href="https://www.duolingo.com/profile/Ash_Geo" target="_blank" rel="noopener noreferrer">Ash_Geo</a></span>
-        </article>
-    </section>
+                <a href="https://linkedin.com/in/ashergeorgy" target="_blank" class="contact-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <div class="details">
+                        <div class="platform">LinkedIn</div>
+                        <div class="username">ashergeorgy</div>
+                    </div>
+                </a>
+            </div>
 
-    <aside class="sidebar">
-        <!-- Twitter Embed -->
-        <a class="twitter-timeline" data-theme="light" href="https://twitter.com/AsherTweetsHere?ref_src=twsrc%5Etfw">Tweets by AsherTweetsHere</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <p><em><strong>Note:</strong> X posts may not be displayed due to a recent update made by X.com. Click on the above button and log into your X account to view posts.</em></p>
-    </aside>
-</main>
+            <div class="social-grid">
+                <a href="https://x.com/AsherTweetsHere" target="_blank" class="social-item">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <div class="platform-name">X (Twitter)</div>
+                </a>
+                
+                <a href="https://www.reddit.com/user/stormcloak573/" target="_blank" class="social-item">
+                    <i class="fa-brands fa-reddit-alien"></i>
+                    <div class="platform-name">Reddit</div>
+                </a>
+                
+                <a href="https://public.tableau.com/app/profile/ashergeorgy" target="_blank" class="social-item">
+                    <i class="lni lni-dashboard-square-1"></i>
+                    <div class="platform-name">Tableau Public</div>
+                </a>
 
-<!-- Footer -->
-<footer class="w3-container w3-center w3-margin-top" style="padding: 30px 0;">
-    <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">GitHub</a> |
-    <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-    <a href="mailto:asher.georgy@outlook.com">Email</a>
-</footer>
+                <a href="https://www.kaggle.com/ashergeorgy" target="_blank" class="social-item">
+                    <i class="fa-brands fa-kaggle"></i>
+                    <div class="platform-name">Kaggle</div>
+                </a>
+            </div>
+        </div>
 
-<script>
-    let prevScrollPos = window.pageYOffset;
-	const navbar = document.querySelector('.navbar');
+        <!-- Right Section -->
+        <div class="contact-form-section">
+            <div class="form-header">
+                <h2>Send a Message</h2>
+                <p>Alternatively, you can reach out directly using the contact form below.</p>
+            </div>
+        
+            <form id="contact-form" action="https://formspree.io/f/mvggzkrj" method="POST" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Your Name</label>
+                    <span id="name-error" class="error-message"></span> <!-- Error message for name -->
+                </div>
+            
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email Address</label>
+                    <span id="email-error" class="error-message"></span> <!-- Error message for email -->
+                </div>
+            
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder=" " required>
+                    <label for="subject">Subject</label>
+                    <span id="subject-error" class="error-message"></span> <!-- Error message for subject -->
+                </div>
+            
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder=" " required></textarea>
+                    <label for="message">Your Message</label>
+                    <span id="message-error" class="error-message"></span> <!-- Error message for message -->
+                </div>
+            
+                <button type="submit" class="form-submit">Send Message</button>
+                <p class="formspree-powered">
+                    Powered by <a href="https://formspree.io" target="_blank">Formspree</a>
+                </p>
+            </form>
+        </div>
+        
+    </div>
 
-	window.onscroll = function() {
-		let currentScrollPos = window.pageYOffset;
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:asher.georgy@outlook.com">
+                    <i class="fas fa-envelope" aria-label="Email"></i>
+                </a>
+                <a href="https://github.com/AsherGeorgy" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github" aria-label="GitHub"></i>
+                </a>
+                <a href="https://linkedin.com/in/ashergeorgy" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-label="LinkedIn"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-		// Show navbar when scrolling up, hide when scrolling down
-		if (currentScrollPos === 0) {
-			navbar.style.top = "0"; // Navbar should be visible at the top
-		} else if (prevScrollPos > currentScrollPos) {
-			navbar.style.top = "0"; // Navbar visible
-		} else {
-			navbar.style.top = "-60px"; // Navbar hidden
-		}
-		prevScrollPos = currentScrollPos;
-	};
-</script>
+    <script>
+        // Navbar scroll behavior
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector('.navbar');
 
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (currentScrollPos === 0) {
+                navbar.style.top = "0";
+            } else if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0";
+            } else {
+                navbar.style.top = "-60px";
+            }
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
+    <script>
+        function validateForm() {
+            let isValid = true;
+    
+            // Clear previous error messages
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(msg => msg.style.display = 'none');
+    
+            // Validate Name
+            const name = document.getElementById("name").value;
+            if (name.trim() === "") {
+                document.getElementById("name-error").textContent = "Name is required.";
+                document.getElementById("name-error").style.display = "inline";
+                isValid = false;
+            }
+    
+            // Validate Email
+            const email = document.getElementById("email").value;
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email.trim() === "") {
+                document.getElementById("email-error").textContent = "Email is required.";
+                document.getElementById("email-error").style.display = "inline";
+                isValid = false;
+            } else if (!emailRegex.test(email)) {
+                document.getElementById("email-error").textContent = "Please enter a valid email address.";
+                document.getElementById("email-error").style.display = "inline";
+                isValid = false;
+            }
+    
+            // Validate Subject
+            const subject = document.getElementById("subject").value;
+            if (subject.trim() === "") {
+                document.getElementById("subject-error").textContent = "Subject is required.";
+                document.getElementById("subject-error").style.display = "inline";
+                isValid = false;
+            }
+    
+            // Validate Message
+            const message = document.getElementById("message").value;
+            if (message.trim() === "") {
+                document.getElementById("message-error").textContent = "Message is required.";
+                document.getElementById("message-error").style.display = "inline";
+                isValid = false;
+            }
+    
+            return isValid; // If false, form submission will be prevented
+        }
+    </script>
+    
 </body>
 </html>
