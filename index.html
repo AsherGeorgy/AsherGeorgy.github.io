@@ -61,18 +61,6 @@
             text-decoration: underline; 
 			background-color: var(--secondary-color);
         }
-		
-		/* Link Styles */
-		a {
-			color: var(--primary-color); 
-			text-decoration: underline; 
-			transition: color 0.3s ease; 
-		}
-
-		a:hover {
-			text-decoration: underline; 
-			color: var(--secondary-color);
-		}
 
         /* About Section */
         .about-section {
@@ -106,18 +94,14 @@
         }
 
         .about-section a {
-            color: #5C6BC0;
+            color: #0070E0;
             text-decoration: none; 
             transition: color 0.3s; 
+            text-decoration: none;
         }
 
         .about-section a:hover {
-            color: #3F51B5; 
             text-decoration: underline; 
-        }
-
-        .about-section a:visited {
-            color: #3F51B5; 
         }
         
         /* Qualities Section */
@@ -417,15 +401,25 @@
         }        
         @media (max-width: 450px) {
             html {
-                font-size: 15.2px;
+                font-size: 15.7px;
             }
             .project-card {
                 max-width: 11.9rem;
             }
         }
+        @media (max-width: 435px) {
+            html {
+                font-size: 15.2px;
+            }
+        }
         @media (max-width: 420px) {
             html {
-                font-size: 13.9px;
+                font-size: 14.5px;
+            }
+        }
+        @media (max-width: 405px) {
+            html {
+                font-size: 14px;
             }
         }
         @media (max-width: 390px) {
@@ -435,15 +429,30 @@
             .project-card {
                 max-width: 11.8rem;
             }
-        }        
+        }   
+        @media (max-width: 375px) {
+            html {
+                font-size: 12.8px;
+            }
+        }     
         @media (max-width: 360px) {
             html {
-                font-size: 12px;
+                font-size: 12.1px;
+            }
+        }
+        @media (max-width: 345px) {
+            html {
+                font-size: 11.4px;
             }
         }
         @media (max-width: 330px) {
             html {
                 font-size: 10.7px;
+            }
+        }
+        @media (max-width: 315px) {
+            html {
+                font-size: 10px;
             }
         }
     </style>
@@ -479,7 +488,7 @@
             <h2><strong>Hi there, I'm Asher 👋</strong></h2>
         
             <p>
-                I’m a finance professional turned tech enthusiast. With a B.Com degree and <strong>ACCA affiliate</strong> status, I have a strong financial foundation. Currently, I’m expanding my expertise by learning <b>data science and development</b>, blending finance with technology. <br><br>
+                I’m a finance professional turned tech enthusiast. With a B.Com degree and <strong><a href="https://en.wikipedia.org/wiki/Association_of_Chartered_Certified_Accountants" target="_blank" rel="noopener noreferrer" >ACCA</a></strong> affiliation, I’m currently expanding my expertise into <b>data science and development</b>, blending finance with technology. <br><br>
             </p>
         
             <h3>Where It All Started</h3>
@@ -490,7 +499,7 @@
         
             <h3>Turning a Hobby into Passion</h3>
             <p>
-                While pursuing a career in finance, I realized the huge potential of <strong>combining finance and big data with technology</strong>. While finance was interesting, using technology to create financial models was truly exciting. This drove me to explore advanced Excel and eventually dive into Python, SQL, data visualization tools like Tableau and Power BI, and even web development (HTML/CSS).<br><br>
+                While pursuing a career in finance, I realized the immense potential of <strong>combining finance and big data with technology</strong>. While finance was interesting, using technology to create financial models was truly exciting. This drove me to explore advanced Excel and eventually dive into Python, SQL, data visualization tools like Tableau and Power BI, and even web development (HTML/CSS).<br><br>
             
                 <!-- <h3>Continuous Learning and Projects</h3> -->
                 Through hands-on projects, experimentation, and continuous learning on platforms like <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a> and <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>, I’ve developed proficiency in <strong>data exploration, analysis, visualization, and development</strong>.<br><br>
@@ -563,7 +572,7 @@
                 <div id="Excel" class="tabcontent" style="display:block;">
                     <h3>Microsoft Excel</h3>
                     <ul>
-                        <li><strong>Advanced Financial Modeling:</strong> Expertise in building integrated financial models with dynamic forecasting and DCF analysis.<br><br></li>
+                        <li><strong>Advanced Financial Modeling:</strong> Expertise in building integrated financial models with dynamic forecasting and analysis.<br><br></li>
                         <li><strong>Data Processing:</strong> Proficient in data cleaning using functions like SUBSTITUTE, along with Power Query for efficient transformation.<br><br></li>
                         <li><strong>Formulas and What-If Analysis:</strong> Skilled in advanced Excel functions (e.g., nested IFs, INDEX/MATCH) and performing What-If analysis using Scenario Manager and Goal Seek.<br><br></li>
                         <li><strong>Interactive Dashboards and Automation:</strong> Capable of creating sophisticated dashboards with charts and slicers, and familiar with automating tasks through Macros and basic VBA scripting.<br><br></li>
@@ -641,10 +650,10 @@
                 <div id="Tableau" class="tabcontent">
                     <h3>Tableau</h3>
                     <ul>
-                        <li><strong>Data Visualization Fundamentals:</strong> Strong understanding of data visualization principles, with hands on experience in using Tableau and PowerBI to create insightful reports and dashboards.<br><br></li>
-                        <li><strong>Dashboard Creation:</strong> Familiar with building interactive dashboards in Tableau and PowerBI, showcasing key metrics and data trends for clear communication of business insights.<br><br></li>
-                        <li><strong>Data Manipulation & Transformation:</strong> Proficient in using Tableau and PowerBI's built-in data transformation tools to clean, reshape, and organize datasets for accurate visualizations.<br><br></li>
-                        <li><strong>Data Integration & Interactivity:</strong> Familiar with integrating multiple data sources into Tableau and PowerBI and creating interactive elements such as filters, slicers, and drilldowns to enhance user engagement and data exploration.<br><br></li>
+                        <li><strong>Data Visualization Fundamentals:</strong> Strong understanding of data visualization principles, with hands on experience creating insightful reports and dashboards.<br><br></li>
+                        <li><strong>Dashboard Creation:</strong> Familiar with building interactive dashboards, showcasing key metrics and data trends for clear communication of business insights.<br><br></li>
+                        <li><strong>Data Manipulation & Transformation:</strong> Proficient in using built-in data transformation tools to clean, reshape, and organize datasets for accurate visualizations.<br><br></li>
+                        <li><strong>Data Integration & Interactivity:</strong> Familiar with integrating multiple data sources and creating interactive elements such as filters, slicers, and drilldowns to enhance user engagement and data exploration.<br><br></li>
                     </ul>
                 </div>
 
@@ -772,21 +781,28 @@
         }
 
         let prevScrollPos = window.pageYOffset;
-            const navbar = document.querySelector('.navbar');
+        const navbar = document.querySelector('.navbar');
 
-            window.onscroll = function() {
+        let timeout;
+
+        window.onscroll = function() {
+            clearTimeout(timeout); // Clear previous timeout
+            timeout = setTimeout(() => {
                 let currentScrollPos = window.pageYOffset;
 
-                // Show navbar when scrolling up, hide when scrolling down
+                // Show navbar when scrolling up or at the top
                 if (currentScrollPos === 0) {
-                    navbar.style.top = "0"; // Navbar should be visible at the top
+                    navbar.classList.remove('nav-hidden');
                 } else if (prevScrollPos > currentScrollPos) {
-                    navbar.style.top = "0"; // Navbar visible
+                    navbar.classList.remove('nav-hidden');
                 } else {
-                    navbar.style.top = "-60px"; // Navbar hidden
+                    navbar.classList.add('nav-hidden');
                 }
+
                 prevScrollPos = currentScrollPos;
-            };
+            }, 50); // Delay the execution of the scroll event handler
+        };
+
     </script>
 
 </body>
