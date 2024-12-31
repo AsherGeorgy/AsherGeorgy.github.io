@@ -202,6 +202,10 @@
             margin-top: 2rem;
         }
 
+        .social-grid a {
+            text-decoration: none;
+        }
+
         .social-item {
             background: #f8f9fa;
             padding: 1rem;
@@ -315,6 +319,11 @@
                 padding: 1.5rem;
             }
         }
+        @media (max-width: 465px) {
+            html {
+                font-size: 15.6px;
+            }
+        }
         @media (max-width: 450px) {
             html {
                 font-size: 15px;
@@ -324,14 +333,29 @@
                 margin-top: -1rem;
             }
         }
+        @media (max-width: 435px) {
+            html {
+                font-size: 14.6px;
+            }
+        }
         @media (max-width: 420px) {
             html {
                 font-size: 13.9px;
             }
         }
+        @media (max-width: 405px) {
+            html {
+                font-size: 13.3px;
+            }
+        }
         @media (max-width: 390px) {
             html {
                 font-size: 12.7px;
+            }
+        }
+        @media (max-width: 375px) {
+            html {
+                font-size: 12.1px;
             }
         }
         @media (max-width: 360px) {
@@ -342,9 +366,19 @@
                 font-size: 1.7rem;
             }
         }
+        @media (max-width: 345px) {
+            html {
+                font-size: 11px;
+            }
+        }
         @media (max-width: 330px) {
             html {
-                font-size: 10.3px;
+                font-size: 10.5px;
+            }
+        }
+        @media (max-width: 315px) {
+            html {
+                font-size: 10.4px;
             }
         }
     </style>
@@ -483,16 +517,24 @@
         let prevScrollPos = window.pageYOffset;
         const navbar = document.querySelector('.navbar');
 
+        let timeout;
+
         window.onscroll = function() {
-            let currentScrollPos = window.pageYOffset;
-            if (currentScrollPos === 0) {
-                navbar.style.top = "0";
-            } else if (prevScrollPos > currentScrollPos) {
-                navbar.style.top = "0";
-            } else {
-                navbar.style.top = "-60px";
-            }
-            prevScrollPos = currentScrollPos;
+            clearTimeout(timeout); // Clear previous timeout
+            timeout = setTimeout(() => {
+                let currentScrollPos = window.pageYOffset;
+
+                // Show navbar when scrolling up or at the top
+                if (currentScrollPos === 0) {
+                    navbar.classList.remove('nav-hidden');
+                } else if (prevScrollPos > currentScrollPos) {
+                    navbar.classList.remove('nav-hidden');
+                } else {
+                    navbar.classList.add('nav-hidden');
+                }
+
+                prevScrollPos = currentScrollPos;
+            }, 50); // Delay the execution of the scroll event handler
         };
     </script>
     <script>
