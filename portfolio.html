@@ -222,18 +222,15 @@
 		}
 
 		/* Media Queries for Mobile Responsiveness */
-		@media (min-width: 735px) and (max-width: 1100px) {
+		@media (max-width: 1280px) {
 			main {
-				margin: 1rem 5rem;
+				margin: 1rem 3rem;
 			}
 		}
         @media (max-width:735px) {
             html {
                 font-size: 16px;
             }
-			main {
-				margin: 2rem;
-			}
 			#title h1 {
 				font-size: 2.2rem;
 			}
@@ -259,24 +256,44 @@
                 font-size: 15.3px;
             }
         }
+		@media (max-width: 435px) {
+            html {
+                font-size: 14.9px;
+            }
+        }
         @media (max-width: 420px) {
             html {
                 font-size: 14px;
+            }
+        }
+		@media (max-width: 405px) {
+            html {
+                font-size: 13.7px;
             }
         }
         @media (max-width: 390px) {
             html {
                 font-size: 13px;
             }
-        }        
+        } 
+		@media (max-width: 375px) {
+            html {
+                font-size: 12.5px;
+            }
+        }       
         @media (max-width: 360px) {
             html {
-                font-size: 11.8px;
+                font-size: 11.9px;
+            }
+        }
+		@media (max-width: 345px) {
+            html {
+                font-size: 11.4px;
             }
         }
         @media (max-width: 330px) {
             html {
-                font-size: 10.6px;
+                font-size: 10.7px;
             }
         }
 
@@ -952,23 +969,28 @@
     document.addEventListener('DOMContentLoaded', highlightProject);
 
     let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector('nav');
+	const navbar = document.querySelector('.navbar');
 
-    // Throttled scroll event
-    let scrollTimeout;
-    window.onscroll = () => {
-        if (scrollTimeout) clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-            let currentScrollPos = window.pageYOffset;
-            navbar.style.top = (currentScrollPos === 0 || prevScrollPos > currentScrollPos) ? "0" : "-60px";
-            prevScrollPos = currentScrollPos;
+	let timeout;
 
-            const scrollButton = document.getElementById("myBtn");
-            if (scrollButton) {
-                scrollButton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
-            }
-        }, 50);
-    };
+	window.onscroll = function() {
+		clearTimeout(timeout); // Clear previous timeout
+		timeout = setTimeout(() => {
+			let currentScrollPos = window.pageYOffset;
+
+			// Show navbar when scrolling up or at the top
+			if (currentScrollPos === 0) {
+				navbar.classList.remove('nav-hidden');
+			} else if (prevScrollPos > currentScrollPos) {
+				navbar.classList.remove('nav-hidden');
+			} else {
+				navbar.classList.add('nav-hidden');
+			}
+
+			prevScrollPos = currentScrollPos;
+		}, 50); // Delay the execution of the scroll event handler
+	};
+
 
     // Smooth scroll to top
     function scrollToTop() {
