@@ -115,6 +115,7 @@
         }
 
         #link-h {
+            color: #0070E0;
             text-decoration: underline;
         }
 
@@ -222,6 +223,14 @@
                 font-size: 1.5rem;
             }
         }
+
+        /* Avoid clicking accidentally */
+        @media (max-width: 991px) { 
+            .post-images a {
+                pointer-events: none;
+            }
+        }
+
         @media (min-width: 620px) and (max-width: 855px) {
             .post-images img {
                 width: 100%;
@@ -230,29 +239,50 @@
         }
         @media (max-width: 450px) {
             html {
-                font-size: 15.7px; 
+                font-size: 15.1px; 
+            }
+        }
+        @media (max-width: 435px) {
+            html {
+                font-size: 14.4px; 
             }
         }
         @media (max-width: 420px) {
             html {
-                font-size: 14.2px; 
+                font-size: 13.8px; 
             }
         }
-        @media (max-width: 390px) {
+        @media (max-width: 405px) {
             html {
                 font-size: 13.2px; 
             }
         }
-        @media (max-width: 360px) {
+        @media (max-width: 390px) {
             html {
-                font-size: 11.9px; 
+                font-size: 12.7px; 
             }
         }
-        @media (max-width: 330px) {
+        @media (max-width: 375px) {
+            html {
+                font-size: 12.1px; 
+            }
+        }
+        @media (max-width: 360px) {
+            html {
+                font-size: 11.5px; 
+            }
+        }
+        @media (max-width: 345px) {
+            html {
+                font-size: 10.9px; 
+            }
+        }
+        @media (max-width: 315px) {
             html {
                 font-size: 10.6px; 
             }
         }
+
     </style>
 </head>
 <body>
@@ -402,17 +432,25 @@
         let prevScrollPos = window.pageYOffset;
         const navbar = document.querySelector('.navbar');
 
-        window.addEventListener('scroll', () => {
-            const currentScrollPos = window.pageYOffset;
-            
-            // Show navbar when scrolling up or at the top
-            if (currentScrollPos === 0 || prevScrollPos > currentScrollPos) {
-                navbar.style.top = "0";
-            } else {
-                navbar.style.top = "-60px";
-            }
-            prevScrollPos = currentScrollPos;
-        });
+        let timeout;
+
+        window.onscroll = function() {
+            clearTimeout(timeout); // Clear previous timeout
+            timeout = setTimeout(() => {
+                let currentScrollPos = window.pageYOffset;
+
+                // Show navbar when scrolling up or at the top
+                if (currentScrollPos === 0) {
+                    navbar.classList.remove('nav-hidden');
+                } else if (prevScrollPos > currentScrollPos) {
+                    navbar.classList.remove('nav-hidden');
+                } else {
+                    navbar.classList.add('nav-hidden');
+                }
+
+                prevScrollPos = currentScrollPos;
+            }, 50); // Delay the execution of the scroll event handler
+        };
     </script>
     
 </body>
