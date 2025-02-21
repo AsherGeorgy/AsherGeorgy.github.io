@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     
     <!-- Favicon Links -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
@@ -130,6 +131,11 @@
 		}
 
 		.project-description img {
+			width: 90%; 
+			padding: 1rem;
+		}
+
+		.project-description video {
 			width: 90%; 
 			padding: 1rem;
 		}
@@ -372,6 +378,40 @@
 		</div>
 	</article>
 
+	<!-- Financial Analysis Project -->
+	<article id="Project2" class="project-card">
+		<header class="project-title" onclick="toggleDescription(this)">
+			<span>Financial Statement Analysis with Powerpoint</span>
+			<div class="project-icons">
+				<img src="assets/forage-logo-only.png" alt="Powerpoint Logo" class="project-icon">
+				<img src="assets/powerpoint-logo-only.png" alt="Powerpoint Logo" class="project-icon">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</div>
+		</header>
+		<div class="project-description">
+			<h3>Overview</h3>
+			<p>Completed the New York Jobs CEO Council Financial Analyst Job Simulation on Forage. 
+				<ul>
+					<li>Completed a Simulation focused on financial analysis as an Analyst on the technology team at an investment bank.</li>
+					<li>Played a pivotal role in aiding senior bankers to determine the feasibility of establishing a partnership with BigTechCompany.</li>
+					<li>Demonstrated strong communication skills by articulately presenting findings and opinions to senior bankers.</li>
+				</ul> 
+			</p>
+			
+				<div style="padding:56.25% 0 0 0;position:relative;">
+					<iframe
+						src="https://player.vimeo.com/video/1058560524?h=68da7b9dc7&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+						frameborder="0"
+						allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+						style="position:absolute;top:0;left:0;width:100%;height:100%;"
+						title="Task 1_BigTech Template__"
+					></iframe>
+				</div>
+				<script src="https://player.vimeo.com/api/player.js"></script>
+			
+		</div>
+	</article>
+
 	<!-- SQL Data Cleaning Project -->
 	<article class="project-card">
 		<header class="project-title" onclick="toggleDescription(this)">
@@ -497,7 +537,7 @@
 	</article>
 
 	<!-- S&P 500 Momentum Project -->
-	<article id="Project2" class="project-card">
+	<article class="project-card">
 		<header class="project-title" onclick="toggleDescription(this)">
 			<span>Momentum Investment Strategy with Python</span>
 			<div class="project-icons">
@@ -1031,6 +1071,10 @@
             }
         });
     });
+</script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<script>
+	const player = new Plyr('#player');
 </script>
 
 </body>
